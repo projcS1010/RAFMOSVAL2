@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+
+<!--[if IE 8]><html class="no-js ie89 ie8" lang="it"><![endif]-->
+<!--[if IE 9]><html class="no-js ie89 ie9" lang="it"><![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="no-js" lang="it">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link rel="preload" href="../../build/IWT.min.js" as="script"> -->
+    <!--
+    In alternativa a WebFontLoader è possibile caricare il font direttamente da Google
+      <link href='//fonts.googleapis.com/css?family=Titillium+Web:400,400italic,700,' rel='stylesheet' type='text/css' />
+    o dal repository locale (src/fonts)
+  -->
+    <script type="text/javascript">
+        WebFontConfig = {
+            google: {
+                families: ['Titillium+Web:300,400,600,700,400italic:latin']
+            }
+        };
+        (function () {
+            var wf = document.createElement('script');
+            wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+            wf.type = 'text/javascript';
+            wf.async = 'true';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(wf, s);
+        })();
+    </script>
+
+    <!-- include HTML5shim per Explorer 8 -->
+    <script src="../../build/vendor/modernizr.js"></script>
+
+    <link media="all" rel="stylesheet" href="../../build/build.css">
+
+    <script src="../../build/vendor/jquery.min.js"></script>
+
+    <title>Chi Siamo?</title>
+</head>
+
+<body class="t-Pac">
+
+    <div id="cookie-bar" class="CookieBar js-CookieBar u-background-95 u-padding-r-all" aria-hidden="true">
+        <p class="u-color-white u-text-r-xs u-lineHeight-m u-padding-r-bottom">Questo sito utilizza cookie tecnici, analytics e di terze parti.
+            <br>Proseguendo nella navigazione accetti l’utilizzo dei cookie.
+            <br>
+        </p>
+        <p>
+            <button class="Button Button--default u-text-r-xxs js-cookieBarAccept u-inlineBlock u-margin-r-all">Accetto</button>
+            <a href="" class="u-text-r-xs u-color-teal-50">Privacy policy</a>
+        </p>
+    </div>
+
+    <ul class="Skiplinks js-fr-bypasslinks u-hiddenPrint">
+        <li>
+            <a href="#main">Vai al Contenuto</a>
+        </li>
+        <li>
+            <a class="js-fr-offcanvas-open" href="#menu" aria-controls="menu" aria-label="accedi al menu" title="accedi al menu">Vai alla navigazione del sito</a>
+        </li>
+    </ul>
+
+
+    <header class="Header Headroom--fixed js-Headroom u-hiddenPrint">
+
+        <div class="Header-navbar ">
+            <div class="u-layout-wide Grid Grid--alignMiddle u-layoutCenter">
+                <div class="Header-logo Grid-cell" aria-hidden="true">
+                    <a href="homepage.html" tabindex="-1">
+                        <img src="log2.png" alt="">
+                    </a>
+                </div>
+
+                <div class="Header-title Grid-cell">
+                    <h1 class="Header-titleLink" style="color: white !important">
+                        Informazioni Progetto
+                        <br>
+                    </h1>
+                </div>
+
+                <div class="Header-searchTrigger Grid-cell">
+                    <button aria-controls="header-search" class="js-Header-search-trigger Icon Icon-search " title="attiva il form di ricerca"
+                        aria-label="attiva il form di ricerca" aria-hidden="false">
+                    </button>
+                    <button aria-controls="header-search" class="js-Header-search-trigger Icon Icon-close u-hidden " title="disattiva il form di ricerca"
+                        aria-label="disattiva il form di ricerca" aria-hidden="true">
+                    </button>
+                </div>
+
+                <div class="Header-utils Grid-cell">
+
+                    <div class="Header-search" id="header-search">
+                        <form class="Form">
+                            <div class="Form-field Form-field--withPlaceholder Grid u-background-white u-color-grey-30 u-borderRadius-s" role="search">
+                                <input class="Form-input Form-input--ultraLean Grid-cell u-sizeFill u-text-r-s u-color-black u-text-r-xs u-borderRadius-s "
+                                    required id="cerca">
+                                <label class="Form-label u-color-grey-50 u-text-r-xxs" for="cerca">cerca nel sito</label>
+                                <button class="Grid-cell u-sizeFit Icon-search Icon--rotated u-color-grey-50 u-padding-all-s u-textWeight-700" title="Avvia la ricerca"
+                                    aria-label="Avvia la ricerca">
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+
+
+                </div>
+
+
+                <div class="Header-toggle Grid-cell">
+                    <a class="Hamburger-toggleContainer js-fr-offcanvas-open u-nojsDisplayInlineBlock u-lg-hidden u-md-hidden" href="#menu" aria-controls="menu"
+                        aria-label="accedi al menu" title="accedi al menu">
+                        <span class="Hamburger-toggle" role="presentation"></span>
+                        <span class="Header-toggleText" role="presentation">Menu</span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+        <!-- Header-navbar -->
+
+        <div class="Headroom-hideme u-textCenter u-hidden u-sm-hidden u-md-block u-lg-block" style: "float: left !important;">
+            <nav class="Megamenu Megamenu--default js-megamenu u-background-50" data-rel=".Offcanvas .Treeview"></nav>
+        </div>
+
+    </header>
+
+    <section class="Offcanvas Offcanvas--right Offcanvas--modal js-fr-offcanvas u-jsVisibilityHidden u-nojsDisplayNone u-hiddenPrint"
+        id="menu">
+        <h2 class="u-hiddenVisually">Menu di navigazione</h2>
+        <div class="Offcanvas-content u-background-white">
+            <div class="Offcanvas-toggleContainer u-background-70 u-jsHidden">
+                <a class="Hamburger-toggleContainer u-block u-color-white u-padding-bottom-xxl u-padding-left-s u-padding-top-xxl js-fr-offcanvas-close"
+                    aria-controls="menu" aria-label="esci dalla navigazione" title="esci dalla navigazione" href="#">
+                    <span class="Hamburger-toggle is-active" aria-hidden="true"></span>
+                </a>
+            </div>
+            <nav>
+                <ul class="Linklist Linklist--padded Treeview Treeview--default js-Treeview u-text-r-xs">
+                    <li>
+                        <a href="homepage.html">Home Page</a>
+                    </li>
+
+                    <li>
+                        <a href="lista-servizi.html">Elenco Servizi</a>
+                    </li>
+
+                    <li>
+                        <a href="chi-siamo.html">Chi siamo?</a>
+                    </li>
+
+                    <li>
+                        <a href="accesso.html">
+                            <b>
+                                <font size=+1>LogIN</font>
+                            </b>
+                        </a>
+                    </li>
+
+
+
+
+                    <li data-megamenu-class="u-hidden">
+
+                        <a href="#spid-button-get-xxs" data-menu-trigger="spid-button-get-xxs" class="Button Spid-button u-text-r-xxs" style="background-color:rgb(12, 89, 204) !important">
+                            <img src="../raw/spid/spid-ico-circle-bb.svg" alt="" />
+                            <span>Entra con SPID</span>
+                        </a>
+                        <ul data-megamenu-class="u-lg-columns-2">
+
+                            <li>
+                                <a href="#" class="Spid-idp">
+                                    <span class="u-hiddenVisually">Prosegui con Infocert ID</span>
+                                    <img src="../raw/spid/spid-idp-infocertid.svg" alt="" class="u-text-r-xxs" />
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="Spid-idp">
+                                    <span class="u-hiddenVisually">Prosegui con TIM ID</span>
+                                    <img src="../raw/spid/spid-idp-timid.svg" alt="" class="u-text-r-xxs" />
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="Spid-idp">
+                                    <span class="u-hiddenVisually">Prosegui con Poste ID</span>
+                                    <img src="../raw/spid/spid-idp-posteid.svg" alt="" class="u-text-r-xxs" />
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="Spid-idp">
+                                    <span class="u-hiddenVisually">Prosegui con Sielte ID</span>
+                                    <img src="../raw/spid/spid-idp-sielteid.svg" alt="" class="u-text-r-xxs" />
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="Spid-idp">
+                                    <span class="u-hiddenVisually">Prosegui con Aruba ID</span>
+                                    <img src="../raw/spid/spid-idp-arubaid.svg" alt="" class="u-text-r-xxs" />
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="Spid-idp">
+                                    <span class="u-hiddenVisually">Prosegui con Namirial ID</span>
+                                    <img src="../raw/spid/spid-idp-namirialid.svg" alt="" class="u-text-r-xxs" />
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="Spid-idp">
+                                    <span class="u-hiddenVisually">Prosegui con SPIDItalia Register.it</span>
+                                    <img src="../raw/spid/spid-idp-spiditalia.svg" alt="" class="u-text-r-xxs" />
+                                </a>
+                            </li>
+                        </ul>
+
+                    </li>
+
+                    <li>
+                        <a href="#spid-button-get-xxs" data-menu-trigger="spid-button-get-xxs" class="Button Spid-button u-text-r-xxs" style="background-color:rgb(141, 173, 221) !important; width:240px;height:50px; margin-left:400px; border:thin solid rgb(255, 255, 255);">
+
+                            <span>
+                                <img src="../raw/spid/spid-ico-circle-bb.svg" alt="" style="width: 30px;height:30px;margin-right:20px !important;" />Entra con SPID</span>
+                        </a>
+                        <ul data-megamenu-class="u-lg-columns-3">
+
+                            <li>
+                                <a href="#" class="Spid-idp">
+                                    <img src="../raw/spid/spid-idp-infocertid.svg" alt="" class="u-text-r-xxs" />
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="Spid-idp">
+                                    <img src="../raw/spid/spid-idp-timid.svg" alt="" class="u-text-r-xxs" />
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="Spid-idp">
+                                    <img src="../raw/spid/spid-idp-posteid.svg" alt="" class="u-text-r-xxs" />
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="Spid-idp">
+                                    <img src="../raw/spid/spid-idp-sielteid.svg" alt="" class="u-text-r-xxs" />
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="Spid-idp">
+                                    <img src="../raw/spid/spid-idp-arubaid.svg" alt="" class="u-text-r-xxs" />
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="Spid-idp">
+                                    <img src="../raw/spid/spid-idp-namirialid.svg" alt="" class="u-text-r-xxs" />
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="Spid-idp">
+                                    <img src="../raw/spid/spid-idp-spiditalia.svg" alt="" class="u-text-r-xxs" />
+                                </a>
+                            </li>
+                        </ul>
+
+                    </li>
+
+                </ul>
+
+
+
+
+            </nav>
+        </div>
+    </section>
+
+
+
+
+
+    <div id="main" style="margin-bottom: 100px">
+        <section>
+
+
+            <div class="u-layout-wide u-layoutCenter u-layout-withGutter u-padding-r-bottom u-padding-r-top">
+                <nav aria-label="sei qui:" role="navigation">
+                    <ul class="Breadcrumb">
+                        <li class="Breadcrumb-item">
+                            <a class="Breadcrumb-link u-color-30" href="comuni.html">Home</a>
+                        </li>
+                        <li class="Breadcrumb-item">
+                            <a class="Breadcrumb-link u-color-50">Chi siamo?</a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div>
+
+            <div class="u-layout-wide u-layoutCenter u-layout-withGutter u-padding-r-top u-padding-bottom-xxl">
+                <h1 class="u-text-h2">
+                    PROGETTO AREA VASTA METROPOLI TERRA DI BARI
+                </h1>
+
+                </h2>
+                <p class="u-textSecondary u-lineHeight-l">
+                    <h3> Il <b>progetto</b> fa parte di un gruppo di 10 progetti finanziati dalla Regione Puglia con fondi europei, realizzati dalle 10 "Aree
+                    Vaste" in cui è stato suddiviso tutto il territorio regionale. </h3>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <ul> 
+                        <h3> Gli obiettivi generali del progetto sono:</h3>
+                        
+                        <li><font size=+1>-></font> La <b>Diffusione</b> omogenea dei servizi presso la PA locale. Tutti gli Enti del territorio erogheranno una serie di servizi a cittadini e ad imprese; 
+                            </li>
+                        <li><font size=+1>-></font> La <b>Standardizzazione</b> dei servizi nella PA locale. Tutti gli Enti del territorio devono sviluppare ed erogare i servizi sulla base di standard nazionali e standard regionali; 
+                            </li>
+                        <li><font size=+1>-></font> La <b>Gerarchizzazione</b> dei servizi. Tutti gli Enti del territorio devono seguire un percorso di sviluppo e diffusione dei servizi. 
+                            </li>
+                        <li><font size=+1>-></font> La <b>Valorizzazione</b> dei servizi trasversali. Tutti gli Enti del territorio devono erogare servizi che siano rilevanti per soddisfare i bisogni di Enti Locali, di cittadini e di imprese. 
+                            </li>
+
+                    </ul>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+                    <ul> 
+                        <h3> <font size=-0.5>I <b>servizi di e-government</b> erogati dai comuni dell'area vasta metropolitana di Bari riguardano: </font></h3>
+    
+                        <li><font size=-1>-></font> Il Protocollo Informatico </li>
+                        <li><font size=-1>-></font> La Posta ElettronicaCertificata </li>
+                        <li><font size=-1>-></font> La Gestione informatizzata Atti Amministrativi</li>
+                        <li><font size=-1>-></font> La Firma Digitale</li>
+                        <li><font size=-1>-></font> I servizi per l'interazione con cittadini, imprese ed altri utenti </li>
+                        <li><font size=-1>-></font> Il SUE (Sportello unico per l'ediliza) </li>
+                        <li><font size=-1>-></font> Il SIT (Sistema informativo Territoriale) </li>
+                        <li><font size=-1>-></font> Il SUAP (Sportello unico per le attività produttive)</li>
+                        <li><font size=-1>-></font> I Servizi anagrafici per i cittadini</li>
+                        <li><font size=-1>-></font> La Pianificazione territoriale ed urbanistica (PRG/PUG) </li>
+                        <li><font size=-1>-></font> I Servizi Tributari</li>
+                    </ul>
+                    <h3>Il tuo comune aggiornerà i servizi digitali disponibili costantemente.</h3>
+                    <h3>Consulta la lista servizi disponibili per il tuo comune periodicamente così eviterai <b>inutili code e perdite di tempo.</b></h3> 
+
+
+                </p>
+
+            </div>
+
+
+
+
+
+
+
+
+
+        </section>
+
+
+
+        <!-- Sezione scelta per comuni -->
+        <div class=" u-background-compl-10 u-layout-centerContent u-padding-r-top">
+
+
+            <section class="Hero" style="background:url('image2.jpg'); background-size:cover; height: 700px">
+                <div id="news" class="Hero-content">
+                    <h2 class="u-text-h2 u-color-95">Comuni</h2>
+                    <p class="u-padding-r-bottom u-padding-r-top u-text-p u-margin-r-bottom">L'Area Vasta Metropoli di Bari è costituita da istituzionali locali, che sono impegnate ad erogare servizi
+                        a cittadini e imprese. I servizi online al cittadino sono attivi momentaneamente per i seguenti Comuni,
+                        il tuo comune aggiornerà i servizi digitali disponibili costantemente.</p>
+
+                    <div class="u-color-grey-30 ">
+
+                        <form class="Form Form--ultraLean">
+                            <div class="Grid">
+
+                                <div class="Form-field Grid-cell u-sizeFull u-sm-size6of12 u-md-size4of12 u-lg-size7of12 u-border-right-xxs u-border-top-xxs">
+                                    <label class="Form-label is-required u-hiddenVisually" for="provincia">Provincia</label>
+                                    <select class="Form-input u-color-grey-90 u-text-r-s u-padding-r-all" id="provincia" aria-required="true" required>
+                                        <option disabled selected>Provincia</option>
+                                        <option>Bari</option>
+                                        <option>Adelfia</option>
+                                        <option>Bitetto</option>
+                                        <option>Bitonto</option>
+                                        <option>Bitritto</option>
+                                        <option>Casamassima</option>
+                                        <option>Cassano delle Murge</option>
+                                        <option>Conversano</option>
+                                        <option>Gioia Del Colle</option>
+                                        <option>Giovinazzo</option>
+                                        <option>Modugno</option>
+                                        <option>Mola di Bari</option>
+                                        <option>Molfetta</option>
+                                        <option>Noicattaro</option>
+                                        <option>Palo del Colle</option>
+                                        <option>Polignano a Mare</option>
+                                        <option>Rutigliano</option>
+                                        <option>Ruvo di Puglia</option>
+                                        <option>Sammichele di Bari</option>
+                                        <option>Sannicandro di Bari</option>
+                                        <option>Toritto</option>
+                                        <option>Triggiano</option>
+                                        <option>Turi</option>
+                                        <option>Valenzano</option>
+
+
+                                    </select>
+                                </div>
+                                <button class="u-background-40 u-color-white u-padding-all-s u-text-r-m u-textNoWrap">Cerca Servizi</button>
+                            </div>
+
+                        </form>
+
+                    </div>
+
+
+
+                </div>
+            </section>
+
+        </div>
+
+        <div class="u-background-95 u-hiddenPrint">
+            <div class="u-layout-wide u-layoutCenter u-layout-r-withGutter">
+                <footer class="Footer u-background-95">
+
+
+                    <div class="Grid Grid--withGutter">
+
+                        <div class="Footer-block Grid-cell u-md-size1of4 u-lg-size1of4">
+                            <div class="Footer-subBlock">
+                                <h3 class="Footer-subTitle">Recapiti</h3>
+                                <address>
+                                    Indirizzo del comune Bari
+                                    <br> email:
+                                    <br> Tel:
+                                </address>
+                            </div>
+                        </div>
+
+                        <div class="Footer-block Grid-cell u-md-size1of4 u-lg-size1of4">
+                            <div class="Footer-subBlock">
+                                <h3 class="Footer-subTitle">Assistenza Sito</h3>
+                                <address>
+                                    Exprivia
+                                    <br> email
+                                    <br> Tel.
+                                </address>
+                            </div>
+                        </div>
+
+
+                        <div class="Footer-block Grid-cell u-md-size1of4 u-lg-size1of4">
+                            <div class="Footer-subBlock">
+                                <h3 class="Footer-subTitle">Indirizzo PEC</h3>
+                                <p>
+                                    <a href="">indirizzo.pec@gov.it</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="Footer-block Grid-cell u-md-size1of4 u-lg-size1of4">
+                            <h2 class="Footer-blockTitle">Seguici su</h2>
+                            <div class="Footer-subBlock">
+                                <ul class="Footer-socialIcons">
+                                    <li>
+                                        <a href="">
+                                            <span class="Icon Icon-facebook"></span>
+                                            <span class="u-hiddenVisually">Facebook</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <span class="Icon Icon-twitter"></span>
+                                            <span class="u-hiddenVisually">Twitter</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <span class="Icon Icon-youtube"></span>
+                                            <span class="u-hiddenVisually">Youtube</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </footer>
+
+            </div>
+        </div>
+
+        <a href="#" title="torna all'inizio del contenuto" class="ScrollTop js-scrollTop js-scrollTo">
+            <i class="ScrollTop-icon Icon-collapse" aria-hidden="true"></i>
+            <span class="u-hiddenVisually">torna all'inizio del contenuto</span>
+        </a>
+
+
+    </div>
+
+
+    <!--[if IE 8]>
+  <script src="../../build/vendor/respond.min.js"></script>
+  <script src="../../build/vendor/rem.min.js"></script>
+  <script src="../../build/vendor/selectivizr.js"></script>
+  <script src="../../build/vendor/slice.js"></script>
+  <![endif]-->
+
+    <!--[if lte IE 9]>
+  <script src="../../build/vendor/polyfill.min.js"></script>
+  <![endif]-->
+
+    <!-- sostituire questo percorso con quello degli assets javascript nel proprio sito web:
+    è il percorso, relativo alla webroot, della directory che contiene il file IWT.min.js e i file *.chunk.js -->
+    <script>__PUBLIC_PATH__ = '/design-web-toolkit/build/'</script>
+
+    <script src="../../build/IWT.min.js"></script>
+
+</body>
+
+</html>
