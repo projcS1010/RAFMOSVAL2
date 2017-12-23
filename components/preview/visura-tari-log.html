@@ -40,7 +40,7 @@
 
     <script src="../../build/vendor/jquery.min.js"></script>
 
-    <title>Servizio Visure</title>
+    <title>Visura Avvisi Bonari TARI</title>
 </head>
 
 <body class="t-Pac">
@@ -68,10 +68,9 @@
                     </a>
                 </div>
 
-                
                 <div class="Header-title Grid-cell">
                     <h1 class="Header-titleLink" style="color: white !important">
-                        Visure
+                        Visura Avvisi Bonari TARI
                         <br>
                     </h1>
                 </div>
@@ -150,7 +149,7 @@
                     <li>
                         <a href="accesso.html">
                             <b>
-                                <font size=+1>Accesso Utente</font>
+                                <font size=+1>LogIN</font>
                             </b>
                         </a>
                     </li>
@@ -192,7 +191,7 @@
                             <a class="Breadcrumb-link u-color-30">Servizi Online</a>
                         </li>
                         <li class="Breadcrumb-item">
-                            <a class="Breadcrumb-link u-color-50">Visure</a>
+                            <a class="Breadcrumb-link u-color-50">Visura TARI</a>
                         </li>
                     </ul>
                 </nav>
@@ -202,72 +201,35 @@
             <div class="u-layout-wide u-layoutCenter u-layout-withGutter u-padding-r-top u-padding-bottom-xxl">
 
                 <h1 class="u-text-h2">
-                    Visure
+                    Visura Imposta TARI
                 </h1>
-
                 <p>
-                    Il servizio permette all'utente di controllare e tener traccia dei problemi riscontrati dall'Agenzia delle entrate sui pagamenti
-                    della tassa mostrando le eventuali imposte e/o contributi che presentano errori di pagamento.
-                </p>
-
-                <p>&nbsp;</p>
-                <p>&nbsp;</p>
-
-                <h2 class="u-text-h3">Come funziona</h2>
-                <p>
-                    Permette di scaricare i documenti relativi alle visure trovate.
-                </p>
-                <p>&nbsp;</p>
-                <p>&nbsp;</p>
-                <p>&nbsp;</p>
-                <h2 class="u-text-h3">Seleziona Visura</h2>
-                <p>
-                    Indicare la visura del quale si vuole cercate documenti.
+                    Indicare l'anno per la ricerca di documenti bonari TARI registrati.
                 </p>
                 <p>&nbsp;</p>
 
-                <div class="u-color-green-30 ">
+                <div class="u-color-grey-30 ">
 
                     <form class="Form Form--ultraLean">
                         <div class="Grid">
 
                             <div class="Form-field Grid-cell u-sizeFull u-sm-size6of12 u-md-size4of12 u-lg-size7of12 u-border-right-xxs u-border-top-xxs">
-                                <label class="Form-label is-required u-hiddenVisually" for="provincia">Visura</label>
-                                <select class="Form-input u-color-grey-90 u-text-r-s u-padding-r-all" id="dynamic_select" aria-required="true" required>
+                                <label class="Form-label is-required u-hiddenVisually" for="provincia">Anno Riferimento</label>
+                                <select class="Form-input u-color-grey-90 u-text-r-s u-padding-r-all" id="provincia" aria-required="true" required>
                                     <option disabled selected>Seleziona</option>
-                                    <option>TARI</option>
-                                    <option>TASI</option>
-                                    <option>IMU</option>
-                                    <option>ICI</option>
+                                    <option>2013</option>
+                                    <option>2014</option>
+                                    <option>2015</option>
+                                    <option>2016</option>
+                                    <option>2017</option>
                                 </select>
-                            </div>
-                            <button class="u-background-40 u-color-white u-padding-all-s u-text-r-m u-textNoWrap">
-                               Vai alla visura
-                            </button>
-
-                            <script>
-                                    $(function () {
-                                        // bind change event to select
-                                        $('#dynamic_select').on('change', function () {
-                                            var url = $(this).val(); // get selected value
-                                            if (url=="TARI") { // require a URL
-                                                window.location.href = "visura-tari.html"; // redirect
-                                            }
-                                            return false;
-                                        });
-                                    });
-                                </script>
+                            </div> 
+                            <button class="u-background-40 u-color-white u-padding-all-s u-text-r-m u-textNoWrap">Cerca documento</button>
                         </div>
-
-
-
-
 
                     </form>
 
                 </div>
-
-
 
             </div>
         </section>

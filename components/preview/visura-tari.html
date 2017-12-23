@@ -40,7 +40,7 @@
 
     <script src="../../build/vendor/jquery.min.js"></script>
 
-    <title>Visura Avvisi Bonari TARI</title>
+    <title>Servizio Visure</title>
 </head>
 
 <body class="t-Pac">
@@ -68,9 +68,10 @@
                     </a>
                 </div>
 
+
                 <div class="Header-title Grid-cell">
                     <h1 class="Header-titleLink" style="color: white !important">
-                        Visura Avvisi Bonari TARI
+                        Visura TARI
                         <br>
                     </h1>
                 </div>
@@ -149,7 +150,7 @@
                     <li>
                         <a href="accesso.html">
                             <b>
-                                <font size=+1>LogIN</font>
+                                <font size=+1>Accesso Utente</font>
                             </b>
                         </a>
                     </li>
@@ -188,10 +189,10 @@
                             <a class="Breadcrumb-link u-color-30" href="comuni.html">Home</a>
                         </li>
                         <li class="Breadcrumb-item">
-                            <a class="Breadcrumb-link u-color-30">Servizi Online</a>
+                            <a class="Breadcrumb-link u-color-30" href="lista-servizi.html">Servizi Online</a>
                         </li>
                         <li class="Breadcrumb-item">
-                            <a class="Breadcrumb-link u-color-50">Visura TARI</a>
+                            <a class="Breadcrumb-link u-color-50">Visure</a>
                         </li>
                     </ul>
                 </nav>
@@ -201,39 +202,65 @@
             <div class="u-layout-wide u-layoutCenter u-layout-withGutter u-padding-r-top u-padding-bottom-xxl">
 
                 <h1 class="u-text-h2">
-                    Visura Imposta TARI
+                    Visura TARI
                 </h1>
-                <p>
-                    Indicare l'anno per la ricerca di documenti bonari TARI registrati.
-                </p>
-                <p>&nbsp;</p>
+                <div class="Grid Grid--withGutter">
+                    <div class="Grid-cell u-md-size8of12 u-lg-size8of12">
+                        <article class="Prose u-layout-prose">
 
-                <div class="u-color-grey-30 ">
+                            <p>
+                                Il servizio permette all'utente di controllare e tener traccia dei problemi riscontrati dall'Agenzia delle entrate sui pagamenti
+                                della tassa TARI mostrando le eventuali imposte e/o contributi che presentano errori di pagamento.
+                            </p>
 
-                    <form class="Form Form--ultraLean">
-                        <div class="Grid">
+                            <p>&nbsp;</p>
+                            <h2 class="u-text-h3">Come funziona</h2>
+                            <p>
+                                Permette di scaricare i documenti relativi alle visure TARI presenti in base all'anno di riferimento.
+                            </p>
+                            <p>&nbsp;</p>
+                            <p>&nbsp;</p>
 
-                            <div class="Form-field Grid-cell u-sizeFull u-sm-size6of12 u-md-size4of12 u-lg-size7of12 u-border-right-xxs u-border-top-xxs">
-                                <label class="Form-label is-required u-hiddenVisually" for="provincia">Anno Riferimento</label>
-                                <select class="Form-input u-color-grey-90 u-text-r-s u-padding-r-all" id="provincia" aria-required="true" required>
-                                    <option disabled selected>Seleziona</option>
-                                    <option>2013</option>
-                                    <option>2014</option>
-                                    <option>2015</option>
-                                    <option>2016</option>
-                                    <option>2017</option>
-                                </select>
-                            </div> 
-                            <button class="u-background-40 u-color-white u-padding-all-s u-text-r-m u-textNoWrap">Cerca documento</button>
+                            
+                        </article>
+                    </div>
+
+                    <aside class="Grid-cell u-md-size4of12 u-lg-size4of12">
+                        <div class="u-cf u-padding-bottom-xxl u-hidden u-md-block u-lg-block">
+                            <button type="button" class="Button Button--default u-text-r-xs"><a href="visura-tari-log.html" style="text-decoration: none !important; color:black !important">Accedi al servizio</a></button>
                         </div>
+                        <p>&nbsp;</p>
+                        <div class="u-sizeFull" id="subnav">
+                            <ul class="Linklist Linklist--padded u-layout-prose u-text-r-xs">
+                                <li>
+                                    <h2 class="Linklist-link Linklist-link--lev1" style="text-decoration: none !important">Servizi utili</h2>
+                                </li>
+                                <li>
+                                     <ul>
+                                            <li>
+                                                    <a href="" class="Linklist-link Linklist-link--lev2">Visura ICI/IMU</a>
+                                                </li>
+                                        <li>
+                                            <a href="" class="Linklist-link Linklist-link--lev2">Dichiarazione TARI</a>
+                                        </li>
+                                        <li>
+                                            <a href="" class="Linklist-link Linklist-link--lev2">Certificato residenza</a>
+                                        </li>
+                                        <li>
+                                            <a href="" class="Linklist-link Linklist-link--lev2">Certificato variazioni domiciliari</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                        <a href="#" title="torna all'inizio del contenuto" class="u-hiddenVisually">torna all'inizio del contenuto</a>
+                    </aside>
 
-                    </form>
 
                 </div>
 
-              
 
-            </div>
         </section>
 
 
@@ -316,25 +343,25 @@
         </a>
 
 
-    </div>
+        </div>
 
 
-    <!--[if IE 8]>
+        <!--[if IE 8]>
   <script src="../../build/vendor/respond.min.js"></script>
   <script src="../../build/vendor/rem.min.js"></script>
   <script src="../../build/vendor/selectivizr.js"></script>
   <script src="../../build/vendor/slice.js"></script>
   <![endif]-->
 
-    <!--[if lte IE 9]>
+        <!--[if lte IE 9]>
   <script src="../../build/vendor/polyfill.min.js"></script>
   <![endif]-->
 
-    <!-- sostituire questo percorso con quello degli assets javascript nel proprio sito web:
+        <!-- sostituire questo percorso con quello degli assets javascript nel proprio sito web:
     è il percorso, relativo alla webroot, della directory che contiene il file IWT.min.js e i file *.chunk.js -->
-    <script>__PUBLIC_PATH__ = '/design-web-toolkit/build/'</script>
+        <script>__PUBLIC_PATH__ = '/design-web-toolkit/build/'</script>
 
-    <script src="../../build/IWT.min.js"></script>
+        <script src="../../build/IWT.min.js"></script>
 
 </body>
 
