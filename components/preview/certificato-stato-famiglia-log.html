@@ -40,7 +40,7 @@
 
     <script src="../../build/vendor/jquery.min.js"></script>
 
-    <title>Visura Avvisi Bonari TARI</title>
+    <title>Certificato Stato Famiglia</title>
 </head>
 
 <body class="t-Pac">
@@ -56,8 +56,6 @@
         </p>
     </div>
 
-
-
     <header class="Header Headroom--fixed js-Headroom u-hiddenPrint">
 
         <div class="Header-navbar ">
@@ -70,7 +68,7 @@
 
                 <div class="Header-title Grid-cell">
                     <h1 class="Header-titleLink" style="color: white !important">
-                        Visura Avvisi Bonari TARI
+                        Certificato Stato Famiglia
                         <br>
                     </h1>
                 </div>
@@ -91,7 +89,7 @@
                             <div class="Form-field Form-field--withPlaceholder Grid u-background-white u-color-grey-30 u-borderRadius-s" role="search">
                                 <input class="Form-input Form-input--ultraLean Grid-cell u-sizeFill u-text-r-s u-color-black u-text-r-xs u-borderRadius-s "
                                     required id="cerca">
-                                <label class="Form-label u-color-grey-50 u-text-r-xxs" for="cerca">Cerca nel sito</label>
+                                <label class="Form-label u-color-grey-50 u-text-r-xxs" for="cerca">cerca nel sito</label>
                                 <button class="Grid-cell u-sizeFit Icon-search Icon--rotated u-color-grey-50 u-padding-all-s u-textWeight-700" title="Avvia la ricerca"
                                     aria-label="Avvia la ricerca">
                                 </button>
@@ -153,15 +151,7 @@
                             </b>
                         </a>
                     </li>
-
-
-
-
-
                 </ul>
-
-
-
 
             </nav>
         </div>
@@ -172,6 +162,7 @@
 
 
     <div id="main" style="margin-bottom: 100px">
+
 
         <section>
             <p class="u-md-hidden u-lg-hidden u-padding-r-all u-text-m u-background-grey-20">
@@ -185,70 +176,149 @@
                 <nav aria-label="sei qui:" role="navigation">
                     <ul class="Breadcrumb">
                         <li class="Breadcrumb-item">
-                            <a class="Breadcrumb-link u-color-30" href="comuni.html">Home</a>
+                            <a class="Breadcrumb-link u-color-30" href="homepage.html">Home</a>
                         </li>
                         <li class="Breadcrumb-item">
                             <a class="Breadcrumb-link u-color-30" href="lista-servizi.html">Servizi Online</a>
                         </li>
                         <li class="Breadcrumb-item">
-                            <a class="Breadcrumb-link u-color-50" href="#">Visura Avvisi Bonari TARI</a>
+                            <a class="Breadcrumb-link u-color-50">Certificato Stato Famiglia</a>
                         </li>
                     </ul>
                 </nav>
 
             </div>
-
             <div class="u-layout-wide u-layoutCenter u-layout-withGutter u-padding-r-top u-padding-bottom-xxl">
+
+                <h1 class="u-text-h2">
+                    Certificato Stato Famiglia
+                </h1>
+
                 <div class="Grid Grid--withGutter">
                     <div class="Grid-cell u-md-size8of12 u-lg-size8of12">
                         <article class="Prose u-layout-prose">
-                           
+
                             <!-- input boxes-->
-                            <div class="u-layout-wide u-layoutCenter u-layout-withGutter u-padding-r-top u-padding-bottom-xxl">
-
-                                <h1 class="u-text-h2">
-                                        Visura Avvisi Bonari TARI
-                                </h1>
-                                <p>
-                                    Indicare l'anno per la ricerca di avvisi bonari TARI registrati.
-                                </p>
-                                <p>&nbsp;</p>
-                
-                                <div class="u-color-grey-30 ">
-                
-                                    <form class="Form Form--ultraLean">
-                                        <div class="Grid">
-                
-                                            <div class="Form-field Grid-cell u-sizeFull u-sm-size6of12 u-md-size4of12 u-lg-size7of12 u-border-right-xxs u-border-top-xxs">
-                                                <label class="Form-label is-required u-hiddenVisually" for="provincia">Anno Riferimento</label>
-                                                <select class="Form-input u-color-grey-90 u-text-r-s u-padding-r-all" id="provincia" aria-required="true" required>
-                                                    <option disabled selected>Seleziona</option>
-                                                    <option>2013</option>
-                                                    <option>2014</option>
-                                                    <option>2015</option>
-                                                    <option>2016</option>
-                                                    <option>2017</option>
-                                                </select>
-                                            </div> 
-                                            <button class="u-background-40 u-color-white u-padding-all-s u-text-r-m u-textNoWrap">Cerca documento</button>
-                                        </div>
-                
-                                    </form>
-                
+                            <form class="Form Form--spaced u-padding-all-xl u-background-grey-10 u-text-r-xs u-layout-prose">
+                                <div class="Prose Alert Alert--info">
+                                    <p>Tutti i campi sono richiesti salvo dove espressamente indicato</p>
                                 </div>
-                
-                            </div>
 
+                                <div class="Grid-cell u-md-size4of12 u-lg-size4of12">
+                                    <div class="Form-field">
+                                        <label class="Form-label is-required" for="provincia">Soggetto</label>
+                                        <select class="Form-input" id="provincia" aria-required="true" required>
+                                            <option disabled selected>seleziona</option>
+                                            <option>Marta Pedillo</option>
+                                            <option>Mario Rossi</option>
+                                            <option>Lorenzo Rossi</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <fieldset class="Form-fieldset">
+                                    <legend class="Form-legend">Uso della certificazione</legend>
+
+
+                                <div class="Grid-cell u-md-size4of12 u-lg-size4of12">
+                                    <div class="Form-field">
+                                        <label class="Form-label is-required" for="provincia">Tipologia di utilizzo</label>
+                                        <select class="Form-input" id="provincia" aria-required="true" required>
+                                            <option disabled selected>seleziona</option>
+                                            <option>Uso bollo</option>
+                                            <option>Uso abbonamenti per trasporto di persone</option>
+                                            <option>Uso adozione e affido minore</option>
+                                            <option>Uso aiuti settore agricolo</option>
+                                            <option>Uso ammissione soci in cooperativa ediliza</option>
+                                            <option>Uso anticipazione indennità fine rapporto</option>
+                                            <option>Uso applicazione leggi tributarie</option>
+                                            <option>Uso assegni familiari</option>
+                                            <option>Uso assicurazioni sociali obbligatorie</option>
+                                            <option>Uso assistenza sanitaria</option>
+                                            <option>Uso atti,documenti e provvedimenti in materia penale</option>
+                                            <option>Uso atti e provvedimenti del procedimento innanzi alla corte costituzionale</option>
+                                            <option>Uso attività sportive</option>
+                                            <option>Uso attribuzione,rettifica o modifica del codice fiscale o partita iva</option>
+                                            <option>Uso borsa di studio</option>
+                                            <option>Uso calcolo detrazioni IRPEF</option>
+                                            <option>Uso cause scioglimento matrimonio</option>
+                                            <option>Uso controversie in materie di lavoro</option>
+                                            <option>Uso domande di sussidio</option>
+                                            <option>Uso erogazione prestiti INDAP</option>
+                                            <option>Uso esonero o frequenza insegnamento religioso</option>
+                                            <option>Uso esonero tasse scolastiche</option>
+                                            <option>Uso espatrio minore</option>
+                                            <option>Uso espropriazione</option>
+                                            <option>Uso istruzione di secondo grado</option>
+                                            <option>Uso legalizzazione di fotografia</option>
+                                            <option>Uso organismi utilità sociale</option>
+                                            <option>Uso pensione</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                    
+
+                                    <div class="Form-field">
+                                        <label class="Form-label is-required" for="nome">Numero marca da bollo</label>
+                                        <input class="Form-input" id="nome" aria-required="true" required>
+                                    </div>
+
+
+
+                                    <legend class="Form-legend">Riepilogo dati</legend>
+
+
+                                    <div class="Form-field">
+                                        <label class="Form-label is-required" for="nome">Codice Fiscale:</label>
+                                        <label class="Form-label is-required" for="cod"></label>
+                                    </div>
+
+                                    <div class="Form-field">
+                                        <label class="Form-label is-required" for="nome">Nome:</label>
+                                        <label class="Form-label is-required" for="nome"></label>
+                                    </div>
+
+                                    <div class="Form-field">
+                                        <label class="Form-label is-required" for="cognome">Cognome:</label>
+                                        <label class="Form-label is-required" for="cognome"></label>
+                                    </div>
+
+                                    <div class="Form-field">
+                                        <label class="Form-label" for="ddn">Data di nascita:</label>
+                                        <label class="Form-label" for="ddn"></label>
+                                    </div>
+
+                                    <div class="Form-field">
+                                        <label class="Form-label is-required" for="cognome">Comune Nascita:</label>
+                                        <label class="Form-label is-required" for="cognome"></label>
+                                    </div>
+
+                                    <div class="Form-field">
+                                        <label class="Form-label is-required" for="cognome">Indirizzo Residenza:</label>
+                                        <label class="Form-label is-required" for="cognome"></label>
+                                    </div>
+
+                                </fieldset>
+
+                                <div class="Form-field Grid-cell u-textRight">
+                                    <button type="button" class="Button Button--default u-text-xs">Scarica Certificato</button>
+                                </div>
+
+
+                            </form>
 
 
                         </article>
                     </div>
 
                     <aside class="Grid-cell u-md-size4of12 u-lg-size4of12">
-                        
+
 
                         <!-- profile data boxes-->
 
+
+
+                        
 
                         <h3 class="u-text-h4">Servizi correlati</h3>
                         <div class="u-sizeFull" id="subnav">
@@ -272,7 +342,6 @@
 
             </div>
         </section>
-
 
         <div class="u-background-95 u-hiddenPrint">
             <div class="u-layout-wide u-layoutCenter u-layout-r-withGutter">
