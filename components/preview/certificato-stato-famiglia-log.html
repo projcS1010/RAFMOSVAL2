@@ -17,6 +17,17 @@
       <link href='//fonts.googleapis.com/css?family=Titillium+Web:400,400italic,700,' rel='stylesheet' type='text/css' />
     o dal repository locale (src/fonts)
   -->
+  	<script>
+function myFunction() {
+    var txt;
+    var r = confirm("Premi su OK per confermare il download della certificazione.");
+    if (r == true) {
+        //start download
+    } else {
+        //nothing
+    }
+}
+</script>
     <script type="text/javascript">
         WebFontConfig = {
             google: {
@@ -33,6 +44,68 @@
         })();
     </script>
 
+    <script type="text/javascript">
+
+   function changeFunc() {
+    var selectBox = document.getElementById("selectBox");
+    var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+    alert(selectedValue);
+   }
+
+  </script>
+
+  <script>
+function alert_bottom() {
+   	var x = document.getElementById("snackbar");
+    x.className = "show";
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+}
+</script>
+
+<style>
+#snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+}
+
+#snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+</style>
+
     <!-- include HTML5shim per Explorer 8 -->
     <script src="../../build/vendor/modernizr.js"></script>
 
@@ -44,6 +117,7 @@
 </head>
 
 <body class="t-Pac">
+<div id="snackbar">Hai selezionato: Lorenzo Bianchi</div>
 
     <div id="cookie-bar" class="CookieBar js-CookieBar u-background-95 u-padding-r-all" aria-hidden="true">
         <p class="u-color-white u-text-r-xs u-lineHeight-m u-padding-r-bottom">Questo sito utilizza cookie tecnici, analytics e di terze parti.
@@ -199,7 +273,7 @@
                         <article class="Prose u-layout-prose">
 
                             <!-- input boxes-->
-                            <form class="Form Form--spaced u-padding-all-xl u-background-grey-10 u-text-r-xs u-layout-prose">
+                            <form class="Form Form--spaced u-padding-all-xl u-background-grey-10 u-text-r-xs u-layout-prose" id="f1" method="post" onsubmit="return myFunction()">
                                 <div class="Prose Alert Alert--info">
                                     <p>Tutti i campi sono richiesti salvo dove espressamente indicato</p>
                                 </div>
@@ -207,25 +281,56 @@
                                 <div class="Grid-cell u-md-size4of12 u-lg-size4of12">
                                     <div class="Form-field">
                                         <label class="Form-label is-required" for="provincia">Soggetto</label>
-                                        <select class="Form-input" id="provincia" aria-required="true" required>
-                                            <option disabled selected>seleziona</option>
-                                            <option>Marta Pedillo</option>
+                                        <select class="Form-input" id="selectBox" onchange="alert_bottom();" required>
+                                            <option selected>Marta Verdi</option>
                                             <option>Mario Rossi</option>
-                                            <option>Lorenzo Rossi</option>
+                                            <option>Lorenzo Bianchi</option>
                                         </select>
                                     </div>
                                 </div>
 
                                 <fieldset class="Form-fieldset">
+
+                                <legend class="Form-legend">Riepilogo dati</legend>
+
+
+                                    <div class="Form-field">
+                                        <label class="Form-label is-required" for="nome">Codice Fiscale:</label>
+                                        <label  for="cod">1234567890qwerty</label>
+                                    </div>
+
+                                    <div class="Form-field">
+                                        <label class="Form-label is-required" for="nome">Nome:</label>
+                                        <label  for="nome">Marta</label>
+                                    </div>
+
+                                    <div class="Form-field">
+                                        <label class="Form-label is-required" for="cognome">Cognome:</label>
+                                        <label  for="cognome">Verdi</label>
+                                    </div>
+
+                                    <div class="Form-field">
+                                        <label class="Form-label" for="ddn">Data di nascita:</label>
+                                        <label  for="ddn">01/01/1990</label>
+                                    </div>
+
+                                    <div class="Form-field">
+                                        <label class="Form-label is-required" for="cognome">Comune Nascita:</label>
+                                        <label  for="cognome">Bari</label>
+                                    </div>
+
+                                    <div class="Form-field">
+                                        <label class="Form-label is-required" for="cognome">Indirizzo Residenza:</label>
+                                        <label  for="cognome">Via Napoli 1</label>
+                                    </div>
                                     <legend class="Form-legend">Uso della certificazione</legend>
 
 
                                 <div class="Grid-cell u-md-size4of12 u-lg-size4of12">
                                     <div class="Form-field">
                                         <label class="Form-label is-required" for="provincia">Tipologia di utilizzo</label>
-                                        <select class="Form-input" id="provincia" aria-required="true" required>
-                                            <option disabled selected>seleziona</option>
-                                            <option>Uso bollo</option>
+                                        <select class="Form-input" id="tipo_utilizzo" required>
+                                            <option selected>Uso bollo</option>
                                             <option>Uso abbonamenti per trasporto di persone</option>
                                             <option>Uso adozione e affido minore</option>
                                             <option>Uso aiuti settore agricolo</option>
@@ -259,49 +364,18 @@
                                     
 
                                     <div class="Form-field">
-                                        <label class="Form-label is-required" for="nome">Numero marca da bollo</label>
-                                        <input class="Form-input" id="nome" aria-required="true" required>
+                                        <label class="Form-label is-required" for="id_marca_bollo">Numero identificativo marca da bollo</label>
+                                        <input class="Form-input" id="nome" maxlength="14" pattern=".{14,}" required>
                                     </div>
 
 
 
-                                    <legend class="Form-legend">Riepilogo dati</legend>
-
-
-                                    <div class="Form-field">
-                                        <label class="Form-label is-required" for="nome">Codice Fiscale:</label>
-                                        <label class="Form-label is-required" for="cod"></label>
-                                    </div>
-
-                                    <div class="Form-field">
-                                        <label class="Form-label is-required" for="nome">Nome:</label>
-                                        <label class="Form-label is-required" for="nome"></label>
-                                    </div>
-
-                                    <div class="Form-field">
-                                        <label class="Form-label is-required" for="cognome">Cognome:</label>
-                                        <label class="Form-label is-required" for="cognome"></label>
-                                    </div>
-
-                                    <div class="Form-field">
-                                        <label class="Form-label" for="ddn">Data di nascita:</label>
-                                        <label class="Form-label" for="ddn"></label>
-                                    </div>
-
-                                    <div class="Form-field">
-                                        <label class="Form-label is-required" for="cognome">Comune Nascita:</label>
-                                        <label class="Form-label is-required" for="cognome"></label>
-                                    </div>
-
-                                    <div class="Form-field">
-                                        <label class="Form-label is-required" for="cognome">Indirizzo Residenza:</label>
-                                        <label class="Form-label is-required" for="cognome"></label>
-                                    </div>
+                                    
 
                                 </fieldset>
 
                                 <div class="Form-field Grid-cell u-textRight">
-                                    <button type="button" class="Button Button--default u-text-xs">Scarica Certificato</button>
+                                    <input type="submit" class="Button Button--default u-text-xs" form="f1"  value="Scarica Certificato">
                                 </div>
 
 
