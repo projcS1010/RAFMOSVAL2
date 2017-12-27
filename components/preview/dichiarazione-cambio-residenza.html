@@ -39,6 +39,10 @@
   <link media="all" rel="stylesheet" href="../../build/build.css">
 
   <script src="../../build/vendor/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+    crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
   <title>Dichiarazione Cambio Residenza</title>
 </head>
@@ -201,46 +205,32 @@
       <div class="u-layout-wide u-layoutCenter u-layout-withGutter u-padding-r-top u-padding-bottom-xxl">
     
         <h1 class="u-text-h2">
-          Nome del servizio
+          Dichiarazione Cambio Residenza
         </h1>
     
         <div class="Grid Grid--withGutter">
           <div class="Grid-cell u-md-size8of12 u-lg-size8of12">
             <article class="Prose u-layout-prose">
               <p>
-                Una breve descrizione del servizio. Voluptate ut voluptatem sit earum ipsam sint. Aut unde explicabo eos dolor rerum eum et. Maxime aliquam deserunt. Non officiis eos fugit in perferendis.
+				Il servizio offre, previa dichiarazione TARI, la compilazione e l'inoltro in via telematica della dichiarazione  di cambio residenza opportunamente firmata.
               </p>
-              <p>
-                Questo servizio serve per:
-              </p>
-              <ul>
-                <li>fare qualcosa</li>
-                <li>verificare lo stato della propria pratica</li>
-              </ul>
-              <h2 class="u-text-h3">A chi è rivolto</h2>
-              <p>
-                Consequatur in quis nemo quidem. In laborum eum repellendus aut. Non similique iure magni iusto numquam nam delectus eum. Enim possimus dolorum similique architecto sed iste. Nobis eligendi labore sit.
-     
-    Maiores architecto ut culpa blanditiis voluptatem. Facere qui cumque ducimus vitae qui consequuntur totam ut. Aut delectus sint vitae nemo explicabo rerum molestiae id tempora.
-     
-    Quod dolor voluptatem quia aspernatur. Soluta vel et. Tempore est earum laborum neque totam ad officiis perferendis enim. Aliquid necessitatibus soluta aut harum est sed. Voluptates blanditiis eos est. Asperiores doloremque beatae modi reprehenderit eveniet ullam distinctio consequatur.
-              </p>
+          
               <h2 class="u-text-h3">Come funziona</h2>
               <p>
-                Quam vel tempora rerum quia. Qui pariatur praesentium et id fugiat tenetur earum dolores. Numquam et quia assumenda sed animi dolores aut.
-     
-    Eaque porro quo enim. Et eaque nulla ea. Voluptatum ratione eum suscipit aut in pariatur natus quos consequatur.
-     
-    Sed et commodi repellat numquam cupiditate ut. Molestiae est ut voluptatem praesentium perspiciatis autem nulla labore. Qui dignissimos qui dolore dolore odit nulla et corrupti eligendi. Excepturi eveniet voluptate consequatur dolor voluptas illum quae ut nemo. Voluptas similique deleniti voluptates. Autem deserunt ex.
+                Per procedere con l'invio della dichiarazione, una volta effettuato il donwload della stessa tramite il tasto "Genera Dichiarazione", occorre:<br>
+				<ul><li> Frimare la dichiarazione scaricata dal sistema (applicando fimr digitale oppure autografa);</li><br> 
+				<li> Cliccare sul tasto home e dunque "Invia Dichiarazione";</li><br>
+				<li> Effettuare l'upload del documento firmato e degli eventuali allegati seguendo le informazioni a video, se è stata applicata la firma autografa
+				sulla dichiarazione occorre effettuare la scansione della stessa, altrimenti si può allegare il file generato dal kit di firma digitale in possesso.</li><br>
+				<li> Una volta completata la procedura sarà possibile verificare il corretto invio della dichiarazione accedendo al proprio fascicolo utente, nel quale compariranno i dettagli circa
+				la transazione effettuata(id, pratica e numero di porotocollo).</li></ul>
               </p>
               <h2 class="u-text-h3">Prima di iniziare</h2>
               <p>
-                Accertati di aver già...
-                </p><ul>
-                  <li>azione 1</li>
-                  <li>azione 2</li>
-                  <li>azione 3</li>
-                </ul>
+                er effettuare la compilazione e l'invio della dichiarazione di cambio residenza/abitazione è necessario effettuare prima l'invio della Dichiarazione TARI.<br>
+				<ul><li>Cliccando sul pulsante "Genera nuova dichiarazione TARI"sarà possibile procedere con l'invio della dichiarazione TARI.</li><br>
+				<li>Cliccando sul pulsante "Salta invio dichiarazione" sarà possibile omettere l'invio della dichiarazione TARI, specificandone il motivo.</li></ul>
+                </p>
               <p></p>
               <p>
                 <button type="button" class="Button Button--default u-text-r-xs">Accedi al servizio</button>
@@ -249,6 +239,13 @@
           </div>
     
           <aside class="Grid-cell u-md-size4of12 u-lg-size4of12">
+		  <div class="Prose Alert Alert--warning Alert--withIcon u-layout-prose u-padding-r-bottom u-padding-r-right u-margin-r-bottom"
+              role="alert">
+              <h2 class="u-text-h3">
+                Attenzione
+              </h2>
+              <p class="u-text-p">Per usufruire del servizio richiesto è necessario accedere!</p>
+            </div>
             <div class="u-cf u-padding-bottom-xxl u-hidden u-md-block u-lg-block">
               <button type="button" class="Button Button--default u-text-r-xs">Accedi al servizio</button>
             </div>
@@ -256,21 +253,14 @@
             <div class="u-sizeFull" id="subnav">
               <ul class="Linklist Linklist--padded u-layout-prose u-text-r-xs">
       <li>
-        <a class="Linklist-link Linklist-link--lev1" href="">Et cupiditate in molestiae enim.</a>
+        <a class="Linklist-link Linklist-link--lev1" href="">Dichiarazione TARI</a>
       </li>
-      <li><a class="Linklist-link Linklist-link--lev2 is-expanded" href="">Aut quod dicta maiores aut cupiditate.</a>
+      <li><a class="Linklist-link Linklist-link--lev2" href="">Dichiarazione IMU/TASI</a>
         <ul>
-          <li><a href="" class="Linklist-link Linklist-link--lev3">Dolor itaque ad asperiores et.</a></li>
-          <li><a href="">Odit perspiciatis dignissimos velit architecto.</a></li>
-          <li><a href="">Quam id non.</a></li>
-          <li><a href="">Et commodi mollitia eius rerum dolorem et dolorum dolorem.</a></li>
+          <li><a href="" class="Linklist-link Linklist-link--lev3">Dichiarazione Cambio Domicilio</a></li>
+          <li><a href="">Richiesta di rimborso IMU/TASI/ICI</a></li>
+          <li><a href="">Richiesta di rimborso TARI/TARES/TARSU</a></li>
         </ul>
-      </li>
-      <li><a href="">Quia ex deleniti.</a></li>
-      <li><a href="">Amet adipisci cumque odio voluptas.</a></li>
-      <li><a href="" class="Linklist-link is-collapsed">Quisquam reiciendis molestias fugiat minus laudantium soluta dolorum et vitae.</a></li>
-      <li><a href="">Consequatur non incidunt possimus voluptas ut et sit.</a></li>
-    </ul>
     
             </div>
             <a href="#" title="torna all'inizio del contenuto" class="u-hiddenVisually">torna all'inizio del contenuto</a>
