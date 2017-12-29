@@ -49,15 +49,16 @@ function myFunction() {
    function changeFunc() {
     var selectBox = document.getElementById("selectBox");
     var selectedValue = selectBox.options[selectBox.selectedIndex].value;
-    alert(selectedValue);
+    alert_bottom(selectedValue);
    }
 
   </script>
 
   <script>
-function alert_bottom() {
+function alert_bottom(nom) {
    	var x = document.getElementById("snackbar");
     x.className = "show";
+    x.innerHTML = "Hai selezionato: "+ nom;
     setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
 }
 </script>
@@ -117,7 +118,7 @@ function alert_bottom() {
 </head>
 
 <body class="t-Pac">
-<div id="snackbar">Hai selezionato: Lorenzo Bianchi</div>
+<div id="snackbar"></div>
 
     <div id="cookie-bar" class="CookieBar js-CookieBar u-background-95 u-padding-r-all" aria-hidden="true">
         <p class="u-color-white u-text-r-xs u-lineHeight-m u-padding-r-bottom">Questo sito utilizza cookie tecnici, analytics e di terze parti.
@@ -281,7 +282,7 @@ function alert_bottom() {
                                 <div class="Grid-cell u-md-size4of12 u-lg-size4of12">
                                     <div class="Form-field">
                                         <label class="Form-label is-required" for="provincia">Soggetto</label>
-                                        <select class="Form-input" id="selectBox" onchange="alert_bottom();" required>
+                                        <select class="Form-input" id="selectBox" onchange="changeFunc();" required>
                                             <option selected>Marta Verdi</option>
                                             <option>Mario Rossi</option>
                                             <option>Lorenzo Bianchi</option>
