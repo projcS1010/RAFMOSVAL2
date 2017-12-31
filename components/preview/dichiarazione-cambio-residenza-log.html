@@ -17,17 +17,17 @@
       <link href='//fonts.googleapis.com/css?family=Titillium+Web:400,400italic,700,' rel='stylesheet' type='text/css' />
     o dal repository locale (src/fonts)
   -->
-  	<script>
-function myFunction() {
-    var txt;
-    var r = confirm("Premi su OK per confermare il download della certificazione.");
-    if (r == true) {
-        //start download
-    } else {
-        //nothing
-    }
-}
-</script>
+    <script>
+        function myFunction() {
+            var txt;
+            var r = confirm("Premi su OK per confermare il download della certificazione.");
+            if (r == true) {
+                //start download
+            } else {
+                //nothing
+            }
+        }
+    </script>
     <script type="text/javascript">
         WebFontConfig = {
             google: {
@@ -46,88 +46,109 @@ function myFunction() {
 
     <script type="text/javascript">
 
-   function changeFunc() {
-    var selectBox = document.getElementById("selectBox");
-    var selectedValue = selectBox.options[selectBox.selectedIndex].value;
-    alert_bottom(selectedValue);
-    if(selectedValue == "Francesca Bianchi")
-    {
-		document.getElementById("cf").innerHTML = "BNCFNC65R52A662F";
-		document.getElementById("nome").innerHTML = "Francesca";
-		document.getElementById("cognome").innerHTML = "Bianchi";
-		document.getElementById("datanascita").innerHTML = "12/10/1965";
-    }
-    else if(selectedValue == "Mario Verdi")
-    {
-    	document.getElementById("cf").innerHTML = "VRDMRA64M26A662E";
-		document.getElementById("nome").innerHTML = "Mario";
-		document.getElementById("cognome").innerHTML = "Verdi";
-		document.getElementById("datanascita").innerHTML = "26/08/1964";
-    }
-    else if(selectedValue == "Marta Verdi")
-    {
-    	document.getElementById("cf").innerHTML = "VRDMRT90A41A662V";
-		document.getElementById("nome").innerHTML = "Marta";
-		document.getElementById("cognome").innerHTML = "Verdi";
-		document.getElementById("datanascita").innerHTML = "01/01/1990";
-    }
-   }
+        function changeFunc() {
+            var selectBox = document.getElementById("selectBox");
+            var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+            alert_bottom(selectedValue);
+            if (selectedValue == "Francesca Bianchi") {
+                document.getElementById("cf").innerHTML = "BNCFNC65R52A662F";
+                document.getElementById("nome").innerHTML = "Francesca";
+                document.getElementById("cognome").innerHTML = "Bianchi";
+                document.getElementById("datanascita").innerHTML = "12/10/1965";
+            }
+            else if (selectedValue == "Mario Verdi") {
+                document.getElementById("cf").innerHTML = "VRDMRA64M26A662E";
+                document.getElementById("nome").innerHTML = "Mario";
+                document.getElementById("cognome").innerHTML = "Verdi";
+                document.getElementById("datanascita").innerHTML = "26/08/1964";
+            }
+            else if (selectedValue == "Marta Verdi") {
+                document.getElementById("cf").innerHTML = "VRDMRT90A41A662V";
+                document.getElementById("nome").innerHTML = "Marta";
+                document.getElementById("cognome").innerHTML = "Verdi";
+                document.getElementById("datanascita").innerHTML = "01/01/1990";
+            }
+        }
 
-  </script>
+    </script>
 
-  <script>
-function alert_bottom(nom) {
-   	var x = document.getElementById("snackbar");
-    x.className = "show";
-    x.innerHTML = "Hai selezionato: "+ nom;
-    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
-    
-}
-</script>
+    <script>
+        function alert_bottom(nom) {
+            var x = document.getElementById("snackbar");
+            x.className = "show";
+            x.innerHTML = "Hai selezionato: " + nom;
+            setTimeout(function () { x.className = x.className.replace("show", ""); }, 3000);
 
-<style>
-#snackbar {
-    visibility: hidden;
-    min-width: 250px;
-    margin-left: -125px;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    border-radius: 2px;
-    padding: 16px;
-    position: fixed;
-    z-index: 1;
-    left: 50%;
-    bottom: 30px;
-    font-size: 17px;
-}
+        }
+    </script>
 
-#snackbar.show {
-    visibility: visible;
-    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
-    animation: fadein 0.5s, fadeout 0.5s 2.5s;
-}
+    <style>
+        #snackbar {
+            visibility: hidden;
+            min-width: 250px;
+            margin-left: -125px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            border-radius: 2px;
+            padding: 16px;
+            position: fixed;
+            z-index: 1;
+            left: 50%;
+            bottom: 30px;
+            font-size: 17px;
+        }
 
-@-webkit-keyframes fadein {
-    from {bottom: 0; opacity: 0;} 
-    to {bottom: 30px; opacity: 1;}
-}
+        #snackbar.show {
+            visibility: visible;
+            -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+            animation: fadein 0.5s, fadeout 0.5s 2.5s;
+        }
 
-@keyframes fadein {
-    from {bottom: 0; opacity: 0;}
-    to {bottom: 30px; opacity: 1;}
-}
+        @-webkit-keyframes fadein {
+            from {
+                bottom: 0;
+                opacity: 0;
+            }
+            to {
+                bottom: 30px;
+                opacity: 1;
+            }
+        }
 
-@-webkit-keyframes fadeout {
-    from {bottom: 30px; opacity: 1;} 
-    to {bottom: 0; opacity: 0;}
-}
+        @keyframes fadein {
+            from {
+                bottom: 0;
+                opacity: 0;
+            }
+            to {
+                bottom: 30px;
+                opacity: 1;
+            }
+        }
 
-@keyframes fadeout {
-    from {bottom: 30px; opacity: 1;}
-    to {bottom: 0; opacity: 0;}
-}
-</style>
+        @-webkit-keyframes fadeout {
+            from {
+                bottom: 30px;
+                opacity: 1;
+            }
+            to {
+                bottom: 0;
+                opacity: 0;
+            }
+        }
+
+        @keyframes fadeout {
+            from {
+                bottom: 30px;
+                opacity: 1;
+            }
+            to {
+                bottom: 0;
+                opacity: 0;
+            }
+        }
+    </style>
 
     <!-- include HTML5shim per Explorer 8 -->
     <script src="../../build/vendor/modernizr.js"></script>
@@ -136,11 +157,11 @@ function alert_bottom(nom) {
 
     <script src="../../build/vendor/jquery.min.js"></script>
 
-    <title>Certificato Stato Famiglia</title>
+    <title>Dichiarazione Cambio Residenza/Abitazione</title>
 </head>
 
 <body class="t-Pac">
-<div id="snackbar"></div>
+    <div id="snackbar"></div>
 
     <div id="cookie-bar" class="CookieBar js-CookieBar u-background-95 u-padding-r-all" aria-hidden="true">
         <p class="u-color-white u-text-r-xs u-lineHeight-m u-padding-r-bottom">Questo sito utilizza cookie tecnici, analytics e di terze parti.
@@ -154,81 +175,81 @@ function alert_bottom(nom) {
     </div>
 
     <header class="Header Headroom--fixed js-Headroom u-hiddenPrint">
-    	<div class="Header-banner ">
-      <div class="Header-owner Headroom-hideme ">
-        <a href="">
-          <span>Regione Puglia</span>
-        </a>
-        <div class="Header-languages ">
-          <a href="#languages" data-menu-trigger="languages" class="Header-language u-border-none u-zindex-max u-inlineBlock">
-            <span class="u-hiddenVisually">lingua attiva:</span>
-            <span class="">ITA</span>
-            <!-- <span class="u-hidden u-md-inlineBlock u-lg-inlineBlock">Italiano</span> -->
-            <span class="Icon Icon-expand u-padding-left-xs"></span>
-          </a>
-          <div id="languages" data-menu class="Dropdown-menu Header-language-other u-jsVisibilityHidden u-nojsDisplayNone">
-            <span class="Icon-drop-down Dropdown-arrow u-color-white"></span>
-            <ul>
-              <li>
-                <a href="#1" class="u-padding-r-all">
-                  <span lang="en">English</span>
+        <div class="Header-banner ">
+            <div class="Header-owner Headroom-hideme ">
+                <a href="">
+                    <span>Regione Puglia</span>
                 </a>
-              </li>
-              <li>
-                <a href="#1" class="u-padding-r-all">
-                  <span lang="ar">عربي</span>
-                </a>
-              </li>
-              <li>
-                <a href="#2" class="u-padding-r-all">
-                  <span lang="ch">中文网</span>
-                </a>
-              </li>
-              <li>
-                <a href="#3" class="u-padding-r-all">
-                  <span lang="de">Deutsch</span>
-                </a>
-              </li>
-              <li>
-                <a href="#8" class="u-padding-r-all">
-                  <span lang="es">Español</span>
-                </a>
-              </li>
-              <li>
-                <a href="#4" class="u-padding-r-all">
-                  <span lang="fr">Français</span>
-                </a>
-              </li>
-              <li>
-                <a href="#5" class="u-padding-r-all">
-                  <span lang="ja">日本語</span>
-                </a>
-              </li>
-              <li>
-                <a href="#6" class="u-padding-r-all">
-                  <span lang="pt">Portuguese</span>
-                </a>
-              </li>
-              <li>
-                <a href="#7" class="u-padding-r-all">
-                  <span lang="ru">НА РУССКОМ</span>
-                </a>
-              </li>
-              <li>
-                <a href="#10" class="u-padding-r-all">
-                  <span lang="uk">УКРАЇНСЬКA</span>
-                </a>
-              </li>
-              <li>
-                <a href="#9" class="u-padding-r-all">
-                  <span lang="tr">TÜRKÇE</span>
-                </a>
-              </li>
-            </ul>
-          </div>
+                <div class="Header-languages ">
+                    <a href="#languages" data-menu-trigger="languages" class="Header-language u-border-none u-zindex-max u-inlineBlock">
+                        <span class="u-hiddenVisually">lingua attiva:</span>
+                        <span class="">ITA</span>
+                        <!-- <span class="u-hidden u-md-inlineBlock u-lg-inlineBlock">Italiano</span> -->
+                        <span class="Icon Icon-expand u-padding-left-xs"></span>
+                    </a>
+                    <div id="languages" data-menu class="Dropdown-menu Header-language-other u-jsVisibilityHidden u-nojsDisplayNone">
+                        <span class="Icon-drop-down Dropdown-arrow u-color-white"></span>
+                        <ul>
+                            <li>
+                                <a href="#1" class="u-padding-r-all">
+                                    <span lang="en">English</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#1" class="u-padding-r-all">
+                                    <span lang="ar">عربي</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#2" class="u-padding-r-all">
+                                    <span lang="ch">中文网</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#3" class="u-padding-r-all">
+                                    <span lang="de">Deutsch</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#8" class="u-padding-r-all">
+                                    <span lang="es">Español</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#4" class="u-padding-r-all">
+                                    <span lang="fr">Français</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#5" class="u-padding-r-all">
+                                    <span lang="ja">日本語</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#6" class="u-padding-r-all">
+                                    <span lang="pt">Portuguese</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#7" class="u-padding-r-all">
+                                    <span lang="ru">НА РУССКОМ</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#10" class="u-padding-r-all">
+                                    <span lang="uk">УКРАЇНСЬКA</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#9" class="u-padding-r-all">
+                                    <span lang="tr">TÜRKÇE</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
         <div class="Header-navbar ">
             <div class="u-layout-wide Grid Grid--alignMiddle u-layoutCenter">
                 <div class="Header-logo Grid-cell" aria-hidden="true">
@@ -253,29 +274,29 @@ function alert_bottom(nom) {
                 </div>
 
                 <div class="Header-utils Grid-cell">
-                	 <div class="Header-social Headroom-hideme">
-            <p>Seguici su</p>
-            <ul class="Header-socialIcons">
-              <li>
-                <a href="" title="Facebook">
-                  <span class="Icon-facebook"></span>
-                  <span class="u-hiddenVisually">Facebook</span>
-                </a>
-              </li>
-              <li>
-                <a href="" title="Twitter">
-                  <span class="Icon-twitter"></span>
-                  <span class="u-hiddenVisually">Twitter</span>
-                </a>
-              </li>
-              <li>
-                <a href="" title="Youtube">
-                  <span class="Icon-youtube"></span>
-                  <span class="u-hiddenVisually">Youtube</span>
-                </a>
-              </li>
-            </ul>
-          </div>
+                    <div class="Header-social Headroom-hideme">
+                        <p>Seguici su</p>
+                        <ul class="Header-socialIcons">
+                            <li>
+                                <a href="" title="Facebook">
+                                    <span class="Icon-facebook"></span>
+                                    <span class="u-hiddenVisually">Facebook</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" title="Twitter">
+                                    <span class="Icon-twitter"></span>
+                                    <span class="u-hiddenVisually">Twitter</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" title="Youtube">
+                                    <span class="Icon-youtube"></span>
+                                    <span class="u-hiddenVisually">Youtube</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                     <div class="Header-search" id="header-search">
                         <form class="Form">
                             <div class="Form-field Form-field--withPlaceholder Grid u-background-white u-color-grey-30 u-borderRadius-s" role="search">
@@ -325,28 +346,28 @@ function alert_bottom(nom) {
             <nav>
                 <ul class="Linklist Linklist--padded Treeview Treeview--default js-Treeview u-text-r-xs">
                     <li>
-            <a href="homepage.html">Homepage</a>
-          </li>
+                        <a href="homepage.html">Homepage</a>
+                    </li>
 
-          <li>
-            <a href="lista-servizi.html">Elenco servizi</a>
-          </li>
+                    <li>
+                        <a href="lista-servizi.html">Elenco servizi</a>
+                    </li>
 
-          <li>
-            <a href="chi-siamo.html">Chi siamo?</a>
-          </li>
+                    <li>
+                        <a href="chi-siamo.html">Chi siamo?</a>
+                    </li>
 
-          <li>
+                    <li>
 
-            <a href="#">
+                        <a href="#">
 
-              <font size=+1>Profilo utente</font>
+                            <font size=+1>Profilo utente</font>
 
-            </a>
-          </li>
-          <li>
-            <a href="homepage.html">Logout</a>
-          </li>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="homepage.html">Logout</a>
+                    </li>
                 </ul>
 
             </nav>
@@ -384,7 +405,9 @@ function alert_bottom(nom) {
                 </nav>
 
             </div>
-            <div class="u-layout-wide u-layoutCenter u-layout-withGutter u-padding-r-top u-padding-bottom-xxl">
+
+            <!-- Div sezione Dati Anagrafici con informazioni salto TARI-->
+            <div class="u-layout-wide u-layoutCenter u-layout-withGutter u-padding-r-top u-padding-bottom-xxl" id="dati-ana">
 
                 <h1 class="u-text-h2">
                     Dichiarazione Cambio Residenza/Abitazione
@@ -395,9 +418,13 @@ function alert_bottom(nom) {
                         <article class="Prose u-layout-prose">
 
                             <!-- input boxes-->
+
+
                             <form class="Form Form--spaced u-padding-all-xl u-background-grey-10 u-text-r-xs u-layout-prose" id="f1" method="post" onsubmit="return myFunction()">
                                 <div class="Prose Alert Alert--info">
-                                    <p>Tutti i campi sono richiesti salvo dove espressamente indicato</p>
+                                    <p>Scegliere il soggetto in uso per effettuare la dichiarazione di cambio residenza e controllare
+                                        la correttezza dei dati anagrafici.</p>
+
                                 </div>
 
                                 <div class="Grid-cell u-md-size4of12 u-lg-size4of12">
@@ -413,53 +440,84 @@ function alert_bottom(nom) {
 
                                 <fieldset class="Form-fieldset">
 
-                                <legend class="Form-legend">Riepilogo dati</legend>
+                                    <legend class="Form-legend">Riepilogo dati</legend>
 
 
                                     <div class="Form-field">
                                         <label class="Form-label is-required" for="nome">Codice Fiscale:</label>
-                                        <label  for="cod"><div id="cf">VRDMRT90A41A662V</div></label>
+                                        <label for="cod">
+                                            <div id="cf">VRDMRT90A41A662V</div>
+                                        </label>
                                     </div>
 
                                     <div class="Form-field">
                                         <label class="Form-label is-required" for="nome">Nome:</label>
-                                        <label  for="nome"><div id="nome">Marta</div></label>
+                                        <label for="nome">
+                                            <div id="nome">Marta</div>
+                                        </label>
                                     </div>
 
                                     <div class="Form-field">
                                         <label class="Form-label is-required" for="cognome">Cognome:</label>
-                                        <label  for="cognome"><div id="cognome">Verdi</div></label>
+                                        <label for="cognome">
+                                            <div id="cognome">Verdi</div>
+                                        </label>
                                     </div>
 
                                     <div class="Form-field">
                                         <label class="Form-label" for="ddn">Data di nascita:</label>
-                                        <label  for="ddn"><div id="datanascita">01/01/1990</div></label>
+                                        <label for="ddn">
+                                            <div id="datanascita">01/01/1990</div>
+                                        </label>
                                     </div>
 
                                     <div class="Form-field">
                                         <label class="Form-label is-required" for="cognome">Comune Nascita:</label>
-                                        <label  for="cognome"><div id="citta">Bari</div></label>
+                                        <label for="cognome">
+                                            <div id="citta">Bari</div>
+                                        </label>
                                     </div>
 
                                     <div class="Form-field">
                                         <label class="Form-label is-required" for="cognome">Indirizzo Residenza:</label>
-                                        <label  for="cognome"><div id="indirizzo">Via Napoli 1</div></label>
+                                        <label for="cognome">
+                                            <div id="indirizzo">Via Napoli 1</div>
+                                        </label>
                                     </div>
-                      
+
                                 </fieldset>
 
+                                <script type="text/javascript">
+                                    WebFontConfig = {
+                                        google: {
+                                            families: ['Titillium+Web:300,400,600,700,400italic:latin']
+                                        }
+                                    };
+                                    (function () {
+                                        var wf = document.createElement('script');
+                                        wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+                                        wf.type = 'text/javascript';
+                                        wf.async = 'true';
+                                        var s = document.getElementsByTagName('script')[0];
+                                        s.parentNode.insertBefore(wf, s);
+                                    })();
+                                </script>
 
+                                <script type="text/javascript">
+
+                                    function showDivSalto() {
+                                        document.getElementById("dati-ana").style.display = 'none';
+                                        document.getElementById("salta-tari").style.display = 'block';
+                                    }
+
+                                </script>
                                 <div class="Form-field Grid-cell u-textLeft">
-                                    <button type="button" class="Button Button--default u-text-r-xs">
-                                      <a href="genera-nuova-dichiarazione-TARI-log1.html" style="text-decoration: none !important; color:black !important">Genera Nuova Dichiarazione TARI</a>
+                                    <button type="button" class="Button Button--default u-text-r-xs" style="float:right !important" onclick="showDivSalto()">
+                                        <a style="text-decoration: none !important; color:black !important">Continua dichiarazione residenza -></a>
                                     </button>
                                 </div>
 
-                                <div class="Form-field Grid-cell u-textLeft">
-                                    <button type="button" class="Button Button--default u-text-r-xs">
-                                      <a href="salta-invio-dichiarazione-TARI.html" style="text-decoration: none !important; color:black !important">Salta Invio Dichiarazione TARI</a>
-                                    </button>
-                                </div>
+
 
                             </form>
 
@@ -471,10 +529,37 @@ function alert_bottom(nom) {
 
 
                         <!-- profile data boxes-->
+                        <div class="Prose Alert Alert--warning Alert--withIcon u-layout-prose u-padding-r-bottom u-padding-r-right u-margin-r-bottom"
+                            role="alert">
+                            <h2 class="u-text-h3">
+                                Attenzione
+                            </h2>
+                            <p class="u-text-p">La dichiarazione cambio residenza richiede la dichiarazione TARI sul nuovo immobile.</p>
+
+
+                            <script>
+                                function nuovaTari() {
+                                    var txt;
+                                    var r = confirm("Verrai indirizzato sulla pagina di Dichiarazione TARI");
+                                    if (r == true) {
+                                        window.open ('genera-nuova-dichiarazione-TARI-log1.html','_self',false)
+                                    } else {
+                                        //nothing
+                                    }
+                                }
+                            </script>
+
+                            <div class="Form-field Grid-cell u-textLeft">
+                                <button type="button" class="Button Button--default u-text-r-xs" onclick="nuovaTari()">
+                                    <a style="text-decoration: none !important; color:black !important">Genera Nuova Dichiarazione TARI</a>
+                                </button>
+                            </div>
+
+                        </div>
 
 
 
-                        
+
 
                         <h3 class="u-text-h4">Servizi correlati</h3>
                         <div class="u-sizeFull" id="subnav">
@@ -497,6 +582,132 @@ function alert_bottom(nom) {
                 </div>
 
             </div>
+
+
+            <!-- Div sezione Campi Salta TARI-->
+            <div class="u-layout-wide u-layoutCenter u-layout-withGutter u-padding-r-top u-padding-bottom-xxl" id="salta-tari" style="display:none !important">
+
+                <h1 class="u-text-h2">
+                    Dichiarazione Cambio Residenza/Abitazione
+                </h1>
+
+                <div class="Grid Grid--withGutter">
+                    <div class="Grid-cell u-md-size8of12 u-lg-size8of12">
+                        <article class="Prose u-layout-prose">
+
+                            <!-- input boxes-->
+                            <form class="Form Form--spaced u-padding-all-xl u-background-grey-10 u-text-r-xs u-layout-prose" id="f1" method="post" onsubmit="return myFunction()">
+
+
+                                <fieldset class="Form-fieldset">
+
+
+                                    <fieldset class="Form-field Form-field--choose Grid-cell u-text-r-s">
+                                        <legend class="Form-legend is-required" for="sex1">Scegliere la motivazione per la quale si intende omettere la dichiarazione TARI:
+                                            *
+                                        </legend>
+
+                                        <label class="Form-label Form-label--block">
+                                            <input type="radio" class="Form-input" name="sex" aria-required="true" required>
+                                            <span class="Form-fieldIcon" role="presentation"></span> Mi riservo di presentarla allo sportello
+                                        </label>
+                                        <label class="Form-label Form-label--block">
+                                            <input type="radio" class="Form-input" name="sex" aria-required="true" required>
+                                            <span class="Form-fieldIcon" role="presentation"></span> Tassa già corrisposta da altra utenza (inserire il Codice Fiscale nel
+                                            campo 'note')
+                                        </label>
+                                        <label class="Form-label Form-label--block">
+                                            <input type="radio" class="Form-input" name="sex" aria-required="true" required>
+                                            <span class="Form-fieldIcon" role="presentation"></span> Altro (specificare nel campo "note")
+                                        </label>
+                                    </fieldset>
+
+
+                                    <div class="Form-field Grid-cell u-size4of4">
+                                        <label class="Form-label" for="cap">Note:</label>
+                                        <textarea class="Form-input Form-textarea u-borderRadius-m" id="notes"></textarea>
+                                    </div>
+
+
+
+
+                                </fieldset>
+
+                                <script type="text/javascript">
+                                    WebFontConfig = {
+                                        google: {
+                                            families: ['Titillium+Web:300,400,600,700,400italic:latin']
+                                        }
+                                    };
+                                    (function () {
+                                        var wf = document.createElement('script');
+                                        wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+                                        wf.type = 'text/javascript';
+                                        wf.async = 'true';
+                                        var s = document.getElementsByTagName('script')[0];
+                                        s.parentNode.insertBefore(wf, s);
+                                    })();
+                                </script>
+
+                                <script type="text/javascript">
+
+                                    function showDivIniz() {
+                                        document.getElementById("dati-ana").style.display = 'block';
+                                        document.getElementById("salta-tari").style.display = 'none';
+                                        document.getElementById("notes").value = "";
+                                    }
+
+                                </script>
+
+                                <div class="Form-field Grid-cell">
+                                    <button type="button" class="Button Button--default u-text-r-xs" style="float: left !important " onclick="showDivIniz()">
+                                        <a style="text-decoration: none !important; color:black !important">
+                                            <- Indietro </a>
+                                    </button>
+
+                                    <button type="button" class="Button Button--default u-text-r-xs" style="float: right !important ">
+                                        <a style="text-decoration: none !important; color:black !important">Invia segnalazione e Prosegui -></a>
+                                    </button>
+                                </div>
+
+                            </form>
+
+
+                        </article>
+                    </div>
+
+                    <aside class="Grid-cell u-md-size4of12 u-lg-size4of12">
+
+
+                        <!-- profile data boxes-->
+
+
+
+
+
+                        <h3 class="u-text-h4">Servizi correlati</h3>
+                        <div class="u-sizeFull" id="subnav">
+                            <ul class="Linklist Linklist--padded u-layout-prose u-text-r-xs">
+                                <li>
+                                    <a class="Linklist-link Linklist-link--lev1" href="">Certificato Residenza</a>
+                                </li>
+                                <li>
+                                    <a class="Linklist-link Linklist-link--lev2" href="">Certificato Cittadinanza</a>
+                                </li>
+                                <li>
+                                    <a href="dichiarazione-cambio-residenza.html" class="Linklist-link Linklist-link--lev3">Dichiarazione Cambio Residenza/Abitazione</a>
+                                </li>
+
+                            </ul>
+
+                        </div>
+                        <a href="#" title="torna all'inizio del contenuto" class="u-hiddenVisually">torna all'inizio del contenuto</a>
+                    </aside>
+                </div>
+
+            </div>
+
+
         </section>
 
         <div class="u-background-95 u-hiddenPrint">

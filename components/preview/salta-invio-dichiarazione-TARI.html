@@ -17,17 +17,17 @@
       <link href='//fonts.googleapis.com/css?family=Titillium+Web:400,400italic,700,' rel='stylesheet' type='text/css' />
     o dal repository locale (src/fonts)
   -->
-  	<script>
-function myFunction() {
-    var txt;
-    var r = confirm("Premi su OK per confermare il download della certificazione.");
-    if (r == true) {
-        //start download
-    } else {
-        //nothing
-    }
-}
-</script>
+    <script>
+        function myFunction() {
+            var txt;
+            var r = confirm("Premi su OK per confermare il download della certificazione.");
+            if (r == true) {
+                //start download
+            } else {
+                //nothing
+            }
+        }
+    </script>
     <script type="text/javascript">
         WebFontConfig = {
             google: {
@@ -46,88 +46,109 @@ function myFunction() {
 
     <script type="text/javascript">
 
-   function changeFunc() {
-    var selectBox = document.getElementById("selectBox");
-    var selectedValue = selectBox.options[selectBox.selectedIndex].value;
-    alert_bottom(selectedValue);
-    if(selectedValue == "Francesca Bianchi")
-    {
-		document.getElementById("cf").innerHTML = "BNCFNC65R52A662F";
-		document.getElementById("nome").innerHTML = "Francesca";
-		document.getElementById("cognome").innerHTML = "Bianchi";
-		document.getElementById("datanascita").innerHTML = "12/10/1965";
-    }
-    else if(selectedValue == "Mario Verdi")
-    {
-    	document.getElementById("cf").innerHTML = "VRDMRA64M26A662E";
-		document.getElementById("nome").innerHTML = "Mario";
-		document.getElementById("cognome").innerHTML = "Verdi";
-		document.getElementById("datanascita").innerHTML = "26/08/1964";
-    }
-    else if(selectedValue == "Marta Verdi")
-    {
-    	document.getElementById("cf").innerHTML = "VRDMRT90A41A662V";
-		document.getElementById("nome").innerHTML = "Marta";
-		document.getElementById("cognome").innerHTML = "Verdi";
-		document.getElementById("datanascita").innerHTML = "01/01/1990";
-    }
-   }
+        function changeFunc() {
+            var selectBox = document.getElementById("selectBox");
+            var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+            alert_bottom(selectedValue);
+            if (selectedValue == "Francesca Bianchi") {
+                document.getElementById("cf").innerHTML = "BNCFNC65R52A662F";
+                document.getElementById("nome").innerHTML = "Francesca";
+                document.getElementById("cognome").innerHTML = "Bianchi";
+                document.getElementById("datanascita").innerHTML = "12/10/1965";
+            }
+            else if (selectedValue == "Mario Verdi") {
+                document.getElementById("cf").innerHTML = "VRDMRA64M26A662E";
+                document.getElementById("nome").innerHTML = "Mario";
+                document.getElementById("cognome").innerHTML = "Verdi";
+                document.getElementById("datanascita").innerHTML = "26/08/1964";
+            }
+            else if (selectedValue == "Marta Verdi") {
+                document.getElementById("cf").innerHTML = "VRDMRT90A41A662V";
+                document.getElementById("nome").innerHTML = "Marta";
+                document.getElementById("cognome").innerHTML = "Verdi";
+                document.getElementById("datanascita").innerHTML = "01/01/1990";
+            }
+        }
 
-  </script>
+    </script>
 
-  <script>
-function alert_bottom(nom) {
-   	var x = document.getElementById("snackbar");
-    x.className = "show";
-    x.innerHTML = "Hai selezionato: "+ nom;
-    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
-    
-}
-</script>
+    <script>
+        function alert_bottom(nom) {
+            var x = document.getElementById("snackbar");
+            x.className = "show";
+            x.innerHTML = "Hai selezionato: " + nom;
+            setTimeout(function () { x.className = x.className.replace("show", ""); }, 3000);
 
-<style>
-#snackbar {
-    visibility: hidden;
-    min-width: 250px;
-    margin-left: -125px;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    border-radius: 2px;
-    padding: 16px;
-    position: fixed;
-    z-index: 1;
-    left: 50%;
-    bottom: 30px;
-    font-size: 17px;
-}
+        }
+    </script>
 
-#snackbar.show {
-    visibility: visible;
-    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
-    animation: fadein 0.5s, fadeout 0.5s 2.5s;
-}
+    <style>
+        #snackbar {
+            visibility: hidden;
+            min-width: 250px;
+            margin-left: -125px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            border-radius: 2px;
+            padding: 16px;
+            position: fixed;
+            z-index: 1;
+            left: 50%;
+            bottom: 30px;
+            font-size: 17px;
+        }
 
-@-webkit-keyframes fadein {
-    from {bottom: 0; opacity: 0;} 
-    to {bottom: 30px; opacity: 1;}
-}
+        #snackbar.show {
+            visibility: visible;
+            -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+            animation: fadein 0.5s, fadeout 0.5s 2.5s;
+        }
 
-@keyframes fadein {
-    from {bottom: 0; opacity: 0;}
-    to {bottom: 30px; opacity: 1;}
-}
+        @-webkit-keyframes fadein {
+            from {
+                bottom: 0;
+                opacity: 0;
+            }
+            to {
+                bottom: 30px;
+                opacity: 1;
+            }
+        }
 
-@-webkit-keyframes fadeout {
-    from {bottom: 30px; opacity: 1;} 
-    to {bottom: 0; opacity: 0;}
-}
+        @keyframes fadein {
+            from {
+                bottom: 0;
+                opacity: 0;
+            }
+            to {
+                bottom: 30px;
+                opacity: 1;
+            }
+        }
 
-@keyframes fadeout {
-    from {bottom: 30px; opacity: 1;}
-    to {bottom: 0; opacity: 0;}
-}
-</style>
+        @-webkit-keyframes fadeout {
+            from {
+                bottom: 30px;
+                opacity: 1;
+            }
+            to {
+                bottom: 0;
+                opacity: 0;
+            }
+        }
+
+        @keyframes fadeout {
+            from {
+                bottom: 30px;
+                opacity: 1;
+            }
+            to {
+                bottom: 0;
+                opacity: 0;
+            }
+        }
+    </style>
 
     <!-- include HTML5shim per Explorer 8 -->
     <script src="../../build/vendor/modernizr.js"></script>
@@ -140,7 +161,7 @@ function alert_bottom(nom) {
 </head>
 
 <body class="t-Pac">
-<div id="snackbar"></div>
+    <div id="snackbar"></div>
 
     <div id="cookie-bar" class="CookieBar js-CookieBar u-background-95 u-padding-r-all" aria-hidden="true">
         <p class="u-color-white u-text-r-xs u-lineHeight-m u-padding-r-bottom">Questo sito utilizza cookie tecnici, analytics e di terze parti.
@@ -154,81 +175,81 @@ function alert_bottom(nom) {
     </div>
 
     <header class="Header Headroom--fixed js-Headroom u-hiddenPrint">
-    	<div class="Header-banner ">
-      <div class="Header-owner Headroom-hideme ">
-        <a href="">
-          <span>Regione Puglia</span>
-        </a>
-        <div class="Header-languages ">
-          <a href="#languages" data-menu-trigger="languages" class="Header-language u-border-none u-zindex-max u-inlineBlock">
-            <span class="u-hiddenVisually">lingua attiva:</span>
-            <span class="">ITA</span>
-            <!-- <span class="u-hidden u-md-inlineBlock u-lg-inlineBlock">Italiano</span> -->
-            <span class="Icon Icon-expand u-padding-left-xs"></span>
-          </a>
-          <div id="languages" data-menu class="Dropdown-menu Header-language-other u-jsVisibilityHidden u-nojsDisplayNone">
-            <span class="Icon-drop-down Dropdown-arrow u-color-white"></span>
-            <ul>
-              <li>
-                <a href="#1" class="u-padding-r-all">
-                  <span lang="en">English</span>
+        <div class="Header-banner ">
+            <div class="Header-owner Headroom-hideme ">
+                <a href="">
+                    <span>Regione Puglia</span>
                 </a>
-              </li>
-              <li>
-                <a href="#1" class="u-padding-r-all">
-                  <span lang="ar">عربي</span>
-                </a>
-              </li>
-              <li>
-                <a href="#2" class="u-padding-r-all">
-                  <span lang="ch">中文网</span>
-                </a>
-              </li>
-              <li>
-                <a href="#3" class="u-padding-r-all">
-                  <span lang="de">Deutsch</span>
-                </a>
-              </li>
-              <li>
-                <a href="#8" class="u-padding-r-all">
-                  <span lang="es">Español</span>
-                </a>
-              </li>
-              <li>
-                <a href="#4" class="u-padding-r-all">
-                  <span lang="fr">Français</span>
-                </a>
-              </li>
-              <li>
-                <a href="#5" class="u-padding-r-all">
-                  <span lang="ja">日本語</span>
-                </a>
-              </li>
-              <li>
-                <a href="#6" class="u-padding-r-all">
-                  <span lang="pt">Portuguese</span>
-                </a>
-              </li>
-              <li>
-                <a href="#7" class="u-padding-r-all">
-                  <span lang="ru">НА РУССКОМ</span>
-                </a>
-              </li>
-              <li>
-                <a href="#10" class="u-padding-r-all">
-                  <span lang="uk">УКРАЇНСЬКA</span>
-                </a>
-              </li>
-              <li>
-                <a href="#9" class="u-padding-r-all">
-                  <span lang="tr">TÜRKÇE</span>
-                </a>
-              </li>
-            </ul>
-          </div>
+                <div class="Header-languages ">
+                    <a href="#languages" data-menu-trigger="languages" class="Header-language u-border-none u-zindex-max u-inlineBlock">
+                        <span class="u-hiddenVisually">lingua attiva:</span>
+                        <span class="">ITA</span>
+                        <!-- <span class="u-hidden u-md-inlineBlock u-lg-inlineBlock">Italiano</span> -->
+                        <span class="Icon Icon-expand u-padding-left-xs"></span>
+                    </a>
+                    <div id="languages" data-menu class="Dropdown-menu Header-language-other u-jsVisibilityHidden u-nojsDisplayNone">
+                        <span class="Icon-drop-down Dropdown-arrow u-color-white"></span>
+                        <ul>
+                            <li>
+                                <a href="#1" class="u-padding-r-all">
+                                    <span lang="en">English</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#1" class="u-padding-r-all">
+                                    <span lang="ar">عربي</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#2" class="u-padding-r-all">
+                                    <span lang="ch">中文网</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#3" class="u-padding-r-all">
+                                    <span lang="de">Deutsch</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#8" class="u-padding-r-all">
+                                    <span lang="es">Español</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#4" class="u-padding-r-all">
+                                    <span lang="fr">Français</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#5" class="u-padding-r-all">
+                                    <span lang="ja">日本語</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#6" class="u-padding-r-all">
+                                    <span lang="pt">Portuguese</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#7" class="u-padding-r-all">
+                                    <span lang="ru">НА РУССКОМ</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#10" class="u-padding-r-all">
+                                    <span lang="uk">УКРАЇНСЬКA</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#9" class="u-padding-r-all">
+                                    <span lang="tr">TÜRKÇE</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
         <div class="Header-navbar ">
             <div class="u-layout-wide Grid Grid--alignMiddle u-layoutCenter">
                 <div class="Header-logo Grid-cell" aria-hidden="true">
@@ -253,29 +274,29 @@ function alert_bottom(nom) {
                 </div>
 
                 <div class="Header-utils Grid-cell">
-                	 <div class="Header-social Headroom-hideme">
-            <p>Seguici su</p>
-            <ul class="Header-socialIcons">
-              <li>
-                <a href="" title="Facebook">
-                  <span class="Icon-facebook"></span>
-                  <span class="u-hiddenVisually">Facebook</span>
-                </a>
-              </li>
-              <li>
-                <a href="" title="Twitter">
-                  <span class="Icon-twitter"></span>
-                  <span class="u-hiddenVisually">Twitter</span>
-                </a>
-              </li>
-              <li>
-                <a href="" title="Youtube">
-                  <span class="Icon-youtube"></span>
-                  <span class="u-hiddenVisually">Youtube</span>
-                </a>
-              </li>
-            </ul>
-          </div>
+                    <div class="Header-social Headroom-hideme">
+                        <p>Seguici su</p>
+                        <ul class="Header-socialIcons">
+                            <li>
+                                <a href="" title="Facebook">
+                                    <span class="Icon-facebook"></span>
+                                    <span class="u-hiddenVisually">Facebook</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" title="Twitter">
+                                    <span class="Icon-twitter"></span>
+                                    <span class="u-hiddenVisually">Twitter</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" title="Youtube">
+                                    <span class="Icon-youtube"></span>
+                                    <span class="u-hiddenVisually">Youtube</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                     <div class="Header-search" id="header-search">
                         <form class="Form">
                             <div class="Form-field Form-field--withPlaceholder Grid u-background-white u-color-grey-30 u-borderRadius-s" role="search">
@@ -325,28 +346,28 @@ function alert_bottom(nom) {
             <nav>
                 <ul class="Linklist Linklist--padded Treeview Treeview--default js-Treeview u-text-r-xs">
                     <li>
-            <a href="homepage.html">Homepage</a>
-          </li>
+                        <a href="homepage.html">Homepage</a>
+                    </li>
 
-          <li>
-            <a href="lista-servizi.html">Elenco servizi</a>
-          </li>
+                    <li>
+                        <a href="lista-servizi.html">Elenco servizi</a>
+                    </li>
 
-          <li>
-            <a href="chi-siamo.html">Chi siamo?</a>
-          </li>
+                    <li>
+                        <a href="chi-siamo.html">Chi siamo?</a>
+                    </li>
 
-          <li>
+                    <li>
 
-            <a href="#">
+                        <a href="#">
 
-              <font size=+1>Profilo utente</font>
+                            <font size=+1>Profilo utente</font>
 
-            </a>
-          </li>
-          <li>
-            <a href="homepage.html">Logout</a>
-          </li>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="homepage.html">Logout</a>
+                    </li>
                 </ul>
 
             </nav>
@@ -405,39 +426,42 @@ function alert_bottom(nom) {
 
                                 <fieldset class="Form-fieldset">
 
-                                <legend class="Form-legend">Invio segnalazione</legend>
+                                    <legend class="Form-legend">Invio segnalazione</legend>
 
-                                <fieldset class="Form-field Form-field--choose Grid-cell u-text-r-s">
-            <legend class="Form-legend is-required" for="sex1">Scegliere la motivazione per la quale si intende omettere la dichiarazione TARI: *</legend>
-            <label class="Form-label Form-label--block">
-        <input type="radio" class="Form-input" name="sex" aria-required="true" required>
-        <span class="Form-fieldIcon" role="presentation"></span>  Mi riservo di presentarla allo sportello
-      </label>
-            <label class="Form-label Form-label--block">
-        <input type="radio" class="Form-input" name="sex" aria-required="true" required>
-        <span class="Form-fieldIcon" role="presentation"></span> Tassa già corrisposta da altra utenza (inserire il Codice Fiscale nel campo 'note')
-      </label>
-      <label class="Form-label Form-label--block">
-        <input type="radio" class="Form-input" name="sex" aria-required="true" required>
-        <span class="Form-fieldIcon" role="presentation"></span> Altro (specificare nel campo "note")
-      </label>
-        </fieldset>
+                                    <fieldset class="Form-field Form-field--choose Grid-cell u-text-r-s">
+                                        <legend class="Form-legend is-required" for="sex1">Scegliere la motivazione per la quale si intende omettere la dichiarazione TARI:
+                                            *</legend>
+                                        <label class="Form-label Form-label--block">
+                                            <input type="radio" class="Form-input" name="sex" aria-required="true" required>
+                                            <span class="Form-fieldIcon" role="presentation"></span> Mi riservo di presentarla allo sportello
+                                        </label>
+                                        <label class="Form-label Form-label--block">
+                                            <input type="radio" class="Form-input" name="sex" aria-required="true" required>
+                                            <span class="Form-fieldIcon" role="presentation"></span> Tassa già corrisposta da altra utenza (inserire il Codice Fiscale nel
+                                            campo 'note')
+                                        </label>
+                                        <label class="Form-label Form-label--block">
+                                            <input type="radio" class="Form-input" name="sex" aria-required="true" required>
+                                            <span class="Form-fieldIcon" role="presentation"></span> Altro (specificare nel campo "note")
+                                        </label>
+                                    </fieldset>
 
-                                
-        <div class="Form-field Grid-cell u-size4of4">
-            <label class="Form-label" for="cap">Note:</label>
-            <textarea class="Form-input Form-textarea u-borderRadius-m"></textarea>
-        </div>
 
-                               
-                                    
-                      
+                                    <div class="Form-field Grid-cell u-size4of4">
+                                        <label class="Form-label" for="cap">Note:</label>
+                                        <textarea class="Form-input Form-textarea u-borderRadius-m"></textarea>
+                                    </div>
+
+
+
+
                                 </fieldset>
 
                                 <div class="Form-field Grid-cell">
-                                    <input type="submit" href = "#" class="Button Button--default u-text-xs" value="Invia segnalazione" style="float: left !important ">
-                              
-                                    <input type="reset" href = "salta-invio-dichiarazione-TARI.html" class="Button Button--default u-text-xs" value="Annulla" style="float: right !important ">
+                                    <input type="reset" href="salta-invio-dichiarazione-TARI.html" class="Button Button--default u-text-xs" value="Annulla" style="float: left !important ">
+
+
+                                    <input type="submit" href="#" class="Button Button--default u-text-xs" value="Invia segnalazione" style="float: right !important ">
                                 </div>
 
                             </form>
@@ -453,7 +477,7 @@ function alert_bottom(nom) {
 
 
 
-                        
+
 
                         <h3 class="u-text-h4">Servizi correlati</h3>
                         <div class="u-sizeFull" id="subnav">
