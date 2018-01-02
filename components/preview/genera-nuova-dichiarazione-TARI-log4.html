@@ -17,17 +17,17 @@
       <link href='//fonts.googleapis.com/css?family=Titillium+Web:400,400italic,700,' rel='stylesheet' type='text/css' />
     o dal repository locale (src/fonts)
   -->
-  	<script>
-function myFunction() {
-    var txt;
-    var r = confirm("Premi su OK per confermare il download della certificazione.");
-    if (r == true) {
-        //start download
-    } else {
-        //nothing
-    }
-}
-</script>
+    <script>
+        function myFunction() {
+            var txt;
+            var r = confirm("Premi su OK per confermare il download della certificazione.");
+            if (r == true) {
+                //start download
+            } else {
+                //nothing
+            }
+        }
+    </script>
     <script type="text/javascript">
         WebFontConfig = {
             google: {
@@ -45,95 +45,116 @@ function myFunction() {
     </script>
 
     <script>
-function fileFunc() {
-    var x = document.getElementById("myFile");
-}
-</script>
+        function fileFunc() {
+            var x = document.getElementById("myFile");
+        }
+    </script>
 
     <script type="text/javascript">
 
-   function changeFunc() {
-    var selectBox = document.getElementById("selectBox");
-    var selectedValue = selectBox.options[selectBox.selectedIndex].value;
-    alert_bottom(selectedValue);
-    if(selectedValue == "Francesca Bianchi")
-    {
-		document.getElementById("cf").innerHTML = "BNCFNC65R52A662F";
-		document.getElementById("nome").innerHTML = "Francesca";
-		document.getElementById("cognome").innerHTML = "Bianchi";
-		document.getElementById("datanascita").innerHTML = "12/10/1965";
-    }
-    else if(selectedValue == "Mario Verdi")
-    {
-    	document.getElementById("cf").innerHTML = "VRDMRA64M26A662E";
-		document.getElementById("nome").innerHTML = "Mario";
-		document.getElementById("cognome").innerHTML = "Verdi";
-		document.getElementById("datanascita").innerHTML = "26/08/1964";
-    }
-    else if(selectedValue == "Marta Verdi")
-    {
-    	document.getElementById("cf").innerHTML = "VRDMRT90A41A662V";
-		document.getElementById("nome").innerHTML = "Marta";
-		document.getElementById("cognome").innerHTML = "Verdi";
-		document.getElementById("datanascita").innerHTML = "01/01/1990";
-    }
-   }
+        function changeFunc() {
+            var selectBox = document.getElementById("selectBox");
+            var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+            alert_bottom(selectedValue);
+            if (selectedValue == "Francesca Bianchi") {
+                document.getElementById("cf").innerHTML = "BNCFNC65R52A662F";
+                document.getElementById("nome").innerHTML = "Francesca";
+                document.getElementById("cognome").innerHTML = "Bianchi";
+                document.getElementById("datanascita").innerHTML = "12/10/1965";
+            }
+            else if (selectedValue == "Mario Verdi") {
+                document.getElementById("cf").innerHTML = "VRDMRA64M26A662E";
+                document.getElementById("nome").innerHTML = "Mario";
+                document.getElementById("cognome").innerHTML = "Verdi";
+                document.getElementById("datanascita").innerHTML = "26/08/1964";
+            }
+            else if (selectedValue == "Marta Verdi") {
+                document.getElementById("cf").innerHTML = "VRDMRT90A41A662V";
+                document.getElementById("nome").innerHTML = "Marta";
+                document.getElementById("cognome").innerHTML = "Verdi";
+                document.getElementById("datanascita").innerHTML = "01/01/1990";
+            }
+        }
 
-  </script>
+    </script>
 
-  <script>
-function alert_bottom(nom) {
-   	var x = document.getElementById("snackbar");
-    x.className = "show";
-    x.innerHTML = "Hai selezionato: "+ nom;
-    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
-    
-}
-</script>
+    <script>
+        function alert_bottom(nom) {
+            var x = document.getElementById("snackbar");
+            x.className = "show";
+            x.innerHTML = "Hai selezionato: " + nom;
+            setTimeout(function () { x.className = x.className.replace("show", ""); }, 3000);
 
-<style>
-#snackbar {
-    visibility: hidden;
-    min-width: 250px;
-    margin-left: -125px;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    border-radius: 2px;
-    padding: 16px;
-    position: fixed;
-    z-index: 1;
-    left: 50%;
-    bottom: 30px;
-    font-size: 17px;
-}
+        }
+    </script>
 
-#snackbar.show {
-    visibility: visible;
-    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
-    animation: fadein 0.5s, fadeout 0.5s 2.5s;
-}
+    <style>
+        #snackbar {
+            visibility: hidden;
+            min-width: 250px;
+            margin-left: -125px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            border-radius: 2px;
+            padding: 16px;
+            position: fixed;
+            z-index: 1;
+            left: 50%;
+            bottom: 30px;
+            font-size: 17px;
+        }
 
-@-webkit-keyframes fadein {
-    from {bottom: 0; opacity: 0;} 
-    to {bottom: 30px; opacity: 1;}
-}
+        #snackbar.show {
+            visibility: visible;
+            -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+            animation: fadein 0.5s, fadeout 0.5s 2.5s;
+        }
 
-@keyframes fadein {
-    from {bottom: 0; opacity: 0;}
-    to {bottom: 30px; opacity: 1;}
-}
+        @-webkit-keyframes fadein {
+            from {
+                bottom: 0;
+                opacity: 0;
+            }
+            to {
+                bottom: 30px;
+                opacity: 1;
+            }
+        }
 
-@-webkit-keyframes fadeout {
-    from {bottom: 30px; opacity: 1;} 
-    to {bottom: 0; opacity: 0;}
-}
+        @keyframes fadein {
+            from {
+                bottom: 0;
+                opacity: 0;
+            }
+            to {
+                bottom: 30px;
+                opacity: 1;
+            }
+        }
 
-@keyframes fadeout {
-    from {bottom: 30px; opacity: 1;}
-    to {bottom: 0; opacity: 0;}
-}
-</style>
+        @-webkit-keyframes fadeout {
+            from {
+                bottom: 30px;
+                opacity: 1;
+            }
+            to {
+                bottom: 0;
+                opacity: 0;
+            }
+        }
+
+        @keyframes fadeout {
+            from {
+                bottom: 30px;
+                opacity: 1;
+            }
+            to {
+                bottom: 0;
+                opacity: 0;
+            }
+        }
+    </style>
 
     <!-- include HTML5shim per Explorer 8 -->
     <script src="../../build/vendor/modernizr.js"></script>
@@ -146,7 +167,7 @@ function alert_bottom(nom) {
 </head>
 
 <body class="t-Pac">
-<div id="snackbar"></div>
+    <div id="snackbar"></div>
 
     <div id="cookie-bar" class="CookieBar js-CookieBar u-background-95 u-padding-r-all" aria-hidden="true">
         <p class="u-color-white u-text-r-xs u-lineHeight-m u-padding-r-bottom">Questo sito utilizza cookie tecnici, analytics e di terze parti.
@@ -160,81 +181,81 @@ function alert_bottom(nom) {
     </div>
 
     <header class="Header Headroom--fixed js-Headroom u-hiddenPrint">
-    	<div class="Header-banner ">
-      <div class="Header-owner Headroom-hideme ">
-        <a href="">
-          <span>Regione Puglia</span>
-        </a>
-        <div class="Header-languages ">
-          <a href="#languages" data-menu-trigger="languages" class="Header-language u-border-none u-zindex-max u-inlineBlock">
-            <span class="u-hiddenVisually">lingua attiva:</span>
-            <span class="">ITA</span>
-            <!-- <span class="u-hidden u-md-inlineBlock u-lg-inlineBlock">Italiano</span> -->
-            <span class="Icon Icon-expand u-padding-left-xs"></span>
-          </a>
-          <div id="languages" data-menu class="Dropdown-menu Header-language-other u-jsVisibilityHidden u-nojsDisplayNone">
-            <span class="Icon-drop-down Dropdown-arrow u-color-white"></span>
-            <ul>
-              <li>
-                <a href="#1" class="u-padding-r-all">
-                  <span lang="en">English</span>
+        <div class="Header-banner ">
+            <div class="Header-owner Headroom-hideme ">
+                <a href="">
+                    <span>Regione Puglia</span>
                 </a>
-              </li>
-              <li>
-                <a href="#1" class="u-padding-r-all">
-                  <span lang="ar">عربي</span>
-                </a>
-              </li>
-              <li>
-                <a href="#2" class="u-padding-r-all">
-                  <span lang="ch">中文网</span>
-                </a>
-              </li>
-              <li>
-                <a href="#3" class="u-padding-r-all">
-                  <span lang="de">Deutsch</span>
-                </a>
-              </li>
-              <li>
-                <a href="#8" class="u-padding-r-all">
-                  <span lang="es">Español</span>
-                </a>
-              </li>
-              <li>
-                <a href="#4" class="u-padding-r-all">
-                  <span lang="fr">Français</span>
-                </a>
-              </li>
-              <li>
-                <a href="#5" class="u-padding-r-all">
-                  <span lang="ja">日本語</span>
-                </a>
-              </li>
-              <li>
-                <a href="#6" class="u-padding-r-all">
-                  <span lang="pt">Portuguese</span>
-                </a>
-              </li>
-              <li>
-                <a href="#7" class="u-padding-r-all">
-                  <span lang="ru">НА РУССКОМ</span>
-                </a>
-              </li>
-              <li>
-                <a href="#10" class="u-padding-r-all">
-                  <span lang="uk">УКРАЇНСЬКA</span>
-                </a>
-              </li>
-              <li>
-                <a href="#9" class="u-padding-r-all">
-                  <span lang="tr">TÜRKÇE</span>
-                </a>
-              </li>
-            </ul>
-          </div>
+                <div class="Header-languages ">
+                    <a href="#languages" data-menu-trigger="languages" class="Header-language u-border-none u-zindex-max u-inlineBlock">
+                        <span class="u-hiddenVisually">lingua attiva:</span>
+                        <span class="">ITA</span>
+                        <!-- <span class="u-hidden u-md-inlineBlock u-lg-inlineBlock">Italiano</span> -->
+                        <span class="Icon Icon-expand u-padding-left-xs"></span>
+                    </a>
+                    <div id="languages" data-menu class="Dropdown-menu Header-language-other u-jsVisibilityHidden u-nojsDisplayNone">
+                        <span class="Icon-drop-down Dropdown-arrow u-color-white"></span>
+                        <ul>
+                            <li>
+                                <a href="#1" class="u-padding-r-all">
+                                    <span lang="en">English</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#1" class="u-padding-r-all">
+                                    <span lang="ar">عربي</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#2" class="u-padding-r-all">
+                                    <span lang="ch">中文网</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#3" class="u-padding-r-all">
+                                    <span lang="de">Deutsch</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#8" class="u-padding-r-all">
+                                    <span lang="es">Español</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#4" class="u-padding-r-all">
+                                    <span lang="fr">Français</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#5" class="u-padding-r-all">
+                                    <span lang="ja">日本語</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#6" class="u-padding-r-all">
+                                    <span lang="pt">Portuguese</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#7" class="u-padding-r-all">
+                                    <span lang="ru">НА РУССКОМ</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#10" class="u-padding-r-all">
+                                    <span lang="uk">УКРАЇНСЬКA</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#9" class="u-padding-r-all">
+                                    <span lang="tr">TÜRKÇE</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
         <div class="Header-navbar ">
             <div class="u-layout-wide Grid Grid--alignMiddle u-layoutCenter">
                 <div class="Header-logo Grid-cell" aria-hidden="true">
@@ -259,29 +280,29 @@ function alert_bottom(nom) {
                 </div>
 
                 <div class="Header-utils Grid-cell">
-                	 <div class="Header-social Headroom-hideme">
-            <p>Seguici su</p>
-            <ul class="Header-socialIcons">
-              <li>
-                <a href="" title="Facebook">
-                  <span class="Icon-facebook"></span>
-                  <span class="u-hiddenVisually">Facebook</span>
-                </a>
-              </li>
-              <li>
-                <a href="" title="Twitter">
-                  <span class="Icon-twitter"></span>
-                  <span class="u-hiddenVisually">Twitter</span>
-                </a>
-              </li>
-              <li>
-                <a href="" title="Youtube">
-                  <span class="Icon-youtube"></span>
-                  <span class="u-hiddenVisually">Youtube</span>
-                </a>
-              </li>
-            </ul>
-          </div>
+                    <div class="Header-social Headroom-hideme">
+                        <p>Seguici su</p>
+                        <ul class="Header-socialIcons">
+                            <li>
+                                <a href="" title="Facebook">
+                                    <span class="Icon-facebook"></span>
+                                    <span class="u-hiddenVisually">Facebook</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" title="Twitter">
+                                    <span class="Icon-twitter"></span>
+                                    <span class="u-hiddenVisually">Twitter</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" title="Youtube">
+                                    <span class="Icon-youtube"></span>
+                                    <span class="u-hiddenVisually">Youtube</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                     <div class="Header-search" id="header-search">
                         <form class="Form">
                             <div class="Form-field Form-field--withPlaceholder Grid u-background-white u-color-grey-30 u-borderRadius-s" role="search">
@@ -331,28 +352,28 @@ function alert_bottom(nom) {
             <nav>
                 <ul class="Linklist Linklist--padded Treeview Treeview--default js-Treeview u-text-r-xs">
                     <li>
-            <a href="homepage.html">Homepage</a>
-          </li>
+                        <a href="homepage.html">Homepage</a>
+                    </li>
 
-          <li>
-            <a href="lista-servizi.html">Elenco servizi</a>
-          </li>
+                    <li>
+                        <a href="lista-servizi.html">Elenco servizi</a>
+                    </li>
 
-          <li>
-            <a href="chi-siamo.html">Chi siamo?</a>
-          </li>
+                    <li>
+                        <a href="chi-siamo.html">Chi siamo?</a>
+                    </li>
 
-          <li>
+                    <li>
 
-            <a href="#">
+                        <a href="#">
 
-              <font size=+1>Profilo utente</font>
+                            <font size=+1>Profilo utente</font>
 
-            </a>
-          </li>
-          <li>
-            <a href="homepage.html">Logout</a>
-          </li>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="homepage.html">Logout</a>
+                    </li>
                 </ul>
 
             </nav>
@@ -363,7 +384,7 @@ function alert_bottom(nom) {
 
 
 
-    <div id="main" style="margin-bottom: 100px">
+    <div id="main4" style="margin-bottom: 100px">
 
 
         <section>
@@ -395,7 +416,7 @@ function alert_bottom(nom) {
                         <li class="Breadcrumb-item">
                             <a class="Breadcrumb-link u-color-30" href="genera-nuova-dichiarazione-TARI-log3.html">Dichiarazione TARI - Iscrizione</a>
                         </li>
-                         <li class="Breadcrumb-item">
+                        <li class="Breadcrumb-item">
                             <a class="Breadcrumb-link u-color-50" href="genera-nuova-dichiarazione-TARI-log4.html">Dichiarazione TARI - Dati locali occupati</a>
                         </li>
                     </ul>
@@ -418,78 +439,81 @@ function alert_bottom(nom) {
                                     <p>Tutti i campi sono richiesti salvo dove espressamente indicato</p>
                                 </div>
 
-                                
-        <fieldset class="Form-fieldset">
-        <legend class="Form-legend">Dati relativi ai locali occupati</legend>
 
-        <div class="Grid-cell u-md-size4of12 u-lg-size4of12">
-                
+                                <fieldset class="Form-fieldset">
+                                    <legend class="Form-legend">Dati relativi ai locali occupati</legend>
 
-        
-        <div class="Grid-cell u-md-size4of12 u-lg-size4of12">
-                <div class="Form-field">
-                    <label class="Form-label is-required" for="provincia">Il cittadino è residente nell'immobile?</label>
-                    <select class="Form-input u-text-r-s u-borderRadius-m" id="dichiarazione" aria-required="true" required>
-            <option selected>NO</option>
-            <option>SI</option>
-          </select>
-                </div>
-            </div>
-            
+                                    <div class="Grid-cell u-md-size4of12 u-lg-size4of12">
 
-       
+
+
+                                        <div class="Grid-cell u-md-size4of12 u-lg-size4of12">
+                                            <div class="Form-field">
+                                                <label class="Form-label is-required" for="provincia">Il cittadino è residente nell'immobile?</label>
+                                                <select class="Form-input u-text-r-s u-borderRadius-m" id="dichiarazione" aria-required="true" required>
+                                                    <option selected>NO</option>
+                                                    <option>SI</option>
+                                                </select>
+                                            </div>
+                                        </div>
 
 
 
 
-        <fieldset class="Form-field Form-field--choose Grid-cell">
-            <label class="Form-label Form-label--block" for="contact1">
-        <input type="checkbox" class="Form-input" id="contact1" aria-required="true" required>
-        <span class="Form-fieldIcon" role="presentation"></span> Dichiaro che il box/garage/cantinola è di pertinenza dell'abitazione </label>
 
-        </fieldset>
 
-        <fieldset class="Form-field Form-field--choose Grid-cell">
 
-         <legend class="Form-legend is-required">Per i non residenti</legend>
-            <label class="Form-label Form-label--block" for="contact2">
-        <input type="checkbox" class="Form-input" id="contact2" aria-required="true" required>
-        <span class="Form-fieldIcon" role="presentation"></span> Dichiaro di non essere residente nell'immobile
-      </label>
-</fieldset>
+                                        <fieldset class="Form-field Form-field--choose Grid-cell">
+                                            <label class="Form-label Form-label--block" for="contact1">
+                                                <input type="checkbox" class="Form-input" id="contact1" aria-required="true" required>
+                                                <span class="Form-fieldIcon" role="presentation"></span> Dichiaro che il box/garage/cantinola è di pertinenza dell'abitazione
+                                            </label>
 
-		<p>A tal fine, dichiaro che il mio nucleo familiare nell'immobile di residenza è di componenti n: 
-		<div class="Form-field">
-            <label class="Form-label is-required" for="cognome"></label>
-            <input class="Form-input u-text-r-s u-borderRadius-m" id="cognome" aria-required="true" required>
-        </div>
-        </p>
+                                        </fieldset>
 
-        <div class="Form-field Grid-cell u-size4of4">
-                                        <label class="Form-label" for="cap">Note:</label>
-                                        <textarea class="Form-input Form-textarea u-borderRadius-m"></textarea>
-                                    </div>
-            
-       <fieldset class="Form-field Form-field--choose Grid-cell">
-            <label class="Form-label Form-label--block" for="contact1">
-        <input type="checkbox" class="Form-input" id="contact1" aria-required="true" required>
-        <span class="Form-fieldIcon" role="presentation"></span> Chiedo la riduzione del 20% ai sensi dell'art.23 del regolamento Tari. </label>
+                                        <fieldset class="Form-field Form-field--choose Grid-cell">
 
-        </fieldset>
-    </fieldset>
+                                            <legend class="Form-legend is-required">Per i non residenti</legend>
+                                            <label class="Form-label Form-label--block" for="contact2">
+                                                <input type="checkbox" class="Form-input" id="contact2" aria-required="true" required>
+                                                <span class="Form-fieldIcon" role="presentation"></span> Dichiaro di non essere residente nell'immobile
+                                            </label>
+                                        </fieldset>
 
-    
-    
-                                    
+                                        <p>A tal fine, dichiaro che il mio nucleo familiare nell'immobile di residenza è di
+                                            componenti n:
+                                            <div class="Form-field">
+                                                <label class="Form-label is-required" for="cognome"></label>
+                                                <input class="Form-input u-text-r-s u-borderRadius-m" id="cognome" aria-required="true" required>
+                                            </div>
+                                        </p>
+
+                                        <div class="Form-field Grid-cell u-size4of4">
+                                            <label class="Form-label" for="cap">Note:</label>
+                                            <textarea class="Form-input Form-textarea u-borderRadius-m"></textarea>
+                                        </div>
+
+                                        <fieldset class="Form-field Form-field--choose Grid-cell">
+                                            <label class="Form-label Form-label--block" for="contact1">
+                                                <input type="checkbox" class="Form-input" id="contact1" aria-required="true" required>
+                                                <span class="Form-fieldIcon" role="presentation"></span> Chiedo la riduzione del 20% ai sensi dell'art.23 del regolamento
+                                                Tari. </label>
+
+                                        </fieldset>
+                                </fieldset>
+
+
+
+
 
 
                                 <div class="Form-field Grid-cell u-textRight">
                                     <button type="button" class="Button Button--default u-text-r-xs" style="float:right !important">
-                                      <a href="genera-nuova-dichiarazione-TARI-log5.html" style="text-decoration: none !important; color:black !important">Avanti</a>
+                                        <a href="genera-nuova-dichiarazione-TARI-log5.html" style="text-decoration: none !important; color:black !important">Avanti</a>
                                     </button>
-                         
+
                                     <button type="button" class="Button Button--default u-text-r-xs" style="float:left !important">
-                                      <a href="genera-nuova-dichiarazione-TARI-log3.html" style="text-decoration: none !important; color:black !important">Indietro</a>
+                                        <a href="genera-nuova-dichiarazione-TARI-log3.html" style="text-decoration: none !important; color:black !important">Indietro</a>
                                     </button>
                                 </div>
 
@@ -499,33 +523,33 @@ function alert_bottom(nom) {
                         </article>
                     </div>
 
-                    <aside class="Grid-cell u-md-size4of12 u-lg-size4of12">
+                        <aside class="Grid-cell u-md-size4of12 u-lg-size4of12">
 
 
-                        <!-- profile data boxes-->
+                            <!-- profile data boxes-->
 
 
 
-                        
 
-                        <h3 class="u-text-h4">Servizi correlati</h3>
-                        <div class="u-sizeFull" id="subnav">
-                            <ul class="Linklist Linklist--padded u-layout-prose u-text-r-xs">
-                                <li>
-                                    <a class="Linklist-link Linklist-link--lev1" href="">Certificato Residenza</a>
-                                </li>
-                                <li>
-                                    <a class="Linklist-link Linklist-link--lev2" href="">Certificato Cittadinanza</a>
-                                </li>
-                                <li>
-                                    <a href="dichiarazione-cambio-residenza.html" class="Linklist-link Linklist-link--lev3">Dichiarazione Cambio Residenza/Abitazione</a>
-                                </li>
 
-                            </ul>
+                            <h3 class="u-text-h4">Servizi correlati</h3>
+                            <div class="u-sizeFull" id="subnav">
+                                <ul class="Linklist Linklist--padded u-layout-prose u-text-r-xs">
+                                    <li>
+                                        <a class="Linklist-link Linklist-link--lev1" href="">Certificato Residenza</a>
+                                    </li>
+                                    <li>
+                                        <a class="Linklist-link Linklist-link--lev2" href="">Certificato Cittadinanza</a>
+                                    </li>
+                                    <li>
+                                        <a href="dichiarazione-cambio-residenza.html" class="Linklist-link Linklist-link--lev3">Dichiarazione Cambio Residenza/Abitazione</a>
+                                    </li>
 
-                        </div>
-                        <a href="#" title="torna all'inizio del contenuto" class="u-hiddenVisually">torna all'inizio del contenuto</a>
-                    </aside>
+                                </ul>
+
+                            </div>
+                            <a href="#" title="torna all'inizio del contenuto" class="u-hiddenVisually">torna all'inizio del contenuto</a>
+                        </aside>
                 </div>
 
             </div>
@@ -613,22 +637,22 @@ function alert_bottom(nom) {
     </div>
 
 
-    <!--[if IE 8]>
+        <!--[if IE 8]>
   <script src="../../build/vendor/respond.min.js"></script>
   <script src="../../build/vendor/rem.min.js"></script>
   <script src="../../build/vendor/selectivizr.js"></script>
   <script src="../../build/vendor/slice.js"></script>
   <![endif]-->
 
-    <!--[if lte IE 9]>
+        <!--[if lte IE 9]>
   <script src="../../build/vendor/polyfill.min.js"></script>
   <![endif]-->
 
-    <!-- sostituire questo percorso con quello degli assets javascript nel proprio sito web:
+        <!-- sostituire questo percorso con quello degli assets javascript nel proprio sito web:
     è il percorso, relativo alla webroot, della directory che contiene il file IWT.min.js e i file *.chunk.js -->
-    <script>__PUBLIC_PATH__ = '/design-web-toolkit/build/'</script>
+        <script>__PUBLIC_PATH__ = '/design-web-toolkit/build/'</script>
 
-    <script src="../../build/IWT.min.js"></script>
+        <script src="../../build/IWT.min.js"></script>
 
 </body>
 
