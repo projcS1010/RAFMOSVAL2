@@ -542,7 +542,7 @@
                                     var txt;
                                     var r = confirm("Verrai indirizzato sulla pagina di Dichiarazione TARI");
                                     if (r == true) {
-                                        window.open ('genera-nuova-dichiarazione-TARI-log1.html','_self',false)
+                                        window.open('genera-nuova-dichiarazione-TARI-log1.html', '_self', false)
                                     } else {
                                         //nothing
                                     }
@@ -597,34 +597,35 @@
 
                             <!-- input boxes-->
                             <form class="Form Form--spaced u-padding-all-xl u-background-grey-10 u-text-r-xs u-layout-prose" id="f1" method="post" onsubmit="return myFunction()">
-
+                                <div class="Prose Alert Alert--error Alert--withIcon u-layout-prose u-padding-r-bottom u-padding-r-right u-margin-r-bottom"
+                                    role="alert" id="errorMot" style="display:none">
+                                    <h2 class="u-text-h3">
+                                        Si è verificato un errore
+                                    </h2>
+                                    <p class="u-text-p">Selezionare una tra le motivazioni.</p>
+                                </div>
 
                                 <fieldset class="Form-fieldset">
-
-
-                                    <fieldset class="Form-field Form-field--choose Grid-cell u-text-r-s">
-                                        <legend class="Form-legend is-required" for="sex1">Scegliere la motivazione per la quale si intende omettere la dichiarazione TARI:
-                                            *
+                                        <legend class="Form-legend is-required">Scegliere la motivazione per la quale si intende omettere la dichiarazione TARI:
                                         </legend>
 
-                                        <label class="Form-label Form-label--block">
-                                            <input type="radio" class="Form-input" name="sex" aria-required="true" required>
-                                            <span class="Form-fieldIcon" role="presentation"></span> Mi riservo di presentarla allo sportello
-                                        </label>
-                                        <label class="Form-label Form-label--block">
-                                            <input type="radio" class="Form-input" name="sex" aria-required="true" required>
-                                            <span class="Form-fieldIcon" role="presentation"></span> Tassa già corrisposta da altra utenza (inserire il Codice Fiscale nel
-                                            campo 'note')
-                                        </label>
-                                        <label class="Form-label Form-label--block">
-                                            <input type="radio" class="Form-input" name="sex" aria-required="true" required>
-                                            <span class="Form-fieldIcon" role="presentation"></span> Altro (specificare nel campo "note")
-                                        </label>
-                                    </fieldset>
+                                        <div class="Grid-cell u-md-size12of12 u-lg-size12of12">
+                                            <div class="Form-field" id="motDiv">
+                                                    <label class="Form-label is-required" for="pro">
+                                                        </label>
+                                                <select class="Form-input u-text-r-s u-borderRadius-m" id="mot" aria-required="true" required>
+                                                    <option selected>Seleziona motivazione</option>
+                                                    <option>Mi riservo di presentarla allo sportello</option>
+                                                    <option>Tassa già corrisposta da altra utenza</option>
+                                                    <option>Altro</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    
 
 
-                                    <div class="Form-field Grid-cell u-size4of4">
-                                        <label class="Form-label" for="cap">Note:</label>
+                                    <div class="Form-field Grid-cell u-size4of4" id="notDiv">
+                                        <label class="Form-label"><a id="notSpi">Note:</a></label>
                                         <textarea class="Form-input Form-textarea u-borderRadius-m" id="notes"></textarea>
                                     </div>
 
@@ -652,15 +653,80 @@
                                 <script type="text/javascript">
 
                                     function showDivIniz() {
+
+
                                         document.getElementById("dati-ana").style.display = 'block';
                                         document.getElementById("salta-tari").style.display = 'none';
                                         document.getElementById("notes").value = "";
                                     }
 
-                                    function showNext()
-                                    {
-                                        document.getElementById("dati-resid").style.display = 'block';
-                                        document.getElementById("salta-tari").style.display = 'none';
+                                    function showNext() {
+
+                                        var cont = 0;
+                                        //Campo Selez Motivazione Errore
+                                        if (document.getElementById("mot").options[document.getElementById("mot").selectedIndex].value == "Seleziona motivazione") {
+                                            document.getElementById("motDiv").className = "Form-field is-invalid";
+                                            document.getElementById("errorMot").style.display = 'block';
+                                            cont++;
+                                        }
+
+                                        else {
+                                            document.getElementById("motDiv").className = "Form-field";
+                                            document.getElementById("errorMot").style.display = 'none';
+                                        }
+
+                                        if (document.getElementById("mot").options[document.getElementById("mot").selectedIndex].value == "Altro") {
+                                           
+                                           if(document.getElementById("notes").value=="")
+                                           {
+                                            document.getElementById("motDiv").className = "Form-field";
+                                            document.getElementById("notSpi").textContent="Inserisci motivazione:" 
+                                            document.getElementById("notSpi").style.color="red";
+                                            document.getElementById("notDiv").className = "Form-field Grid-cell u-size4of4 is-invalid";
+                                            document.getElementById("errorMot").style.display = 'block';
+                                            cont++;
+                                           }
+                                        }
+
+                                        else {
+                                            document.getElementById("motDiv").className = "Form-field";
+                                            document.getElementById("errorMot").style.display = 'none';
+                                        }
+
+                                        if (document.getElementById("mot").options[document.getElementById("mot").selectedIndex].value == "Tassa già corrisposta da altra utenza") {
+                                           
+                                           if(document.getElementById("notes").value=="")
+                                           {
+                                            document.getElementById("motDiv").className = "Form-field";
+                                            document.getElementById("notSpi").textContent="Inserisci codice fiscale utenza che ha dichiarato la TARI:" 
+                                            document.getElementById("notSpi").style.color="red";
+                                           
+                                            document.getElementById("notDiv").className = "Form-field Grid-cell u-size4of4 is-invalid";
+                                            document.getElementById("errorMot").style.display = 'block';
+                                            cont++;
+                                           }
+                                        }
+
+                                        else {
+                                            document.getElementById("motDiv").className = "Form-field";
+                                            document.getElementById("errorMot").style.display = 'none';
+                                        }
+
+             
+                                        if (cont == 0) {
+                                            document.getElementById("errorMot").style.display = 'none';
+                                            document.getElementById("motDiv").className = "Form-field";
+                                            document.getElementById("notSpi").textContent="Note:" 
+                                            document.getElementById("notSpi").style.color="black";
+                                            document.getElementById("notDiv").className = "Form-field Grid-cell u-size4of4";
+                                            document.getElementById("dati-resid").style.display = 'block';
+                                            document.getElementById("salta-tari").style.display = 'none';
+                                        }
+                                        else {
+                                            document.getElementById("errorMot").style.display = 'block';
+                                            document.getElementById("motDiv").className = "Form-field is-invalid";
+                                        }
+
                                     }
 
                                 </script>
@@ -731,15 +797,25 @@
                                     <p>Tutti i campi sono richiesti salvo dove espressamente indicato</p>
                                 </div>
 
+                                <div class="Prose Alert Alert--error Alert--withIcon u-layout-prose u-padding-r-bottom u-padding-r-right u-margin-r-bottom"
+                                    role="alert" id="errorNuovRes" style="display:none">
+                                    <h2 class="u-text-h3">
+                                        Si è verificato un errore
+                                    </h2>
+                                    <p class="u-text-p">Alcuni campi sono errati o non compilati.</p>
+                                </div>
+
 
                                 <fieldset class="Form-fieldset">
                                     <legend class="Form-legend">Indirizzo della nuova residenza</legend>
 
-                                    <div class="Grid-cell u-md-size4of12 u-lg-size4of12">
-                                        <div class="Form-field">
-                                            <label class="Form-label is-required" for="provincia">Provincia residenza*:</label>
-                                            <select class="Form-input u-text-r-s u-borderRadius-m" id="dichiarazione" aria-required="true" required>
-                                                <option selected>MO</option>
+                                    <div class="Grid-cell u-md-size8of12 u-lg-size8of12">
+                                        <div class="Form-field" id="proDiv">
+                                            <label class="Form-label is-required" for="pro">
+                                                <a id="proLbl">Provincia locazione dell'immobile:</a>
+                                            </label>
+                                            <select class="Form-input u-text-r-s u-borderRadius-m" id="pro" aria-required="true" required>
+                                                <option selected>Seleziona una provincia</option>
                                                 <option>MI</option>
                                                 <option>ME</option>
                                                 <option>MB</option>
@@ -747,11 +823,13 @@
                                         </div>
                                     </div>
 
-                                    <div class="Grid-cell u-md-size4of12 u-lg-size4of12">
-                                        <div class="Form-field">
-                                            <label class="Form-label is-required" for="provincia">Comune residenza*:</label>
-                                            <select class="Form-input u-text-r-s u-borderRadius-m" id="dichiarazione" aria-required="true" required>
-                                                <option selected>MO</option>
+                                    <div class="Grid-cell u-md-size8of12 u-lg-size8of12">
+                                        <div class="Form-field" id="comDiv">
+                                            <label class="Form-label is-required" for="provincia">
+                                                <a id="comLbl">Comune locazione dell'immobile:</a>
+                                            </label>
+                                            <select class="Form-input u-text-r-s u-borderRadius-m" id="com" aria-required="true" required>
+                                                <option selected>Seleziona il comune</option>
                                                 <option>MI</option>
                                                 <option>ME</option>
                                                 <option>MB</option>
@@ -759,44 +837,53 @@
                                         </div>
                                     </div>
 
-                                    <div class="Form-field">
-                                        <label class="Form-label is-required" for="cognome">Via</label>
-                                        <input class="Form-input u-text-r-s u-borderRadius-m" id="cognome" aria-required="true" required>
+                                    <div class="Form-field" id="viaDiv">
+                                        <label class="Form-label is-required">
+                                            <a id="viaLbl">Via</a>
+                                        </label>
+                                        <input class="Form-input u-text-r-s u-borderRadius-m" id="via" aria-required="true" required>
                                     </div>
 
-                                    
-                                    <div class="Form-field">
-                                        <label class="Form-label is-required" for="cognome">Piano</label>
-                                        <input class="Form-input u-text-r-s u-borderRadius-m" id="cognome" aria-required="true" required>
+                                    <div class="Form-field" id="civDiv">
+                                        <label class="Form-label is-required">
+                                            <a id="civLbl">Numero civico</a>
+                                        </label>
+                                        <input class="Form-input u-text-r-s u-borderRadius-m" id="civ" aria-required="true" required>
                                     </div>
 
-                                    <div class="Form-field">
-                                        <label class="Form-label is-required" for="cognome">Scala</label>
-                                        <input class="Form-input u-text-r-s u-borderRadius-m" id="cognome" aria-required="true" required>
-                                    </div>
-                                    <div class="Form-field">
-                                        <label class="Form-label is-required" for="cognome">Interno</label>
-                                        <input class="Form-input u-text-r-s u-borderRadius-m" id="cognome" aria-required="true" required>
+                                    <div class="Form-field" id="capDiv">
+                                        <label class="Form-label is-required">
+                                            <a id="capLbl">CAP</a>
+                                        </label>
+                                        <input class="Form-input u-text-r-s u-borderRadius-m" id="cap" aria-required="true" required>
                                     </div>
 
-                                    <div class="Form-field">
-                                        <label class="Form-label is-required" for="cognome">Numero civico</label>
-                                        <input class="Form-input u-text-r-s u-borderRadius-m" id="cognome" aria-required="true" required>
+
+                                    <div class="Form-field" id="piaDiv">
+                                        <label class="Form-label is-required">
+                                            <a id="piaLbl">Piano</a>
+                                        </label>
+                                        <input class="Form-input u-text-r-s u-borderRadius-m" id="pia" aria-invalid="true" aria-required="true" required>
                                     </div>
 
-                                    <div class="Form-field">
-                                        <label class="Form-label is-required" for="cognome">CAP</label>
-                                        <input class="Form-input u-text-r-s u-borderRadius-m" id="cognome" aria-required="true" required>
+
+                                    <div class="Form-field" id="intDiv">
+                                        <label class="Form-label is-required">
+                                            <a id="intLbl">Interno</a>
+                                        </label>
+                                        <input class="Form-input u-text-r-s u-borderRadius-m" id="int" aria-required="true" required>
                                     </div>
 
-                                    <div class="Form-field">
-                                        <label class="Form-label is-required" for="cognome">Telefono</label>
-                                        <input class="Form-input u-text-r-s u-borderRadius-m" id="cognome" aria-required="true" required>
+                                    <div class="Form-field" id="telDiv">
+                                        <label class="Form-label is-required">
+                                            <a id="telLbl">Telefono</a>
+                                        </label>
+                                        <input class="Form-input u-text-r-s u-borderRadius-m" id="tel" aria-required="true" required>
                                     </div>
                                 </fieldset>
 
 
-                                
+
                                 <script type="text/javascript">
                                     WebFontConfig = {
                                         google: {
@@ -815,9 +902,235 @@
 
                                 <script type="text/javascript">
 
+                                    //Controllo errori e mostra div successivo ai dati della nuova residenza
                                     function showDivDettagli() {
-                                        document.getElementById("dati-resid").style.display = 'none';
-                                        document.getElementById("dett-prop").style.display = 'block';
+
+                                        var cont = 0;
+
+                                        //Campo Selez Comune Errore
+                                        if (document.getElementById("com").options[document.getElementById("com").selectedIndex].value == "Seleziona il comune") {
+                                            document.getElementById("comLbl").style.color = "red";
+                                            document.getElementById("comDiv").className = "Form-field is-invalid";
+                                            document.getElementById("errorNuovRes").style.display = 'block';
+                                            cont++;
+                                        }
+
+                                        else {
+                                            document.getElementById("comDiv").className = "Form-field";
+                                            document.getElementById("comLbl").style.color = "black";
+                                            document.getElementById("errorNuovRes").style.display = 'none';
+                                        }
+
+                                        //Campo Selez Provincia Errore
+                                        if (document.getElementById("pro").options[document.getElementById("pro").selectedIndex].value == "Seleziona una provincia") {
+                                            document.getElementById("proLbl").style.color = "red";
+                                            document.getElementById("proDiv").className = "Form-field is-invalid";
+                                            document.getElementById("errorNuovRes").style.display = 'block';
+                                            cont++;
+                                        }
+
+                                        else {
+                                            document.getElementById("proDiv").className = "Form-field";
+                                            document.getElementById("proLbl").style.color = "black";
+                                            document.getElementById("errorNuovRes").style.display = 'none';
+                                        }
+
+
+
+                                        //Campo VIA errore
+                                        if (document.getElementById("via").value == "") {
+                                            document.getElementById("viaLbl").style.color = "red";
+                                            document.getElementById("viaDiv").className = "Form-field is-invalid";
+                                            document.getElementById("errorNuovRes").style.display = 'block';
+                                            cont++;
+                                        }
+                                        else {
+                                            document.getElementById("viaLbl").style.color = "black";
+                                            document.getElementById("errorNuovRes").style.display = 'none';
+                                            document.getElementById("viaDiv").className = "Form-field";
+                                        }
+
+                                        if (!/^[a-z]/i.test(document.getElementById("via").value)) {
+                                            document.getElementById("viaLbl").style.color = "red";
+                                            document.getElementById("viaDiv").className = "Form-field is-invalid";
+                                            document.getElementById("errorNuovRes").style.display = 'block';
+                                            cont++;
+                                        }
+                                        else {
+                                            document.getElementById("viaLbl").style.color = "black";
+                                            document.getElementById("viaDiv").className = "Form-field";
+                                            document.getElementById("errorNuovRes").style.display = 'none';
+                                        }
+
+
+                                        //Campo Numero civico errore
+                                        if (document.getElementById("civ").value == "") {
+                                            document.getElementById("civLbl").style.color = "red";
+                                            document.getElementById("civDiv").className = "Form-field is-invalid";
+                                            document.getElementById("errorNuovRes").style.display = 'block';
+                                            cont++;
+                                        }
+                                        else {
+                                            document.getElementById("civLbl").style.color = "black";
+                                            document.getElementById("errorNuovRes").style.display = 'none';
+                                            document.getElementById("civDiv").className = "Form-field";
+                                        }
+
+                                        if (/^[a-z]+$/i.test(document.getElementById("civ").value)) {
+                                            document.getElementById("civLbl").style.color = "red";
+                                            document.getElementById("civDiv").className = "Form-field is-invalid";
+                                            document.getElementById("errorNuovRes").style.display = 'block';
+                                            cont++;
+                                        }
+                                        else {
+                                            document.getElementById("civLbl").style.color = "black";
+                                            document.getElementById("civDiv").className = "Form-field";
+                                            document.getElementById("errorNuovRes").style.display = 'none';
+                                        }
+
+                                        //Campo CAP errore
+                                        if (document.getElementById("cap").value == "") {
+                                            document.getElementById("capLbl").style.color = "red";
+                                            document.getElementById("capDiv").className = "Form-field is-invalid";
+                                            document.getElementById("errorNuovRes").style.display = 'block';
+                                            cont++;
+                                        }
+                                        else {
+                                            document.getElementById("capLbl").style.color = "black";
+                                            document.getElementById("errorNuovRes").style.display = 'none';
+                                            document.getElementById("capDiv").className = "Form-field";
+                                        }
+
+                                        if (/^[a-z]+$/i.test(document.getElementById("cap").value)) {
+                                            document.getElementById("capLbl").style.color = "red";
+                                            document.getElementById("capDiv").className = "Form-field is-invalid";
+                                            document.getElementById("errorNuovRes").style.display = 'block';
+                                            cont++;
+                                        }
+                                        else {
+                                            document.getElementById("capLbl").style.color = "black";
+                                            document.getElementById("capDiv").className = "Form-field";
+                                            document.getElementById("errorNuovRes").style.display = 'none';
+                                        }
+
+                                        if (document.getElementById("cap").value.length == 5) {
+                                            document.getElementById("capLbl").style.color = "black";
+                                            document.getElementById("capDiv").className = "Form-field";
+                                            document.getElementById("errorNuovRes").style.display = 'none';
+                                        }
+
+                                        else {
+                                            document.getElementById("capLbl").style.color = "red";
+                                            document.getElementById("capDiv").className = "Form-field is-invalid";
+                                            document.getElementById("errorNuovRes").style.display = 'block';
+                                            cont++;
+                                        }
+
+
+
+
+
+
+                                        //Campo Piano errore
+                                        if (document.getElementById("pia").value == "") {
+                                            document.getElementById("piaLbl").style.color = "red";
+                                            document.getElementById("piaDiv").className = "Form-field is-invalid";
+                                            document.getElementById("errorNuovRes").style.display = 'block';
+                                            cont++;
+                                        }
+                                        else {
+                                            document.getElementById("piaLbl").style.color = "black";
+                                            document.getElementById("errorNuovRes").style.display = 'none';
+                                            document.getElementById("piaDiv").className = "Form-field";
+                                        }
+
+                                        if (/^[a-z]+$/i.test(document.getElementById("pia").value)) {
+                                            document.getElementById("piaLbl").style.color = "red";
+                                            document.getElementById("piaDiv").className = "Form-field is-invalid";
+                                            document.getElementById("errorNuovRes").style.display = 'block';
+                                            cont++;
+                                        }
+                                        else {
+                                            document.getElementById("piaLbl").style.color = "black";
+                                            document.getElementById("piaDiv").className = "Form-field";
+                                            document.getElementById("errorNuovRes").style.display = 'none';
+                                        }
+
+                                        //Campo Interno errore
+                                        if (document.getElementById("int").value == "") {
+                                            document.getElementById("intLbl").style.color = "red";
+                                            document.getElementById("intDiv").className = "Form-field is-invalid";
+                                            document.getElementById("errorNuovRes").style.display = 'block';
+                                            cont++;
+                                        }
+                                        else {
+                                            document.getElementById("intLbl").style.color = "black";
+                                            document.getElementById("errorNuovRes").style.display = 'none';
+                                            document.getElementById("intDiv").className = "Form-field";
+                                        }
+
+                                        if (/^[a-z]+$/i.test(document.getElementById("int").value)) {
+                                            document.getElementById("intLbl").style.color = "red";
+                                            document.getElementById("intDiv").className = "Form-field is-invalid";
+                                            document.getElementById("errorNuovRes").style.display = 'block';
+                                            cont++;
+                                        }
+                                        else {
+                                            document.getElementById("intLbl").style.color = "black";
+                                            document.getElementById("intDiv").className = "Form-field";
+                                            document.getElementById("errorNuovRes").style.display = 'none';
+                                        }
+
+                                        //Campo Telefono errore
+                                        if (document.getElementById("tel").value == "") {
+                                            document.getElementById("telLbl").style.color = "red";
+                                            document.getElementById("telDiv").className = "Form-field is-invalid";
+                                            document.getElementById("errorNuovRes").style.display = 'block';
+                                            cont++;
+                                        }
+                                        else {
+                                            document.getElementById("telLbl").style.color = "black";
+                                            document.getElementById("errorNuovRes").style.display = 'none';
+                                            document.getElementById("telDiv").className = "Form-field";
+                                        }
+
+                                        if (/^[a-z]+$/i.test(document.getElementById("tel").value)) {
+                                            document.getElementById("telLbl").style.color = "red";
+                                            document.getElementById("telDiv").className = "Form-field is-invalid";
+                                            document.getElementById("errorNuovRes").style.display = 'block';
+                                            cont++;
+                                        }
+                                        else {
+                                            document.getElementById("telLbl").style.color = "black";
+                                            document.getElementById("telDiv").className = "Form-field";
+                                            document.getElementById("errorNuovRes").style.display = 'none';
+                                        }
+
+                                        if (document.getElementById("tel").value.length < 8 || document.getElementById("tel").value.length > 11) {
+                                            document.getElementById("telLbl").style.color = "red";
+                                            document.getElementById("telDiv").className = "Form-field is-invalid";
+                                            document.getElementById("errorNuovRes").style.display = 'block';
+                                            cont++;
+                                        }
+                                        else {
+                                            document.getElementById("telLbl").style.color = "black";
+                                            document.getElementById("telDiv").className = "Form-field";
+                                            document.getElementById("errorNuovRes").style.display = 'none';
+
+                                        }
+
+
+
+
+                                        //Controllo finale
+                                        if (cont == 0) {
+                                            document.getElementById("dati-resid").style.display = 'none';
+                                            document.getElementById("dett-prop").style.display = 'block';
+                                            document.getElementById("errorNuovRes").style.display = 'none';
+                                        }
+                                        else {
+                                            document.getElementById("errorNuovRes").style.display = 'block';
+                                        }
                                     }
 
                                     function hideDivDatiRes() {
@@ -831,11 +1144,12 @@
 
                                 <div class="Form-field Grid-cell u-textRight">
                                     <button type="button" class="Button Button--default u-text-r-xs" style="float:right !important" onclick="showDivDettagli()">
-                                        <a href="#" style="text-decoration: none !important; color:black !important">Avanti</a>
+                                        <a href="#" style="text-decoration: none !important; color:black !important">Avanti -></a>
                                     </button>
 
                                     <button type="button" class="Button Button--default u-text-r-xs" style="float:left !important" onclick="hideDivDatiRes()">
-                                        <a href="#" style="text-decoration: none !important; color:black !important">Indietro</a>
+                                        <a href="#" style="text-decoration: none !important; color:black !important">
+                                            <- Indietro</a>
                                     </button>
                                 </div>
 
@@ -891,30 +1205,28 @@
 
                             <!-- input boxes-->
                             <form class="Form Form--spaced u-padding-all-xl u-background-grey-10 u-text-r-xs u-layout-prose" id="f1" method="post" onsubmit="return myFunction()">
-                                <div class="Prose Alert Alert--info">
-                                    <p>Tutti i campi sono richiesti salvo dove espressamente indicato</p>
-                                </div>
+                                
 
 
                                 <fieldset class="Form-field Form-field--choose Grid-cell">
                                     <legend class="Form-legend is-required">Familiari risedenti:</legend>
                                     <label class="Form-label Form-label--block" for="contact1">
-                                <input type="checkbox" class="Form-input" id="contact1" aria-required="true" required>
-                                <span class="Form-fieldIcon" role="presentation"></span> Mario Verdi
-                              </label>
-                                    <label class="Form-label is-required Form-label--block" for="contact2">
-                                <input type="checkbox" class="Form-input" id="contact2" aria-required="true" required>
-                                <span class="Form-fieldIcon" role="presentation"></span> Marta Verdi
-                              </label>
-                              <label class="Form-label is-required Form-label--block" for="contact3">
-                                <input type="checkbox" class="Form-input" id="contact2" aria-required="true" required>
-                                <span class="Form-fieldIcon" role="presentation"></span> Francesca Bianchi
-                              </label>
+                                        <input type="checkbox" class="Form-input" id="contact1" aria-required="true" required>
+                                        <span class="Form-fieldIcon" role="presentation"></span> Mario Verdi
+                                    </label>
+                                    <label class="Form-label Form-label--block" for="contact2">
+                                        <input type="checkbox" class="Form-input" id="contact2" aria-required="true" required>
+                                        <span class="Form-fieldIcon" role="presentation"></span> Marta Verdi
+                                    </label>
+                                    <label class="Form-label Form-label--block" for="contact3">
+                                        <input type="checkbox" class="Form-input" id="contact2" aria-required="true" required>
+                                        <span class="Form-fieldIcon" role="presentation"></span> Francesca Bianchi
+                                    </label>
                                 </fieldset>
-                        
 
 
-                                
+
+
                                 <script type="text/javascript">
                                     WebFontConfig = {
                                         google: {
@@ -949,11 +1261,11 @@
 
                                 <div class="Form-field Grid-cell u-textRight">
                                     <button type="button" class="Button Button--default u-text-r-xs" style="float:right !important" onclick="showDivAllega()">
-                                        <a href="#" style="text-decoration: none !important; color:black !important">Prosegui</a>
+                                        <a href="#" style="text-decoration: none !important; color:black !important">Prosegui -></a>
                                     </button>
 
                                     <button type="button" class="Button Button--default u-text-r-xs" style="float:left !important" onclick="hideDivProp()">
-                                        <a  href="#" style="text-decoration: none !important; color:black !important">Indietro</a>
+                                        <a href="#" style="text-decoration: none !important; color:black !important"><- Indietro</a>
                                     </button>
                                 </div>
 
@@ -994,7 +1306,7 @@
 
             </div>
 
-             <!-- Div sezione AllegaDocum-->
+            <!-- Div sezione AllegaDocum-->
             <div class="u-layout-wide u-layoutCenter u-layout-withGutter u-padding-r-top u-padding-bottom-xxl" id="alle-doc" style="display:none !important">
 
                 <h1 class="u-text-h2">
@@ -1009,19 +1321,18 @@
                             <form class="Form Form--spaced u-padding-all-xl u-background-grey-10 u-text-r-xs u-layout-prose" id="f1" method="post" onsubmit="return myFunction()">
                                 <div class="Prose Alert Alert--info">
                                     <p>Allegare fotocopia della carta d'identità o certificato di firma digitale</p>
-                               </div>
+                                </div>
 
 
 
                                 <fieldset class="Form-fieldset">
                                     <legend class="Form-legend">Documenti in allegato</legend>
 
-                                    <div class="Grid-cell u-md-size4of12 u-lg-size4of12">
+                                    <div class="Grid-cell u-md-size12of12 u-lg-size12of12">
 
 
                                         <div class="Form-field">
                                             <label class="Form-label is-required" for="cognome">Allegato 1</label>
-
                                             <input type="file" id="myFile1">
                                         </div>
 
@@ -1045,11 +1356,11 @@
                                             <textarea class="Form-input Form-textarea u-borderRadius-m"></textarea>
                                         </div>
 
-
+                                    </div>
 
                                 </fieldset>
 
-                                  
+
                                 <script type="text/javascript">
                                     WebFontConfig = {
                                         google: {
@@ -1068,7 +1379,7 @@
 
                                 <script type="text/javascript">
 
-                                   
+
 
                                     function hideDivSalto5() {
                                         document.getElementById("alle-doc").style.display = 'none';
@@ -1079,12 +1390,12 @@
 
 
                                 <div class="Form-field Grid-cell u-textRight">
-                                    <button type="button" class="Button Button--default u-text-r-xs" style="float:right !important" >
-                                        <a href="riepilogo-dich-cambRes.html"style="text-decoration: none !important; color:black !important">Genera dichiarazione</a>
+                                    <button type="button" class="Button Button--default u-text-r-xs" style="float:right !important">
+                                        <a href="riepilogo-dich-cambRes.html" style="text-decoration: none !important; color:black !important">Genera dichiarazione -></a>
                                     </button>
 
                                     <button type="button" class="Button Button--default u-text-r-xs" style="float:left !important" onclick="hideDivSalto5()">
-                                        <a href="#" style="text-decoration: none !important; color:black !important">Indietro</a>
+                                        <a href="#" style="text-decoration: none !important; color:black !important"><- Indietro</a>
                                     </button>
                                 </div>
 
@@ -1093,7 +1404,7 @@
 
                         </article>
 
-                    </div>
+                        </div>
 
                         <aside class="Grid-cell u-md-size4of12 u-lg-size4of12">
 
@@ -1122,10 +1433,10 @@
                             </div>
                             <a href="#" title="torna all'inizio del contenuto" class="u-hiddenVisually">torna all'inizio del contenuto</a>
                         </aside>
-                    
-                </div>
-            
-            
+
+                    </div>
+
+
 
 
         </section>
@@ -1209,25 +1520,25 @@
         </a>
 
 
-    </div>
+        </div>
 
 
-    <!--[if IE 8]>
+        <!--[if IE 8]>
   <script src="../../build/vendor/respond.min.js"></script>
   <script src="../../build/vendor/rem.min.js"></script>
   <script src="../../build/vendor/selectivizr.js"></script>
   <script src="../../build/vendor/slice.js"></script>
   <![endif]-->
 
-    <!--[if lte IE 9]>
+        <!--[if lte IE 9]>
   <script src="../../build/vendor/polyfill.min.js"></script>
   <![endif]-->
 
-    <!-- sostituire questo percorso con quello degli assets javascript nel proprio sito web:
+        <!-- sostituire questo percorso con quello degli assets javascript nel proprio sito web:
     è il percorso, relativo alla webroot, della directory che contiene il file IWT.min.js e i file *.chunk.js -->
-    <script>__PUBLIC_PATH__ = '/design-web-toolkit/build/'</script>
+        <script>__PUBLIC_PATH__ = '/design-web-toolkit/build/'</script>
 
-    <script src="../../build/IWT.min.js"></script>
+        <script src="../../build/IWT.min.js"></script>
 
 </body>
 
