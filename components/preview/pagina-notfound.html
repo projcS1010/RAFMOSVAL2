@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 
+
+
 <!--[if IE 8]><html class="no-js ie89 ie8" lang="it"><![endif]-->
 <!--[if IE 9]><html class="no-js ie89 ie9" lang="it"><![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!-->
@@ -17,21 +19,6 @@
       <link href='//fonts.googleapis.com/css?family=Titillium+Web:400,400italic,700,' rel='stylesheet' type='text/css' />
     o dal repository locale (src/fonts)
   -->
-    <script type="text/javascript">
-        WebFontConfig = {
-            google: {
-                families: ['Titillium+Web:300,400,600,700,400italic:latin']
-            }
-        };
-        (function () {
-            var wf = document.createElement('script');
-            wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-            wf.type = 'text/javascript';
-            wf.async = 'true';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(wf, s);
-        })();
-    </script>
 
     <!-- include HTML5shim per Explorer 8 -->
     <script src="../../build/vendor/modernizr.js"></script>
@@ -40,10 +27,11 @@
 
     <script src="../../build/vendor/jquery.min.js"></script>
 
-    <title>Visura Avvisi Bonari TARI</title>
+    <title>Errore pagina non trovata</title>
 </head>
 
 <body class="t-Pac">
+    <div id="snackbar"></div>
 
     <div id="cookie-bar" class="CookieBar js-CookieBar u-background-95 u-padding-r-all" aria-hidden="true">
         <p class="u-color-white u-text-r-xs u-lineHeight-m u-padding-r-bottom">Questo sito utilizza cookie tecnici, analytics e di terze parti.
@@ -55,8 +43,6 @@
             <a href="" class="u-text-r-xs u-color-teal-50">Privacy policy</a>
         </p>
     </div>
-
-
 
     <header class="Header Headroom--fixed js-Headroom u-hiddenPrint">
         <div class="Header-banner ">
@@ -186,7 +172,7 @@
                             <div class="Form-field Form-field--withPlaceholder Grid u-background-white u-color-grey-30 u-borderRadius-s" role="search">
                                 <input class="Form-input Form-input--ultraLean Grid-cell u-sizeFill u-text-r-s u-color-black u-text-r-xs u-borderRadius-s "
                                     required id="cerca">
-                                <label class="Form-label u-color-grey-50 u-text-r-xxs" for="cerca">Cerca nel sito</label>
+                                <label class="Form-label u-color-grey-50 u-text-r-xxs" for="cerca">cerca nel sito</label>
                                 <button class="Grid-cell u-sizeFit Icon-search Icon--rotated u-color-grey-50 u-padding-all-s u-textWeight-700" title="Avvia la ricerca"
                                     aria-label="Avvia la ricerca">
                                 </button>
@@ -217,6 +203,7 @@
 
     </header>
 
+
     <section class="Offcanvas Offcanvas--right Offcanvas--modal js-fr-offcanvas u-jsVisibilityHidden u-nojsDisplayNone u-hiddenPrint"
         id="menu">
         <h2 class="u-hiddenVisually">Menu di navigazione</h2>
@@ -243,15 +230,14 @@
 
                     <li>
 
-                        <a href="#">
+                        <a href="accesso.html">
 
-                            <font size=+1>Profilo utente</font>
+                            <font size=+1>Accesso utente</font>
 
                         </a>
                     </li>
-                    <li>
-                        <a href="homepage.html">Logout</a>
-                    </li>
+
+
 
 
 
@@ -270,239 +256,20 @@
 
     <div id="main" style="margin-bottom: 100px">
 
-        <section>
-            <p class="u-md-hidden u-lg-hidden u-padding-r-all u-text-m u-background-grey-20">
-                <span class="Icon-list u-text-r-xl u-alignMiddle u-padding-r-right" aria-hidden="true"></span>
-                <a href="#subnav" class="js-scrollTo u-text-r-s u-textClean u-color-grey-50 u-alignMiddle">
-                    Esplora contenuti correlati
-                </a>
-            </p>
 
-            <div class="u-layout-wide u-layoutCenter u-layout-withGutter u-padding-r-bottom u-padding-r-top">
-                <nav aria-label="sei qui:" role="navigation">
-                    <ul class="Breadcrumb">
-                        <li class="Breadcrumb-item">
-                            <a class="Breadcrumb-link u-color-30" href="homepage.html">Home</a>
-                        </li>
-                        <li class="Breadcrumb-item">
-                            <a class="Breadcrumb-link u-color-30" href="lista-servizi.html">Servizi Online</a>
-                        </li>
-                        <li class="Breadcrumb-item">
-                            <a class="Breadcrumb-link u-color-50" href="#">Visura Avvisi Bonari TARI</a>
-                        </li>
-                    </ul>
-                </nav>
-
-            </div>
-
-
-
-
-            <script>
-                function myFunction() {
-                    var txt;
-                    var r = confirm("Premi su OK per confermare il download della certificazione.");
-                    if (r == true) {
-                        //start download
-                    } else {
-                        //nothing
-                    }
-                }
-            </script>
-            <script type="text/javascript">
-                WebFontConfig = {
-                    google: {
-                        families: ['Titillium+Web:300,400,600,700,400italic:latin']
-                    }
-                };
-                (function () {
-                    var wf = document.createElement('script');
-                    wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
-                    wf.type = 'text/javascript';
-                    wf.async = 'true';
-                    var s = document.getElementsByTagName('script')[0];
-                    s.parentNode.insertBefore(wf, s);
-                })();
-            </script>
-
-            <script type="text/javascript">
-
-                function changeFunc() {
-                    var selectBox = document.getElementById("selectBox");
-                    var selectedValue = selectBox.options[selectBox.selectedIndex].value;
-                    if (selectedValue == "2014") {
-                        document.getElementById("ric_doc").innerHTML = "Documenti trovati:";
-                        document.getElementById("doc_tari").innerHTML = '<a href="" class="u-text-r-l Icon Icon-download" onclick="myFunction()"></a>  Documento visura TARI 2014';
-                    }
-                    else if (selectedValue == "2015") {
-                        document.getElementById("ric_doc").innerHTML = "Documenti trovati:";
-                        document.getElementById("doc_tari").innerHTML = '<a href="" class="u-text-r-l Icon Icon-download" onclick="myFunction()"></a>  Documento visura TARI 2015';
-                    }
-                    else if (selectedValue == "2016") {
-                        document.getElementById("ric_doc").innerHTML = "";
-                        document.getElementById("doc_tari").innerHTML = "";
-                        alert("Nessun documento trovato per l'anno indicato.");
-                    }
-                    else if (selectedValue == "2017") {
-                        document.getElementById("ric_doc").innerHTML = "";
-                        document.getElementById("doc_tari").innerHTML = "";
-                        alert("Nessun documento trovato per l'anno indicato.");
-                    }
-                }
-
-            </script>
-
-
-
-
-            <div class="u-layout-wide u-layoutCenter u-layout-withGutter u-padding-r-top u-padding-bottom-xxl">
-
-                <h1 class="u-text-h2">
-                    Visura Avvisi Bonari TARI
-                </h1>
-
-                <div class="Grid Grid--withGutter">
-                    <div class="Grid-cell u-md-size8of12 u-lg-size8of12">
-                        <article class="Prose u-layout-prose">
-
-                            <!-- input boxes-->
-                            <form class="Form Form--spaced u-padding-all-xl u-background-grey-10 u-text-r-xs u-layout-prose" id="f1" method="post" onsubmit="return myFunction()">
-                                <div class="Prose Alert Alert--info">
-                                    <p>Tutti i campi sono richiesti salvo dove espressamente indicato</p>
-                                </div>
-
-                                <div class="Grid-cell u-md-size4of12 u-lg-size4of12">
-                                    <div class="Form-field">
-                                        <label class="Form-label is-required" for="provincia">Anno ricerca</label>
-                                        <select class="Form-input" id="selectBox" onchange="changeFunc();" style="width:511px" required>
-                                            <option selected>Seleziona anno...</option>
-                                            <option>2014</option>
-                                            <option>2015</option>
-                                            <option>2016</option>
-                                            <option>2017</option>
-                                        </select>
-                                    </div>
-                                </div>
-
-
-                                <label class="Form-label is-required" for="provincia" id="ric_doc" ></label>
-                                <div class="Form-field Grid-cell u-textCenter">
-                                       
-                                            <label class="Form-label is-required" for="provincia" id="doc_tari"></label>
-                                </div>
-
-
-                            </form>
-
-
-                        </article>
-                    </div>
-
-                    <aside class="Grid-cell u-md-size4of12 u-lg-size4of12">
-
-
-                        <!-- profile data boxes-->
-
-
-
-
-
-                        <h3 class="u-text-h4">Servizi correlati</h3>
-                        <div class="u-sizeFull" id="subnav">
-                            <ul class="Linklist Linklist--padded u-layout-prose u-text-r-xs">
-                                <li>
-                                    <a class="Linklist-link Linklist-link--lev1" href="pagina-notfound.html">Visura Catasto</a>
-                                </li>
-                                <li>
-                                    <a class="Linklist-link Linklist-link--lev2" href="pagina-notfound.html">Visura TASI</a>
-                                </li>
-                                <li>
-                                    <a href="dichiarazione-cambio-residenza.html" class="Linklist-link Linklist-link--lev3">Visura posizione Tributaria</a>
-                                </li>
-
-                            </ul>
-
-                        </div>
-                        <a href="#" title="torna all'inizio del contenuto" class="u-hiddenVisually">torna all'inizio del contenuto</a>
-                    </aside>
+        <div class="Grid">
+            <div class="Grid-cell Grid-cell--center u-size10of12 u-sm-size8of12 u-md-size5of12 u-lg-size4of12">
+                <div class="ErrorPage u-textCenter u-text-xxs u-text-md-xs u-text-lg-s">
+                    <h1 class="ErrorPage-title">404</h1>
+                    <h2 class="ErrorPage-subtitle">Pagina non trovata</h2>
+                    <p class="Prose u-margin-r-all">Oops! La pagina che cerchi non è stata trovata oppure il servizio scelto non è ancora disponibile,
+                        <a href="javascript:history.back();" title="Torna alla pagina precedente">torna indietro</a> o utilizza il menu per continuare la navigazione.</p>
+                    <a class="Button Button--default u-margin-r-all" href="homepage.html">Torna alla Home</a>
                 </div>
 
             </div>
-        </section>
-
-
-        <div class="u-background-95 u-hiddenPrint">
-            <div class="u-layout-wide u-layoutCenter u-layout-r-withGutter">
-                <footer class="Footer u-background-95">
-
-
-                    <div class="Grid Grid--withGutter">
-
-                        <div class="Footer-block Grid-cell u-md-size1of4 u-lg-size1of4">
-                            <h3 class="Footer-subTitle">Recapiti</h3>
-                            <div class="Footer-subBlock">
-
-                                <address>
-                                    Indirizzo del comune Bari
-                                    <br> email:
-                                    <br> Tel:
-                                </address>
-                            </div>
-                        </div>
-
-                        <div class="Footer-block Grid-cell u-md-size1of4 u-lg-size1of4">
-                            <h3 class="Footer-subTitle">Assistenza Sito</h3>
-                            <div class="Footer-subBlock">
-
-                                <address>
-                                    Exprivia
-                                    <br> email
-                                    <br> Tel.
-                                </address>
-                            </div>
-                        </div>
-
-
-                        <div class="Footer-block Grid-cell u-md-size1of4 u-lg-size1of4">
-                            <h3 class="Footer-subTitle">Indirizzo PEC</h3>
-                            <div class="Footer-subBlock">
-
-                                <p>
-                                    <a href="">indirizzo.pec@gov.it</a>
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="Footer-block Grid-cell u-md-size1of4 u-lg-size1of4">
-                            <h2 class="Footer-blockTitle">Seguici su</h2>
-                            <div class="Footer-subBlock">
-                                <ul class="Footer-socialIcons">
-                                    <li>
-                                        <a href="">
-                                            <span class="Icon Icon-facebook"></span>
-                                            <span class="u-hiddenVisually">Facebook</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="">
-                                            <span class="Icon Icon-twitter"></span>
-                                            <span class="u-hiddenVisually">Twitter</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="">
-                                            <span class="Icon Icon-youtube"></span>
-                                            <span class="u-hiddenVisually">Youtube</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-                    </div>
-                </footer>
-            </div>
         </div>
+
 
         <a href="#" title="torna all'inizio del contenuto" class="ScrollTop js-scrollTop js-scrollTo">
             <i class="ScrollTop-icon Icon-collapse" aria-hidden="true"></i>
@@ -511,6 +278,7 @@
 
 
     </div>
+
 
 
     <!--[if IE 8]>
