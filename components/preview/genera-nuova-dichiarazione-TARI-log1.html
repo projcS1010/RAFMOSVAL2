@@ -427,7 +427,7 @@
                         <article class="Prose u-layout-prose">
 
                             <!-- input boxes-->
-                            <form class="Form Form--spaced u-padding-all-xl u-background-grey-10 u-text-r-xs u-layout-prose" id="f1" method="post" >
+                            <form class="Form Form--spaced u-padding-all-xl u-background-grey-10 u-text-r-xs u-layout-prose" id="f1" method="post">
                                 <div class="Prose Alert Alert--info">
                                     <p>Tutti i campi sono richiesti salvo dove espressamente indicato</p>
                                 </div>
@@ -448,7 +448,7 @@
 
                                     <div class="Grid-cell u-md-size12of12 u-lg-size12of12">
                                         <div class="Form-field" id="tipoUtenzaDiv">
-                                            <label class="Form-label is-required" for="provincia" id="tipoUtenzaLbl">Tipo utenza*:</label>
+                                            <label class="Form-label is-required" for="provincia" id="tipoUtenzaLbl">Tipo utenza:</label>
                                             <select class="Form-input u-text-r-s u-borderRadius-m" id="tipoutenza" aria-required="true" required>
                                                 <option selected>Seleziona il tipo utenza</option>
                                                 <option>Domestica</option>
@@ -460,7 +460,7 @@
 
                                     <div class="Grid-cell u-md-size12of12 u-lg-size12of12">
                                         <div class="Form-field" id="tipoDichDiv">
-                                            <label class="Form-label is-required" for="provincia" id="tipoDichLbl">Tipo dichiarazione*:</label>
+                                            <label class="Form-label is-required" for="provincia" id="tipoDichLbl">Tipo dichiarazione:</label>
                                             <select class="Form-input u-text-r-s u-borderRadius-m" id="tipodichiarazione" aria-required="true" required>
                                                 <option selected>Seleziona il tipo dichiarazione</option>
                                                 <option>Iscrizione</option>
@@ -471,55 +471,65 @@
                                     </div>
 
                                     <div class="Form-field" id="addDiv">
-                                        <label class="Form-label" for="ddn" id="addLbl">A decorrere dal*:</label>
+                                        <label class="Form-label" for="ddn" id="addLbl">A decorrere dal:</label>
                                         <input type="date" class="Form-input u-text-r-s u-borderRadius-m" id="add" aria-describedby="info-ddn">
                                     </div>
 
-                                    <fieldset class="Form-field Form-field--choose Grid-cell u-text-r-s" id="contrDiv">
-                                        <legend class="Form-legend is-required" for="contribuente" style="font-size: 18px"><div id="contrLbl">Tipo contribuente*:</div></legend>
-                                        <label class="Form-label Form-label--block">
-                                            <input type="radio" class="Form-input" name="contribuente" id="contribuente1" aria-required="true" required>
-                                            <span class="Form-fieldIcon" role="presentation"></span> Persona fisica
-                                        </label>
-                                        <label class="Form-label Form-label--block">
-                                            <input type="radio" class="Form-input" name="contribuente" id="contribuente2" aria-required="true" required>
-                                            <span class="Form-fieldIcon" role="presentation"></span> Persona giuridica
-                                        </label>
+                                    <fieldset class="Form-field Form-field--choose Grid-cell u-text-r-s">
+                                        <legend class="Form-legend is-required" for="contribuente" style="font-size: 18px">
+                                            <a style="pointer-events: none; cursor: default;" id="contrLbl">Tipo contribuente:</a>
+                                        </legend>
+                                        <div class="From-field" id="contrDiv" style="align-self: auto">
+                                            <label class="Form-label Form-label--block">
+                                                <input type="radio" class="Form-input" name="contribuente" id="contribuente1" aria-required="true" required>
+                                                <span class="Form-fieldIcon" role="presentation"></span> Persona fisica
+                                            </label>
+                                            <label class="Form-label Form-label--block">
+                                                <input type="radio" class="Form-input" name="contribuente" id="contribuente2" aria-required="true" required>
+                                                <span class="Form-fieldIcon" role="presentation"></span> Persona giuridica
+                                            </label>
+                                        </div>
                                     </fieldset>
 
-                                    <fieldset class="Form-field Form-field--choose Grid-cell u-text-r-s" id="sexDiv">
-                                        <legend class="Form-legend is-required" for="sex1" style="font-size: 18px"><div id="sexLbl">Sesso*:</div></legend>
-                                        <label class="Form-label Form-label--block">
-                                            <input type="radio" class="Form-input" name="sex" id="sex1" aria-required="true" required>
-                                            <span class="Form-fieldIcon" role="presentation"></span> M
-                                        </label>
-                                        <label class="Form-label Form-label--block">
-                                            <input type="radio" class="Form-input" name="sex" id="sex2" aria-required="true" required>
-                                            <span class="Form-fieldIcon" role="presentation"></span> F
-                                        </label>
+
+                                    <fieldset class="Form-field Form-field--choose Grid-cell u-text-r-s">
+                                        <legend class="Form-legend is-required" for="sex1" style="font-size: 18px">
+                                            <a style="pointer-events: none; cursor: default;" id="sexLbl">Sesso:</a>
+                                        </legend>
+                                        <div class="Form-field" id="sexDiv">
+                                            <label class="Form-label Form-label--block">
+                                                <input type="radio" class="Form-input" name="sex" id="sex1" aria-required="true" required>
+                                                <span class="Form-fieldIcon" role="presentation"></span> M
+                                            </label>
+                                            <label class="Form-label Form-label--block">
+                                                <input type="radio" class="Form-input" name="sex" id="sex2" aria-required="true" required>
+                                                <span class="Form-fieldIcon" role="presentation"></span> F
+                                            </label>
+                                        </div>
                                     </fieldset>
+
 
                                     <div class="Form-field" id="nomeDiv">
-                                        <label class="Form-label is-required" for="nome" id="nomeLbl">Nome</label>
+                                        <label class="Form-label is-required" for="nome" id="nomeLbl">Nome:</label>
                                         <input class="Form-input u-text-r-s u-borderRadius-m" id="nome" aria-required="true" required>
                                     </div>
 
                                     <div class="Form-field" id="cognDiv">
-                                        <label class="Form-label is-required" for="cognome" id="cognLbl">Cognome</label>
+                                        <label class="Form-label is-required" for="cognome" id="cognLbl">Cognome:</label>
                                         <input class="Form-input u-text-r-s u-borderRadius-m" id="cognome" aria-required="true" required>
                                     </div>
 
                                     <div class="Form-field" id="ddnDiv">
-                                        <label class="Form-label" for="ddn" id="ddnLbl">Data di nascita*:</label>
+                                        <label class="Form-label" for="ddn" id="ddnLbl">Data di nascita:</label>
                                         <input type="date" class="Form-input u-text-r-s u-borderRadius-m" id="ddn" aria-describedby="info-ddn">
                                     </div>
 
                                     <div class="Grid-cell u-md-size12of12 u-lg-size12of12">
                                         <div class="Form-field" id="statoDiv">
-                                            <label class="Form-label is-required" for="provincia" id="statoLbl">Stato nascita*:</label>
+                                            <label class="Form-label is-required" for="provincia" id="statoLbl">Stato nascita:</label>
                                             <select class="Form-input u-text-r-s u-borderRadius-m" id="stato" aria-required="true" required>
                                                 <option selected>Seleziona lo stato di nascita</option>
-                                                <option >Italia</option>
+                                                <option>Italia</option>
                                                 <option>Francia</option>
                                                 <option>Germania</option>
                                                 <option>Spagna</option>
@@ -529,11 +539,11 @@
 
                                     <div class="Grid-cell u-md-size12of12 u-lg-size12of12">
                                         <div class="Form-field" id="provDiv">
-                                            <label class="Form-label is-required" for="provincia" id="provLbl">Provincia nascita*:</label>
+                                            <label class="Form-label is-required" for="provincia" id="provLbl">Provincia nascita:</label>
                                             <select class="Form-input u-text-r-s u-borderRadius-m" id="prov" aria-required="true" required>
-                                                 <option selected>Seleziona la provincia di nascita</option>
+                                                <option selected>Seleziona la provincia di nascita</option>
 
-                                                <option >BA</option>
+                                                <option>BA</option>
                                                 <option>RM</option>
                                                 <option>MI</option>
                                             </select>
@@ -542,11 +552,11 @@
 
                                     <div class="Grid-cell u-md-size12of12 u-lg-size12of12">
                                         <div class="Form-field" id="comDiv">
-                                            <label class="Form-label is-required" for="comune" id="comLbl">Comune nascita*:</label>
+                                            <label class="Form-label is-required" for="comune" id="comLbl">Comune di nascita:</label>
                                             <select class="Form-input u-text-r-s u-borderRadius-m" id="com" aria-required="true" required>
-                                                 <option selected>Seleziona il comune di nascita</option>
+                                                <option selected>Seleziona il comune di nascita</option>
 
-                                                <option >Bari</option>
+                                                <option>Bari</option>
                                                 <option>Roma</option>
                                                 <option>Milano</option>
                                             </select>
@@ -611,19 +621,43 @@
 
 
 
-                                        
 
-                                        /*if (!/^[a-z]/i.test(document.getElementById("add").value)) {
+
+                                        if (!/^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$/.test(document.getElementById("add").value)) {
                                             document.getElementById("addLbl").style.color = "red";
                                             document.getElementById("addDiv").className = "Form-field is-invalid";
                                             document.getElementById("errorNuovRes").style.display = 'block';
                                             cont++;
                                         }
                                         else {
-                                            document.getElementById("addLbl").style.color = "black";
-                                            document.getElementById("addDiv").className = "Form-field";
-                                            document.getElementById("errorNuovRes").style.display = 'none';
-                                        }*/
+
+                                            var stringa=document.getElementById("add").value;
+                                            // Recupera dalla stringa i campi anno, mese e giorno
+                                            anno = parseInt(stringa.substr(6), 10);
+                                            mese = parseInt(stringa.substr(3, 2), 10);
+                                            giorno = parseInt(stringa.substr(0, 2), 10);
+
+                                            // Crea la nuova data
+                                            var data = new Date(anno, mese - 1, giorno);
+
+                                            // Controlla che i parametri della data siano
+                                            //  gli stessi che abbiamo impostato
+                                            if (data.getFullYear() == anno &&
+                                                data.getMonth() + 1 == mese &&
+                                                data.getDate() == giorno) {
+                                                document.getElementById("addLbl").style.color = "black";
+                                                document.getElementById("addDiv").className = "Form-field ";
+                                                document.getElementById("errorNuovRes").style.display = 'none';
+
+                                            } else {
+                                                document.getElementById("addLbl").style.color = "red";
+                                                document.getElementById("addDiv").className = "Form-field is-invalid";
+                                                document.getElementById("errorNuovRes").style.display = 'block';
+                                                cont++;
+                                            }
+
+
+                                        }
 
 
                                         //Campo Numero civico errore
@@ -639,7 +673,7 @@
                                             document.getElementById("nomeDiv").className = "Form-field";
                                         }
 
-                                        
+
                                         if (document.getElementById("cognome").value == "") {
                                             document.getElementById("cognLbl").style.color = "red";
                                             document.getElementById("cognDiv").className = "Form-field is-invalid";
@@ -691,33 +725,71 @@
                                             document.getElementById("errorNuovRes").style.display = 'none';
                                         }
 
-                                       
-                                        if(document.getElementById('sex1').checked || document.getElementById('sex2').checked){
-                                            
 
-                                            document.getElementById("sexDiv").className = "Form-field Form-field--choose Grid-cell u-text-r-s";
+                                        if (document.getElementById('sex1').checked || document.getElementById('sex2').checked) {
+
+
+                                            document.getElementById("sexDiv").className = "From-field";
                                             document.getElementById("sexLbl").style.color = "black";
                                             document.getElementById("errorNuovRes").style.display = 'none';
                                         }
                                         else {
                                             document.getElementById("sexLbl").style.color = "red";
-                                            document.getElementById("sexDiv").className = "Form-field Form-field--choose Grid-cell u-text-r-s is-invalid";
+                                            document.getElementById("sexDiv").className = "Alert Alert--error u-padding-r-right";
                                             document.getElementById("errorNuovRes").style.display = 'block';
                                             cont++;
                                         }
 
-                                         if(document.getElementById('contribuente1').checked || document.getElementById('contribuente2').checked){
-                                            
+                                        if (document.getElementById('contribuente1').checked || document.getElementById('contribuente2').checked) {
 
-                                            document.getElementById("contrDiv").className = "Form-field Form-field--choose Grid-cell u-text-r-s";
+
+                                            document.getElementById("contrDiv").className = "Form-field";
                                             document.getElementById("contrLbl").style.color = "black";
                                             document.getElementById("errorNuovRes").style.display = 'none';
                                         }
                                         else {
                                             document.getElementById("contrLbl").style.color = "red";
-                                            document.getElementById("contrDiv").style.outlineColor = "red";
+                                            document.getElementById("contrDiv").className = "Alert Alert--error u-padding-r-right";
                                             document.getElementById("errorNuovRes").style.display = 'block';
                                             cont++;
+                                        }
+
+
+                                        
+                                        if (!/^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$/.test(document.getElementById("ddn").value)) {
+                                            document.getElementById("ddnLbl").style.color = "red";
+                                            document.getElementById("ddnDiv").className = "Form-field is-invalid";
+                                            document.getElementById("errorNuovRes").style.display = 'block';
+                                            cont++;
+                                        }
+                                        else {
+
+                                            var stringa=document.getElementById("ddn").value;
+                                            // Recupera dalla stringa i campi anno, mese e giorno
+                                            anno = parseInt(stringa.substr(6), 10);
+                                            mese = parseInt(stringa.substr(3, 2), 10);
+                                            giorno = parseInt(stringa.substr(0, 2), 10);
+
+                                            // Crea la nuova data
+                                            var data = new Date(anno, mese - 1, giorno);
+
+                                            // Controlla che i parametri della data siano
+                                            //  gli stessi che abbiamo impostato
+                                            if (data.getFullYear() == anno &&
+                                                data.getMonth() + 1 == mese &&
+                                                data.getDate() == giorno) {
+                                                document.getElementById("ddnLbl").style.color = "black";
+                                                document.getElementById("ddnDiv").className = "Form-field ";
+                                                document.getElementById("errorNuovRes").style.display = 'none';
+
+                                            } else {
+                                                document.getElementById("ddnLbl").style.color = "red";
+                                                document.getElementById("ddnDiv").className = "Form-field is-invalid";
+                                                document.getElementById("errorNuovRes").style.display = 'block';
+                                                cont++;
+                                            }
+
+
                                         }
 
 
@@ -725,7 +797,8 @@
 
 
 
-       
+
+
                                         //Controllo finale
                                         if (cont == 0) {
                                             document.getElementById("errorNuovRes").style.display = 'none';
@@ -892,7 +965,7 @@
 
                                 <script type="text/javascript">
 
-                                function showDivIscrizione() {
+                                    function showDivIscrizione() {
 
                                         var cont = 0;
 
@@ -1020,7 +1093,7 @@
 
 
 
-                                       
+
 
                                         //Campo Telefono errore
                                         if (document.getElementById("tel").value == "") {
@@ -1065,7 +1138,7 @@
 
                                         //Controllo finale
                                         if (cont == 0) {
-                                            
+
                                             document.getElementById("errorNuovRes").style.display = 'none';
                                             showDivSalto2();
                                         }
@@ -1256,7 +1329,7 @@
 
                                         var cont = 0;
 
-                                        
+
 
                                         //Campo VIA errore
                                         if (document.getElementById("via").value == "") {
@@ -1309,8 +1382,8 @@
                                             document.getElementById("errorNuovRes").style.display = 'none';
                                         }
 
-                                     
-          
+
+
                                         //Campo Piano errore
                                         if (document.getElementById("pia").value == "") {
                                             document.getElementById("piaLbl").style.color = "red";
@@ -1436,7 +1509,7 @@
 
                                         //Controllo finale
                                         if (cont == 0) {
-                                            
+
                                             document.getElementById("errorNuovRes").style.display = 'none';
                                             showDivSalto3();
                                         }
