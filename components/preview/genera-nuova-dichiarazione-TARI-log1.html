@@ -476,19 +476,19 @@
                                     </div>
 
                                     <fieldset class="Form-field Form-field--choose Grid-cell u-text-r-s" id="contrDiv">
-                                        <legend class="Form-legend is-required" for="contribuente" style="font-size: 18px" id="contrLbl">Tipo contribuente*:</legend>
+                                        <legend class="Form-legend is-required" for="contribuente" style="font-size: 18px"><div id="contrLbl">Tipo contribuente*:</div></legend>
                                         <label class="Form-label Form-label--block">
                                             <input type="radio" class="Form-input" name="contribuente" id="contribuente1" aria-required="true" required>
                                             <span class="Form-fieldIcon" role="presentation"></span> Persona fisica
                                         </label>
                                         <label class="Form-label Form-label--block">
-                                            <input type="radio" class="Form-input" name="contribuente" id="contribuente1" aria-required="true" required>
+                                            <input type="radio" class="Form-input" name="contribuente" id="contribuente2" aria-required="true" required>
                                             <span class="Form-fieldIcon" role="presentation"></span> Persona giuridica
                                         </label>
                                     </fieldset>
 
                                     <fieldset class="Form-field Form-field--choose Grid-cell u-text-r-s" id="sexDiv">
-                                        <legend class="Form-legend is-required" for="sex1" style="font-size: 18px" id="sexLbl">Sesso</legend>
+                                        <legend class="Form-legend is-required" for="sex1" style="font-size: 18px"><div id="sexLbl">Sesso*:</div></legend>
                                         <label class="Form-label Form-label--block">
                                             <input type="radio" class="Form-input" name="sex" id="sex1" aria-required="true" required>
                                             <span class="Form-fieldIcon" role="presentation"></span> M
@@ -692,28 +692,40 @@
                                         }
 
                                        
-                                        if(document.getElementById('sex1').checked && document.getElementById('sex2').checked){
-                                            document.getElementById("sexLbl").style.color = "red";
-                                            document.getElementById("sexDiv").className = "Form-field is-invalid Form-field--choose Grid-cell u-text-r-s";
-                                            document.getElementById("errorNuovRes").style.display = 'block';
-                                            cont++;
-                                        }
-                                        else {
+                                        if(document.getElementById('sex1').checked || document.getElementById('sex2').checked){
+                                            
+
                                             document.getElementById("sexDiv").className = "Form-field Form-field--choose Grid-cell u-text-r-s";
                                             document.getElementById("sexLbl").style.color = "black";
                                             document.getElementById("errorNuovRes").style.display = 'none';
                                         }
+                                        else {
+                                            document.getElementById("sexLbl").style.color = "red";
+                                            document.getElementById("sexDiv").className = "Form-field Form-field--choose Grid-cell u-text-r-s is-invalid";
+                                            document.getElementById("errorNuovRes").style.display = 'block';
+                                            cont++;
+                                        }
+
+                                         if(document.getElementById('contribuente1').checked || document.getElementById('contribuente2').checked){
+                                            
+
+                                            document.getElementById("contrDiv").className = "Form-field Form-field--choose Grid-cell u-text-r-s";
+                                            document.getElementById("contrLbl").style.color = "black";
+                                            document.getElementById("errorNuovRes").style.display = 'none';
+                                        }
+                                        else {
+                                            document.getElementById("contrLbl").style.color = "red";
+                                            document.getElementById("contrDiv").style.outlineColor = "red";
+                                            document.getElementById("errorNuovRes").style.display = 'block';
+                                            cont++;
+                                        }
 
 
 
 
 
 
-                                        
-
-
-
-
+       
                                         //Controllo finale
                                         if (cont == 0) {
                                             document.getElementById("errorNuovRes").style.display = 'none';
