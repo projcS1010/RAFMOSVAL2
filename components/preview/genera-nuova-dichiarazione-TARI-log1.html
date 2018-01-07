@@ -471,8 +471,8 @@
                                     </div>
 
                                     <div class="Form-field" id="addDiv">
-                                        <label class="Form-label" for="ddn" id="addLbl">A decorrere dal:</label>
-                                        <input type="date" class="Form-input u-text-r-s u-borderRadius-m" id="add" aria-describedby="info-ddn">
+                                        <label class="Form-label" for="ddn" id="addLbl">A decorrere dal (formato: dd/mm/yyyy):</label>
+                                        <input type="text" class="Form-input u-text-r-s u-borderRadius-m" id="add" aria-describedby="info-ddn">
                                     </div>
 
                                     <fieldset class="Form-field Form-field--choose Grid-cell u-text-r-s">
@@ -520,8 +520,8 @@
                                     </div>
 
                                     <div class="Form-field" id="ddnDiv">
-                                        <label class="Form-label" for="ddn" id="ddnLbl">Data di nascita:</label>
-                                        <input type="date" class="Form-input u-text-r-s u-borderRadius-m" id="ddn" aria-describedby="info-ddn">
+                                        <label class="Form-label" for="ddn" id="ddnLbl">Data di nascita (formato: dd/mm/yyyy):</label>
+                                        <input type="text" class="Form-input u-text-r-s u-borderRadius-m" id="ddn" aria-describedby="info-ddn">
                                     </div>
 
                                     <div class="Grid-cell u-md-size12of12 u-lg-size12of12">
@@ -923,11 +923,11 @@
                                         <input class="Form-input u-text-r-s u-borderRadius-m" id="via" aria-required="true" required>
                                     </div>
 
-                                    <div class="Form-field" id="civDiv">
+                                    <div class="Form-field" id="ncivDiv">
                                         <label class="Form-label is-required">
-                                            <a id="civLbl">Numero civico</a>
+                                            <a id="ncivLbl">Numero civico</a>
                                         </label>
-                                        <input class="Form-input u-text-r-s u-borderRadius-m" id="civ" aria-required="true" required>
+                                        <input class="Form-input u-text-r-s u-borderRadius-m" id="nciv" aria-required="true" required>
                                     </div>
 
                                     <div class="Form-field" id="capDiv">
@@ -1026,27 +1026,27 @@
 
 
                                         //Campo Numero civico errore
-                                        if (document.getElementById("civ").value == "") {
-                                            document.getElementById("civLbl").style.color = "red";
-                                            document.getElementById("civDiv").className = "Form-field is-invalid";
+                                        if (document.getElementById("nciv").value == "") {
+                                            document.getElementById("ncivLbl").style.color = "red";
+                                            document.getElementById("ncivDiv").className = "Form-field is-invalid";
                                             document.getElementById("errorNuovRes").style.display = 'block';
                                             cont++;
                                         }
                                         else {
-                                            document.getElementById("civLbl").style.color = "black";
+                                            document.getElementById("ncivLbl").style.color = "black";
                                             document.getElementById("errorNuovRes").style.display = 'none';
-                                            document.getElementById("civDiv").className = "Form-field";
+                                            document.getElementById("ncivDiv").className = "Form-field";
                                         }
 
-                                        if (/^[a-z]+$/i.test(document.getElementById("civ").value)) {
-                                            document.getElementById("civLbl").style.color = "red";
-                                            document.getElementById("civDiv").className = "Form-field is-invalid";
+                                        if (/^[a-z]+$/i.test(document.getElementById("nciv").value)) {
+                                            document.getElementById("ncivLbl").style.color = "red";
+                                            document.getElementById("ncivDiv").className = "Form-field is-invalid";
                                             document.getElementById("errorNuovRes").style.display = 'block';
                                             cont++;
                                         }
                                         else {
-                                            document.getElementById("civLbl").style.color = "black";
-                                            document.getElementById("civDiv").className = "Form-field";
+                                            document.getElementById("ncivLbl").style.color = "black";
+                                            document.getElementById("ncivDiv").className = "Form-field";
                                             document.getElementById("errorNuovRes").style.display = 'none';
                                         }
 
