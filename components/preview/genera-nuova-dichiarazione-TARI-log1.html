@@ -631,7 +631,7 @@
                                         }
                                         else {
 
-                                            var stringa=document.getElementById("add").value;
+                                            var stringa = document.getElementById("add").value;
                                             // Recupera dalla stringa i campi anno, mese e giorno
                                             anno = parseInt(stringa.substr(6), 10);
                                             mese = parseInt(stringa.substr(3, 2), 10);
@@ -755,7 +755,7 @@
                                         }
 
 
-                                        
+
                                         if (!/^[0-9]{2}\/[0-9]{2}\/[0-9]{4}$/.test(document.getElementById("ddn").value)) {
                                             document.getElementById("ddnLbl").style.color = "red";
                                             document.getElementById("ddnDiv").className = "Form-field is-invalid";
@@ -764,7 +764,7 @@
                                         }
                                         else {
 
-                                            var stringa=document.getElementById("ddn").value;
+                                            var stringa = document.getElementById("ddn").value;
                                             // Recupera dalla stringa i campi anno, mese e giorno
                                             anno = parseInt(stringa.substr(6), 10);
                                             mese = parseInt(stringa.substr(3, 2), 10);
@@ -895,23 +895,23 @@
                                             </label>
                                             <select class="Form-input u-text-r-s u-borderRadius-m" id="pro" aria-required="true" required>
                                                 <option selected>Seleziona una provincia</option>
+                                                <option>BA</option>
+                                                <option>RM</option>
                                                 <option>MI</option>
-                                                <option>ME</option>
-                                                <option>MB</option>
                                             </select>
                                         </div>
                                     </div>
 
                                     <div class="Grid-cell u-md-size12of12 u-lg-size12of12">
                                         <div class="Form-field" id="comDiv">
-                                            <label class="Form-label is-required" for="provincia">
+                                            <label class="Form-label is-required" for="com">
                                                 <a id="comLbl">Comune locazione dell'immobile:</a>
                                             </label>
                                             <select class="Form-input u-text-r-s u-borderRadius-m" id="com" aria-required="true" required>
                                                 <option selected>Seleziona il comune</option>
-                                                <option>MI</option>
-                                                <option>ME</option>
-                                                <option>MB</option>
+                                                <option>Bari</option>
+                                                <option>Roma</option>
+                                                <option>Milano</option>
                                             </select>
                                         </div>
                                     </div>
@@ -924,7 +924,7 @@
                                     </div>
 
                                     <div class="Form-field" id="ncivDiv">
-                                        <label class="Form-label is-required">
+                                        <label class="Form-label is-required" for="nciv">
                                             <a id="ncivLbl">Numero civico</a>
                                         </label>
                                         <input class="Form-input u-text-r-s u-borderRadius-m" id="nciv" aria-required="true" required>
@@ -969,19 +969,7 @@
 
                                         var cont = 0;
 
-                                        //Campo Selez Comune Errore
-                                        if (document.getElementById("com").options[document.getElementById("com").selectedIndex].value == "Seleziona il comune") {
-                                            document.getElementById("comLbl").style.color = "red";
-                                            document.getElementById("comDiv").className = "Form-field is-invalid";
-                                            document.getElementById("errorNuovRes").style.display = 'block';
-                                            cont++;
-                                        }
 
-                                        else {
-                                            document.getElementById("comDiv").className = "Form-field";
-                                            document.getElementById("comLbl").style.color = "black";
-                                            document.getElementById("errorNuovRes").style.display = 'none';
-                                        }
 
                                         //Campo Selez Provincia Errore
                                         if (document.getElementById("pro").options[document.getElementById("pro").selectedIndex].value == "Seleziona una provincia") {
@@ -998,6 +986,19 @@
                                         }
 
 
+                                        //Campo Selez Comune Errore
+                                        if (document.getElementById("com").options[document.getElementById("com").selectedIndex].value == "Seleziona il comune") {
+                                            document.getElementById("comLbl").style.color = "red";
+                                            document.getElementById("comDiv").className = "Form-field is-invalid";
+                                            document.getElementById("errorNuovRes").style.display = 'block';
+                                            cont++;
+                                        }
+
+                                        else {
+                                            document.getElementById("comDiv").className = "Form-field";
+                                            document.getElementById("comLbl").style.color = "black";
+                                            document.getElementById("errorNuovRes").style.display = 'none';
+                                        }
 
                                         //Campo VIA errore
                                         if (document.getElementById("via").value == "") {
