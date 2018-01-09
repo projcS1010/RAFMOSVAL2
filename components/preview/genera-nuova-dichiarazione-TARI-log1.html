@@ -660,8 +660,8 @@
                                         }
 
 
-                                        //Campo Numero civico errore
-                                        if (document.getElementById("nome").value == "") {
+                                        //Campo Nome errore
+                                        if ((document.getElementById("nome").value == "") || (!/^[a-z]/i.test(document.getElementById("nome").value))) {
                                             document.getElementById("nomeLbl").style.color = "red";
                                             document.getElementById("nomeDiv").className = "Form-field is-invalid";
                                             document.getElementById("errorNuovRes").style.display = 'block';
@@ -672,9 +672,10 @@
                                             document.getElementById("errorNuovRes").style.display = 'none';
                                             document.getElementById("nomeDiv").className = "Form-field";
                                         }
+ 
+                                        
 
-
-                                        if (document.getElementById("cognome").value == "") {
+                                        if ((document.getElementById("cognome").value == "") ||(!/^[a-z]/i.test(document.getElementById("cognome").value))) {
                                             document.getElementById("cognLbl").style.color = "red";
                                             document.getElementById("cognDiv").className = "Form-field is-invalid";
                                             document.getElementById("errorNuovRes").style.display = 'block';
@@ -1028,7 +1029,7 @@
 
                                         
                                         //Campo Numero civico errore
-                                        if (document.getElementById("nciv").value == "") {
+                                        if ((document.getElementById("nciv").value == "") || (!/^[0-9]+$/i.test(document.getElementById("nciv").value))) {
                                             document.getElementById("ncivLbl").style.color = "red";
                                             document.getElementById("ncivDiv").className = "Form-field is-invalid";
                                             document.getElementById("errorNuovRes2").style.display = 'block';
@@ -1039,22 +1040,8 @@
                                             document.getElementById("errorNuovRes2").style.display = 'none';
                                             document.getElementById("ncivDiv").className = "Form-field";
                                         }
-
-                                        //errore
-                                        if (/^[a-z]+$/.test(document.getElementById("nciv").value)) {
-                                            document.getElementById("ncivLbl").style.color = "red";
-                                            document.getElementById("ncivDiv").className = "Form-field is-invalid";
-                                            document.getElementById("errorNuovRes2").style.display = 'block';
-                                            cont++;
-                                        }
-                                        else {
-                                            document.getElementById("ncivLbl").style.color = "black";
-                                            document.getElementById("ncivDiv").className = "Form-field";
-                                            document.getElementById("errorNuovRes2").style.display = 'none';
-                                        }
-
                                         //Campo CAP errore
-                                        if (document.getElementById("cap").value == "") {
+                                        if ((document.getElementById("cap").value == "") || (!/^[0-9]+$/i.test(document.getElementById("cap").value)) || (!(document.getElementById("cap").value.length == 5))) {
                                             document.getElementById("capLbl").style.color = "red";
                                             document.getElementById("capDiv").className = "Form-field is-invalid";
                                             document.getElementById("errorNuovRes2").style.display = 'block';
@@ -1065,41 +1052,9 @@
                                             document.getElementById("errorNuovRes2").style.display = 'none';
                                             document.getElementById("capDiv").className = "Form-field";
                                         }
-
-                                        if (/^[a-z]+$/i.test(document.getElementById("cap").value)) {
-                                            document.getElementById("capLbl").style.color = "red";
-                                            document.getElementById("capDiv").className = "Form-field is-invalid";
-                                            document.getElementById("errorNuovRes2").style.display = 'block';
-                                            cont++;
-                                        }
-                                        else {
-                                            document.getElementById("capLbl").style.color = "black";
-                                            document.getElementById("capDiv").className = "Form-field";
-                                            document.getElementById("errorNuovRes2").style.display = 'none';
-                                        }
-
-                                        if (document.getElementById("cap").value.length == 5) {
-                                            document.getElementById("capLbl").style.color = "black";
-                                            document.getElementById("capDiv").className = "Form-field";
-                                            document.getElementById("errorNuovRes2").style.display = 'none';
-                                        }
-
-                                        else {
-                                            document.getElementById("capLbl").style.color = "red";
-                                            document.getElementById("capDiv").className = "Form-field is-invalid";
-                                            document.getElementById("errorNuovRes2").style.display = 'block';
-                                            cont++;
-                                        }
-
-
-
-
-
-
-
 
                                         //Campo Telefono errore
-                                        if (document.getElementById("tel").value == "") {
+                                        if ((document.getElementById("tel").value == "") || (!/^[0-9]+$/i.test(document.getElementById("tel").value)) || (document.getElementById("tel").value.length < 8 || document.getElementById("tel").value.length > 11) ){
                                             document.getElementById("telLbl").style.color = "red";
                                             document.getElementById("telDiv").className = "Form-field is-invalid";
                                             document.getElementById("errorNuovRes2").style.display = 'block';
@@ -1109,31 +1064,6 @@
                                             document.getElementById("telLbl").style.color = "black";
                                             document.getElementById("errorNuovRes2").style.display = 'none';
                                             document.getElementById("telDiv").className = "Form-field";
-                                        }
-
-                                        if (/^[a-z]+$/i.test(document.getElementById("tel").value)) {
-                                            document.getElementById("telLbl").style.color = "red";
-                                            document.getElementById("telDiv").className = "Form-field is-invalid";
-                                            document.getElementById("errorNuovRes2").style.display = 'block';
-                                            cont++;
-                                        }
-                                        else {
-                                            document.getElementById("telLbl").style.color = "black";
-                                            document.getElementById("telDiv").className = "Form-field";
-                                            document.getElementById("errorNuovRes2").style.display = 'none';
-                                        }
-
-                                        if (document.getElementById("tel").value.length < 8 || document.getElementById("tel").value.length > 11) {
-                                            document.getElementById("telLbl").style.color = "red";
-                                            document.getElementById("telDiv").className = "Form-field is-invalid";
-                                            document.getElementById("errorNuovRes2").style.display = 'block';
-                                            cont++;
-                                        }
-                                        else {
-                                            document.getElementById("telLbl").style.color = "black";
-                                            document.getElementById("telDiv").className = "Form-field";
-                                            document.getElementById("errorNuovRes2").style.display = 'none';
-
                                         }
 
 
