@@ -903,11 +903,11 @@
                                     </div>
 
                                     <div class="Grid-cell u-md-size12of12 u-lg-size12of12">
-                                        <div class="Form-field" id="comDiv">
-                                            <label class="Form-label is-required" for="com">
-                                                <a id="comLbl">Comune locazione dell'immobile:</a>
+                                        <div class="Form-field" id="com1Div">
+                                            <label class="Form-label is-required" for="com1" id="com1Lbl">
+                                              Comune locazione dell'immobile:
                                             </label>
-                                            <select class="Form-input u-text-r-s u-borderRadius-m" id="com" aria-required="true" required>
+                                            <select class="Form-input u-text-r-s u-borderRadius-m" id="com1" aria-required="true" required>
                                                 <option selected>Seleziona il comune</option>
                                                 <option>Bari</option>
                                                 <option>Roma</option>
@@ -924,8 +924,8 @@
                                     </div>
 
                                     <div class="Form-field" id="ncivDiv">
-                                        <label class="Form-label is-required" for="nciv">
-                                            <a id="ncivLbl">Numero civico</a>
+                                        <label class="Form-label is-required" for="nciv" id="ncivLbl">
+                                            Numero civico
                                         </label>
                                         <input class="Form-input u-text-r-s u-borderRadius-m" id="nciv" aria-required="true" required>
                                     </div>
@@ -987,16 +987,16 @@
 
 
                                         //Campo Selez Comune Errore
-                                        if (document.getElementById("com").options[document.getElementById("com").selectedIndex].value == "Seleziona il comune") {
-                                            document.getElementById("comLbl").style.color = "red";
-                                            document.getElementById("comDiv").className = "Form-field is-invalid";
+                                        if (document.getElementById("com1").options[document.getElementById("com1").selectedIndex].value == "Seleziona il comune") {
+                                            document.getElementById("com1Lbl").style.color = "red";
+                                            document.getElementById("com1Div").className = "Form-field is-invalid";
                                             document.getElementById("errorNuovRes2").style.display = 'block';
                                             cont++;
                                         }
 
                                         else {
-                                            document.getElementById("comDiv").className = "Form-field";
-                                            document.getElementById("comLbl").style.color = "black";
+                                            document.getElementById("com1Div").className = "Form-field";
+                                            document.getElementById("com1Lbl").style.color = "black";
                                             document.getElementById("errorNuovRes2").style.display = 'none';
                                         }
 
@@ -1026,6 +1026,7 @@
                                         }
 
 
+                                        
                                         //Campo Numero civico errore
                                         if (document.getElementById("nciv").value == "") {
                                             document.getElementById("ncivLbl").style.color = "red";
@@ -1039,7 +1040,8 @@
                                             document.getElementById("ncivDiv").className = "Form-field";
                                         }
 
-                                        if (/^[a-z]+$/i.test(document.getElementById("nciv").value)) {
+                                        //errore
+                                        if (/^[a-z]+$/.test(document.getElementById("nciv").value)) {
                                             document.getElementById("ncivLbl").style.color = "red";
                                             document.getElementById("ncivDiv").className = "Form-field is-invalid";
                                             document.getElementById("errorNuovRes2").style.display = 'block';
