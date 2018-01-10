@@ -816,9 +816,9 @@
                                             </label>
                                             <select class="Form-input u-text-r-s u-borderRadius-m" id="pro" aria-required="true" required>
                                                 <option selected>Seleziona una provincia</option>
+                                                <option>BA</option>
+                                                <option>RM</option>
                                                 <option>MI</option>
-                                                <option>ME</option>
-                                                <option>MB</option>
                                             </select>
                                         </div>
                                     </div>
@@ -830,9 +830,9 @@
                                             </label>
                                             <select class="Form-input u-text-r-s u-borderRadius-m" id="com" aria-required="true" required>
                                                 <option selected>Seleziona il comune</option>
-                                                <option>MI</option>
-                                                <option>ME</option>
-                                                <option>MB</option>
+                                                <option>Bari</option>
+                                                <option>Roma</option>
+                                                <option>Milano</option>
                                             </select>
                                         </div>
                                     </div>
@@ -963,8 +963,8 @@
                                         }
 
 
-                                        //Campo Numero civico errore
-                                        if (document.getElementById("civ").value == "") {
+                                         //Campo Numero civico errore
+                                         if ((document.getElementById("civ").value == "") || (!/^[0-9]+$/i.test(document.getElementById("civ").value))) {
                                             document.getElementById("civLbl").style.color = "red";
                                             document.getElementById("civDiv").className = "Form-field is-invalid";
                                             document.getElementById("errorNuovRes").style.display = 'block';
@@ -976,20 +976,10 @@
                                             document.getElementById("civDiv").className = "Form-field";
                                         }
 
-                                        if (/^[a-z]+$/i.test(document.getElementById("civ").value)) {
-                                            document.getElementById("civLbl").style.color = "red";
-                                            document.getElementById("civDiv").className = "Form-field is-invalid";
-                                            document.getElementById("errorNuovRes").style.display = 'block';
-                                            cont++;
-                                        }
-                                        else {
-                                            document.getElementById("civLbl").style.color = "black";
-                                            document.getElementById("civDiv").className = "Form-field";
-                                            document.getElementById("errorNuovRes").style.display = 'none';
-                                        }
+                                       
 
                                         //Campo CAP errore
-                                        if (document.getElementById("cap").value == "") {
+                                        if ((document.getElementById("cap").value == "") || (!/^[0-9]+$/i.test(document.getElementById("cap").value)) || (!(document.getElementById("cap").value.length == 5))) {
                                             document.getElementById("capLbl").style.color = "red";
                                             document.getElementById("capDiv").className = "Form-field is-invalid";
                                             document.getElementById("errorNuovRes").style.display = 'block';
@@ -1001,63 +991,26 @@
                                             document.getElementById("capDiv").className = "Form-field";
                                         }
 
-                                        if (/^[a-z]+$/i.test(document.getElementById("cap").value)) {
-                                            document.getElementById("capLbl").style.color = "red";
-                                            document.getElementById("capDiv").className = "Form-field is-invalid";
-                                            document.getElementById("errorNuovRes").style.display = 'block';
-                                            cont++;
-                                        }
-                                        else {
-                                            document.getElementById("capLbl").style.color = "black";
-                                            document.getElementById("capDiv").className = "Form-field";
-                                            document.getElementById("errorNuovRes").style.display = 'none';
-                                        }
-
-                                        if (document.getElementById("cap").value.length == 5) {
-                                            document.getElementById("capLbl").style.color = "black";
-                                            document.getElementById("capDiv").className = "Form-field";
-                                            document.getElementById("errorNuovRes").style.display = 'none';
-                                        }
-
-                                        else {
-                                            document.getElementById("capLbl").style.color = "red";
-                                            document.getElementById("capDiv").className = "Form-field is-invalid";
-                                            document.getElementById("errorNuovRes").style.display = 'block';
-                                            cont++;
-                                        }
 
 
 
 
 
-
-                                        //Campo Piano errore
-                                        if (document.getElementById("pia").value == "") {
-                                            document.getElementById("piaLbl").style.color = "red";
-                                            document.getElementById("piaDiv").className = "Form-field is-invalid";
-                                            document.getElementById("errorNuovRes").style.display = 'block';
-                                            cont++;
-                                        }
-                                        else {
-                                            document.getElementById("piaLbl").style.color = "black";
-                                            document.getElementById("errorNuovRes").style.display = 'none';
-                                            document.getElementById("piaDiv").className = "Form-field";
-                                        }
-
-                                        if (/^[a-z]+$/i.test(document.getElementById("pia").value)) {
-                                            document.getElementById("piaLbl").style.color = "red";
-                                            document.getElementById("piaDiv").className = "Form-field is-invalid";
-                                            document.getElementById("errorNuovRes").style.display = 'block';
-                                            cont++;
-                                        }
-                                        else {
-                                            document.getElementById("piaLbl").style.color = "black";
-                                            document.getElementById("piaDiv").className = "Form-field";
-                                            document.getElementById("errorNuovRes").style.display = 'none';
-                                        }
+                                      //Campo Piano errore
+                                      if ((document.getElementById("pia").value == "") || (!/^[0-9]+$/i.test(document.getElementById("pia").value))) {
+                                        document.getElementById("piaLbl").style.color = "red";
+                                        document.getElementById("piaDiv").className = "Form-field is-invalid";
+                                        document.getElementById("errorNuovRes").style.display = 'block';
+                                        cont++;
+                                    }
+                                    else {
+                                        document.getElementById("piaLbl").style.color = "black";
+                                        document.getElementById("errorNuovRes").style.display = 'none';
+                                        document.getElementById("piaDiv").className = "Form-field";
+                                    }
 
                                         //Campo Interno errore
-                                        if (document.getElementById("int").value == "") {
+                                        if ((document.getElementById("int").value == "") || (!/^[0-9]+$/i.test(document.getElementById("int").value))) {
                                             document.getElementById("intLbl").style.color = "red";
                                             document.getElementById("intDiv").className = "Form-field is-invalid";
                                             document.getElementById("errorNuovRes").style.display = 'block';
@@ -1069,56 +1022,19 @@
                                             document.getElementById("intDiv").className = "Form-field";
                                         }
 
-                                        if (/^[a-z]+$/i.test(document.getElementById("int").value)) {
-                                            document.getElementById("intLbl").style.color = "red";
-                                            document.getElementById("intDiv").className = "Form-field is-invalid";
-                                            document.getElementById("errorNuovRes").style.display = 'block';
-                                            cont++;
-                                        }
-                                        else {
-                                            document.getElementById("intLbl").style.color = "black";
-                                            document.getElementById("intDiv").className = "Form-field";
-                                            document.getElementById("errorNuovRes").style.display = 'none';
-                                        }
 
-                                        //Campo Telefono errore
-                                        if (document.getElementById("tel").value == "") {
-                                            document.getElementById("telLbl").style.color = "red";
-                                            document.getElementById("telDiv").className = "Form-field is-invalid";
-                                            document.getElementById("errorNuovRes").style.display = 'block';
-                                            cont++;
-                                        }
-                                        else {
-                                            document.getElementById("telLbl").style.color = "black";
-                                            document.getElementById("errorNuovRes").style.display = 'none';
-                                            document.getElementById("telDiv").className = "Form-field";
-                                        }
-
-                                        if (/^[a-z]+$/i.test(document.getElementById("tel").value)) {
-                                            document.getElementById("telLbl").style.color = "red";
-                                            document.getElementById("telDiv").className = "Form-field is-invalid";
-                                            document.getElementById("errorNuovRes").style.display = 'block';
-                                            cont++;
-                                        }
-                                        else {
-                                            document.getElementById("telLbl").style.color = "black";
-                                            document.getElementById("telDiv").className = "Form-field";
-                                            document.getElementById("errorNuovRes").style.display = 'none';
-                                        }
-
-                                        if (document.getElementById("tel").value.length < 8 || document.getElementById("tel").value.length > 11) {
-                                            document.getElementById("telLbl").style.color = "red";
-                                            document.getElementById("telDiv").className = "Form-field is-invalid";
-                                            document.getElementById("errorNuovRes").style.display = 'block';
-                                            cont++;
-                                        }
-                                        else {
-                                            document.getElementById("telLbl").style.color = "black";
-                                            document.getElementById("telDiv").className = "Form-field";
-                                            document.getElementById("errorNuovRes").style.display = 'none';
-
-                                        }
-
+                                       //Campo Telefono errore
+                                       if ((document.getElementById("tel").value == "") || (!/^[0-9]+$/i.test(document.getElementById("tel").value)) || (document.getElementById("tel").value.length < 8 || document.getElementById("tel").value.length > 11)) {
+                                        document.getElementById("telLbl").style.color = "red";
+                                        document.getElementById("telDiv").className = "Form-field is-invalid";
+                                        document.getElementById("errorNuovRes").style.display = 'block';
+                                        cont++;
+                                    }
+                                    else {
+                                        document.getElementById("telLbl").style.color = "black";
+                                        document.getElementById("errorNuovRes").style.display = 'none';
+                                        document.getElementById("telDiv").className = "Form-field";
+                                    }
 
 
 

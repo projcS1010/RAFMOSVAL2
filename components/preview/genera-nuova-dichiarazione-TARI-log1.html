@@ -672,10 +672,10 @@
                                             document.getElementById("errorNuovRes").style.display = 'none';
                                             document.getElementById("nomeDiv").className = "Form-field";
                                         }
- 
-                                        
 
-                                        if ((document.getElementById("cognome").value == "") ||(!/^[a-z]/i.test(document.getElementById("cognome").value))) {
+
+
+                                        if ((document.getElementById("cognome").value == "") || (!/^[a-z]/i.test(document.getElementById("cognome").value))) {
                                             document.getElementById("cognLbl").style.color = "red";
                                             document.getElementById("cognDiv").className = "Form-field is-invalid";
                                             document.getElementById("errorNuovRes").style.display = 'block';
@@ -906,7 +906,7 @@
                                     <div class="Grid-cell u-md-size12of12 u-lg-size12of12">
                                         <div class="Form-field" id="com1Div">
                                             <label class="Form-label is-required" for="com1" id="com1Lbl">
-                                              Comune locazione dell'immobile:
+                                                Comune locazione dell'immobile:
                                             </label>
                                             <select class="Form-input u-text-r-s u-borderRadius-m" id="com1" aria-required="true" required>
                                                 <option selected>Seleziona il comune</option>
@@ -1027,7 +1027,7 @@
                                         }
 
 
-                                        
+
                                         //Campo Numero civico errore
                                         if ((document.getElementById("nciv").value == "") || (!/^[0-9]+$/i.test(document.getElementById("nciv").value))) {
                                             document.getElementById("ncivLbl").style.color = "red";
@@ -1054,7 +1054,7 @@
                                         }
 
                                         //Campo Telefono errore
-                                        if ((document.getElementById("tel").value == "") || (!/^[0-9]+$/i.test(document.getElementById("tel").value)) || (document.getElementById("tel").value.length < 8 || document.getElementById("tel").value.length > 11) ){
+                                        if ((document.getElementById("tel").value == "") || (!/^[0-9]+$/i.test(document.getElementById("tel").value)) || (document.getElementById("tel").value.length < 8 || document.getElementById("tel").value.length > 11)) {
                                             document.getElementById("telLbl").style.color = "red";
                                             document.getElementById("telDiv").className = "Form-field is-invalid";
                                             document.getElementById("errorNuovRes2").style.display = 'block';
@@ -1171,18 +1171,18 @@
                                     <div class="Grid-cell u-md-size12of12 u-lg-size12of12">
 
 
-                                        <div class="Form-field" id="viaDiv">
-                                            <label class="Form-label is-required" for="cognome" id="viaLbl">Via</label>
-                                            <input class="Form-input u-text-r-s u-borderRadius-m" id="via" aria-required="true" required>
+                                        <div class="Form-field" id="via1Div">
+                                            <label class="Form-label is-required" for="cognome" id="via1Lbl">Via</label>
+                                            <input class="Form-input u-text-r-s u-borderRadius-m" id="via1" aria-required="true" required>
                                         </div>
 
-                                        <div class="Form-field " id="civDiv">
-                                            <label class="Form-label is-required" id="civLbl" for="cognome">Numero civico</label>
-                                            <input class="Form-input u-text-r-s u-borderRadius-m " id="civ" aria-required="true" required>
+                                        <div class="Form-field " id="civ1Div">
+                                            <label class="Form-label is-required" id="civ1Lbl" for="cognome">Numero civico</label>
+                                            <input class="Form-input u-text-r-s u-borderRadius-m " id="civ1" aria-required="true" required>
                                         </div>
 
                                         <div class="Form-field" id="piaDiv">
-                                            <label class="Form-label is-required" id="piaLbl" for="cognome">Piano</label>
+                                            <label class="Form-label is-required" id="piaLbl">Piano</label>
                                             <input class="Form-input u-text-r-s u-borderRadius-m" id="pia" aria-required="true" required>
                                         </div>
 
@@ -1191,7 +1191,7 @@
                                             <input class="Form-input u-text-r-s u-borderRadius-m" id="scala" aria-required="true" required>
                                         </div>
                                         <div class="Form-field" id="intDiv">
-                                            <label class="Form-label is-required" id="intLbl" for="cognome">Interno</label>
+                                            <label class="Form-label is-required" id="intLbl">Interno</label>
                                             <input class="Form-input u-text-r-s u-borderRadius-m" id="int" aria-required="true" required>
                                         </div>
                                         <div class="Form-field" id="suffDiv">
@@ -1239,7 +1239,7 @@
                                             </div>
                                         </div>
                                         <div class="Form-field" id="mqDiv">
-                                            <label class="Form-label is-required" id="mqLbl" for="cognome">Mq*</label>
+                                            <label class="Form-label is-required" id="mqLbl">Mq</label>
                                             <input class="Form-input u-text-r-s u-borderRadius-m" id="mq" aria-required="true" required>
                                         </div>
                                     </div>
@@ -1274,60 +1274,48 @@
 
 
                                         //Campo VIA errore
-                                        if (document.getElementById("via").value == "") {
-                                            document.getElementById("viaLbl").style.color = "red";
-                                            document.getElementById("viaDiv").className = "Form-field is-invalid";
+                                        if (document.getElementById("via1").value == "") {
+                                            document.getElementById("via1Lbl").style.color = "red";
+                                            document.getElementById("via1Div").className = "Form-field is-invalid";
                                             document.getElementById("errorNuovRes3").style.display = 'block';
                                             cont++;
                                         }
                                         else {
-                                            document.getElementById("viaLbl").style.color = "black";
+                                            document.getElementById("via1Lbl").style.color = "black";
                                             document.getElementById("errorNuovRes3").style.display = 'none';
-                                            document.getElementById("viaDiv").className = "Form-field";
+                                            document.getElementById("via1Div").className = "Form-field";
                                         }
 
-                                        if (!/^[a-z]/i.test(document.getElementById("via").value)) {
-                                            document.getElementById("viaLbl").style.color = "red";
-                                            document.getElementById("viaDiv").className = "Form-field is-invalid";
+                                        if (!/^[a-z]/i.test(document.getElementById("via1").value)) {
+                                            document.getElementById("via1Lbl").style.color = "red";
+                                            document.getElementById("via1Div").className = "Form-field is-invalid";
                                             document.getElementById("errorNuovRes3").style.display = 'block';
                                             cont++;
                                         }
                                         else {
-                                            document.getElementById("viaLbl").style.color = "black";
-                                            document.getElementById("viaDiv").className = "Form-field";
+                                            document.getElementById("via1Lbl").style.color = "black";
+                                            document.getElementById("via1Div").className = "Form-field";
                                             document.getElementById("errorNuovRes3").style.display = 'none';
                                         }
+
 
 
                                         //Campo Numero civico errore
-                                        if (document.getElementById("civ").value == "") {
-                                            document.getElementById("civLbl").style.color = "red";
-                                            document.getElementById("civDiv").className = "Form-field is-invalid";
+                                        if ((document.getElementById("civ1").value == "") || (!/^[0-9]+$/i.test(document.getElementById("civ1").value))) {
+                                            document.getElementById("civ1Lbl").style.color = "red";
+                                            document.getElementById("civ1Div").className = "Form-field is-invalid";
                                             document.getElementById("errorNuovRes3").style.display = 'block';
                                             cont++;
                                         }
                                         else {
-                                            document.getElementById("civLbl").style.color = "black";
+                                            document.getElementById("civ1Lbl").style.color = "black";
                                             document.getElementById("errorNuovRes3").style.display = 'none';
-                                            document.getElementById("civDiv").className = "Form-field";
+                                            document.getElementById("civ1Div").className = "Form-field";
                                         }
-
-                                        if (/^[a-z]+$/i.test(document.getElementById("civ").value)) {
-                                            document.getElementById("civLbl").style.color = "red";
-                                            document.getElementById("civDiv").className = "Form-field is-invalid";
-                                            document.getElementById("errorNuovRes3").style.display = 'block';
-                                            cont++;
-                                        }
-                                        else {
-                                            document.getElementById("civLbl").style.color = "black";
-                                            document.getElementById("civDiv").className = "Form-field";
-                                            document.getElementById("errorNuovRes3").style.display = 'none';
-                                        }
-
 
 
                                         //Campo Piano errore
-                                        if (document.getElementById("pia").value == "") {
+                                        if ((document.getElementById("pia").value == "") || (!/^[0-9]+$/i.test(document.getElementById("pia").value))) {
                                             document.getElementById("piaLbl").style.color = "red";
                                             document.getElementById("piaDiv").className = "Form-field is-invalid";
                                             document.getElementById("errorNuovRes3").style.display = 'block';
@@ -1339,20 +1327,9 @@
                                             document.getElementById("piaDiv").className = "Form-field";
                                         }
 
-                                        if (/^[a-z]+$/i.test(document.getElementById("pia").value)) {
-                                            document.getElementById("piaLbl").style.color = "red";
-                                            document.getElementById("piaDiv").className = "Form-field is-invalid";
-                                            document.getElementById("errorNuovRes3").style.display = 'block';
-                                            cont++;
-                                        }
-                                        else {
-                                            document.getElementById("piaLbl").style.color = "black";
-                                            document.getElementById("piaDiv").className = "Form-field";
-                                            document.getElementById("errorNuovRes3").style.display = 'none';
-                                        }
 
                                         //Campo Interno errore
-                                        if (document.getElementById("int").value == "") {
+                                        if ((document.getElementById("int").value == "") || (!/^[0-9]+$/i.test(document.getElementById("int").value))) {
                                             document.getElementById("intLbl").style.color = "red";
                                             document.getElementById("intDiv").className = "Form-field is-invalid";
                                             document.getElementById("errorNuovRes3").style.display = 'block';
@@ -1363,19 +1340,6 @@
                                             document.getElementById("errorNuovRes3").style.display = 'none';
                                             document.getElementById("intDiv").className = "Form-field";
                                         }
-
-                                        if (/^[a-z]+$/i.test(document.getElementById("int").value)) {
-                                            document.getElementById("intLbl").style.color = "red";
-                                            document.getElementById("intDiv").className = "Form-field is-invalid";
-                                            document.getElementById("errorNuovRes3").style.display = 'block';
-                                            cont++;
-                                        }
-                                        else {
-                                            document.getElementById("intLbl").style.color = "black";
-                                            document.getElementById("intDiv").className = "Form-field";
-                                            document.getElementById("errorNuovRes3").style.display = 'none';
-                                        }
-
                                         if (document.getElementById("scala").value == "") {
                                             document.getElementById("scalaLbl").style.color = "red";
                                             document.getElementById("scalaDiv").className = "Form-field is-invalid";
@@ -1447,6 +1411,53 @@
                                             document.getElementById("errorNuovRes3").style.display = 'none';
                                             document.getElementById("subDiv").className = "Form-field";
                                         }
+
+                                        //Controllo uso
+                                        if (document.getElementById("uso").options[document.getElementById("uso").selectedIndex].value == "Seleziona l'uso") {
+                                            document.getElementById("usoLbl").style.color = "red";
+                                            document.getElementById("usoDiv").className = "Form-field is-invalid";
+                                            document.getElementById("errorNuovRes3").style.display = 'block';
+                                            cont++;
+                                        }
+
+                                        else {
+                                            document.getElementById("usoDiv").className = "Form-field";
+                                            document.getElementById("usoLbl").style.color = "black";
+                                            document.getElementById("errorNuovRes").style.display = 'none';
+                                        }
+
+                                        //Controllo Cat
+                                        if (document.getElementById("cat").options[document.getElementById("cat").selectedIndex].value == "Seleziona la cat") {
+                                            document.getElementById("catLbl").style.color = "red";
+                                            document.getElementById("catDiv").className = "Form-field is-invalid";
+                                            document.getElementById("errorNuovRes3").style.display = 'block';
+                                            cont++;
+                                        }
+
+                                        else {
+                                            document.getElementById("catDiv").className = "Form-field";
+                                            document.getElementById("catLbl").style.color = "black";
+                                            document.getElementById("errorNuovRes3").style.display = 'none';
+                                        }
+
+
+
+
+
+                                        //Campo Metri quadrati errore
+                                        if ((document.getElementById("mq").value == "") || (!/^[0-9]+$/i.test(document.getElementById("mq").value))) {
+                                            document.getElementById("mqLbl").style.color = "red";
+                                            document.getElementById("mqDiv").className = "Form-field is-invalid";
+                                            document.getElementById("errorNuovRes3").style.display = 'block';
+                                            cont++;
+                                        }
+                                        else {
+                                            document.getElementById("mqLbl").style.color = "black";
+                                            document.getElementById("errorNuovRes3").style.display = 'none';
+                                            document.getElementById("mqDiv").className = "Form-field";
+                                        }
+
+
 
 
                                         //Controllo finale
@@ -1538,6 +1549,14 @@
                                     <p>Tutti i campi sono richiesti salvo dove espressamente indicato</p>
                                 </div>
 
+                                <div class="Prose Alert Alert--error Alert--withIcon u-layout-prose u-padding-r-bottom u-padding-r-right u-margin-r-bottom"
+                                    role="alert" id="errorNuovRes4" style="display:none">
+                                    <h2 class="u-text-h3">
+                                        Si è verificato un errore
+                                    </h2>
+                                    <p class="u-text-p">Alcuni campi sono errati o non compilati.</p>
+                                </div>
+
 
                                 <fieldset class="Form-fieldset">
                                     <legend class="Form-legend">Dati relativi ai locali occupati</legend>
@@ -1547,10 +1566,11 @@
 
 
                                         <div class="Grid-cell u-md-size12of12 u-lg-size12of12">
-                                            <div class="Form-field">
-                                                <label class="Form-label is-required" for="provincia">Il cittadino è residente nell'immobile?</label>
-                                                <select class="Form-input u-text-r-s u-borderRadius-m" id="dichiarazione" aria-required="true" required>
-                                                    <option selected>NO</option>
+                                            <div class="Form-field" id="stctDiv">
+                                                <label class="Form-label is-required" id="stctLbl">Il cittadino è residente nell'immobile?</label>
+                                                <select class="Form-input u-text-r-s u-borderRadius-m" id="stct" aria-required="true" required>
+                                                    <option selected>Selezionare stato cittadino</option>
+                                                    <option>NO</option>
                                                     <option>SI</option>
                                                 </select>
                                             </div>
@@ -1564,22 +1584,6 @@
 
                                         </fieldset>
 
-                                        <fieldset class="Form-field Form-field--choose Grid-cell">
-
-                                            <legend class="Form-legend is-required">Per i non residenti</legend>
-                                            <label class="Form-label Form-label--block" for="contact2">
-                                                <input type="checkbox" class="Form-input" id="contact2" aria-required="true" required>
-                                                <span class="Form-fieldIcon" role="presentation"></span> Dichiaro di non essere residente nell'immobile
-                                            </label>
-                                        </fieldset>
-
-                                        <p>A tal fine, dichiaro che il mio nucleo familiare nell'immobile di residenza è di
-                                            componenti n:
-                                            <div class="Form-field">
-                                                <label class="Form-label is-required" for="cognome"></label>
-                                                <input class="Form-input u-text-r-s u-borderRadius-m" id="cognome" aria-required="true" required>
-                                            </div>
-                                        </p>
 
                                         <div class="Form-field Grid-cell u-size4of4">
                                             <label class="Form-label" for="cap">Note:</label>
@@ -1616,6 +1620,40 @@
 
                                 <script type="text/javascript">
 
+                                    function showDivalleg() {
+
+                                        var cont = 0;
+
+
+
+                                        
+                                        //Controllo Residenza cittadino
+                                        if (document.getElementById("stct").options[document.getElementById("stct").selectedIndex].value == "Selezionare stato cittadino") {
+                                            document.getElementById("stctLbl").style.color = "red";
+                                            document.getElementById("stctDiv").className = "Form-field is-invalid";
+                                            document.getElementById("errorNuovRes4").style.display = 'block';
+                                            cont++;
+                                        }
+
+                                        else {
+                                            document.getElementById("stctDiv").className = "Form-field";
+                                            document.getElementById("stctLbl").style.color = "black";
+                                            document.getElementById("errorNuovRes4").style.display = 'none';
+                                        }
+
+                                        
+
+
+                                        //Controllo finale
+                                        if (cont == 0) {
+
+                                            document.getElementById("errorNuovRes4").style.display = 'none';
+                                            showDivSalto4();
+                                        }
+                                        else {
+                                            document.getElementById("errorNuovRes4").style.display = 'block';
+                                        }
+                                    }
                                     function showDivSalto4() {
                                         document.getElementById("main4").style.display = 'none';
                                         document.getElementById("main5").style.display = 'block';
@@ -1632,7 +1670,7 @@
 
 
                                 <div class="Form-field Grid-cell u-textRight">
-                                    <button type="button" class="Button Button--default u-text-r-xs" style="float:right !important" onclick="showDivSalto4()">
+                                    <button type="button" class="Button Button--default u-text-r-xs" style="float:right !important" onclick="showDivalleg()">
                                         <a href="#" style="text-decoration: none !important; color:black !important">Avanti</a>
                                     </button>
 
