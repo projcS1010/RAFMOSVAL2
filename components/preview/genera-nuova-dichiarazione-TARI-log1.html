@@ -397,7 +397,9 @@
                         <li class="Breadcrumb-item">
                             <a class="Breadcrumb-link u-color-30" href="lista-servizi.html">Servizi Online</a>
                         </li>
-                       
+                       <li class="Breadcrumb-item">
+                            <a class="Breadcrumb-link u-color-30" href="genera-nuova-dichiarazione-TARI.html">Dichiarazione TARI - Presentazione</a>
+                        </li>
                         <li class="Breadcrumb-item">
                             <a class="Breadcrumb-link u-color-50" href="genera-nuova-dichiarazione-TARI-log1.html">Dichiarazione TARI - Esecuzione</a>
                         </li>
@@ -437,7 +439,7 @@
 
                                     <div class="Grid-cell u-md-size12of12 u-lg-size12of12">
                                         <div class="Form-field" id="tipoUtenzaDiv">
-                                            <label class="Form-label is-required" for="provincia" id="tipoUtenzaLbl">Tipo utenza:</label>
+                                            <label class="Form-label is-required" for="provincia" id="tipoUtenzaLbl">Tipo utenza</label>
                                             <select class="Form-input u-text-r-s u-borderRadius-m" id="tipoutenza" aria-required="true" required>
                                                 <option selected>Seleziona il tipo utenza</option>
                                                 <option>Domestica</option>
@@ -449,7 +451,7 @@
 
                                     <div class="Grid-cell u-md-size12of12 u-lg-size12of12">
                                         <div class="Form-field" id="tipoDichDiv">
-                                            <label class="Form-label is-required" for="provincia" id="tipoDichLbl">Tipo dichiarazione:</label>
+                                            <label class="Form-label is-required" for="provincia" id="tipoDichLbl">Tipo dichiarazione</label>
                                             <select class="Form-input u-text-r-s u-borderRadius-m" id="tipodichiarazione" aria-required="true" required>
                                                 <option selected>Seleziona il tipo dichiarazione</option>
                                                 <option>Iscrizione</option>
@@ -460,13 +462,13 @@
                                     </div>
 
                                     <div class="Form-field" id="addDiv">
-                                        <label class="Form-label" for="ddn" id="addLbl">A decorrere dal (formato: gg/mm/aaaa):</label>
+                                        <label class="Form-label" for="ddn" id="addLbl">A decorrere dal (formato: gg/mm/aaaa)</label>
                                         <input type="text" class="Form-input u-text-r-s u-borderRadius-m" id="add" aria-describedby="info-ddn">
                                     </div>
 
                                     <fieldset class="Form-field Form-field--choose Grid-cell u-text-r-s">
                                         <legend class="Form-legend is-required" for="contribuente" style="font-size: 18px">
-                                            <a style="pointer-events: none; cursor: default;" id="contrLbl">Tipo contribuente:</a>
+                                            <a style="pointer-events: none; cursor: default;" id="contrLbl">Tipo contribuente</a>
                                         </legend>
                                         <div class="From-field" id="contrDiv" style="align-self: auto">
                                             <label class="Form-label Form-label--block">
@@ -481,9 +483,9 @@
                                     </fieldset>
 
 
-                                    <fieldset class="Form-field Form-field--choose Grid-cell u-text-r-s">
+                                    <fieldset class="Form-field Form-field--choose Grid-cell u-text-r-s" id="sexField">
                                         <legend class="Form-legend is-required" for="sex1" style="font-size: 18px">
-                                            <a style="pointer-events: none; cursor: default;" id="sexLbl">Sesso:</a>
+                                            <a style="pointer-events: none; cursor: default;" id="sexLbl">Sesso</a>
                                         </legend>
                                         <div class="Form-field" id="sexDiv">
                                             <label class="Form-label Form-label--block">
@@ -499,23 +501,23 @@
 
 
                                     <div class="Form-field" id="nomeDiv">
-                                        <label class="Form-label is-required" for="nome" id="nomeLbl">Nome:</label>
+                                        <label class="Form-label is-required" for="nome" id="nomeLbl">Nome</label>
                                         <input class="Form-input u-text-r-s u-borderRadius-m" id="nome" aria-required="true" required>
                                     </div>
 
                                     <div class="Form-field" id="cognDiv">
-                                        <label class="Form-label is-required" for="cognome" id="cognLbl">Cognome:</label>
+                                        <label class="Form-label is-required" for="cognome" id="cognLbl">Cognome</label>
                                         <input class="Form-input u-text-r-s u-borderRadius-m" id="cognome" aria-required="true" required>
                                     </div>
 
                                     <div class="Form-field" id="ddnDiv">
-                                        <label class="Form-label" for="ddn" id="ddnLbl">Data di nascita (formato: gg/mm/aaaa):</label>
+                                        <label class="Form-label" for="ddn" id="ddnLbl">Data di nascita (formato: gg/mm/aaaa)</label>
                                         <input type="text" class="Form-input u-text-r-s u-borderRadius-m" id="ddn" aria-describedby="info-ddn">
                                     </div>
 
                                     <div class="Grid-cell u-md-size12of12 u-lg-size12of12">
                                         <div class="Form-field" id="statoDiv">
-                                            <label class="Form-label is-required" for="provincia" id="statoLbl">Stato nascita:</label>
+                                            <label class="Form-label is-required" for="provincia" id="statoLbl">Stato nascita</label>
                                             <select class="Form-input u-text-r-s u-borderRadius-m" id="stato" aria-required="true" required>
                                                 <option selected>Seleziona lo stato di nascita</option>
                                                 <option>Italia</option>
@@ -528,7 +530,7 @@
 
                                     <div class="Grid-cell u-md-size12of12 u-lg-size12of12">
                                         <div class="Form-field" id="provDiv">
-                                            <label class="Form-label is-required" for="provincia" id="provLbl">Provincia nascita:</label>
+                                            <label class="Form-label is-required" for="provincia" id="provLbl">Provincia nascita</label>
                                             <select class="Form-input u-text-r-s u-borderRadius-m" id="prov" aria-required="true" required>
                                                 <option selected>Seleziona la provincia di nascita</option>
 
@@ -541,7 +543,7 @@
 
                                     <div class="Grid-cell u-md-size12of12 u-lg-size12of12">
                                         <div class="Form-field" id="comDiv">
-                                            <label class="Form-label is-required" for="comune" id="comLbl">Comune di nascita:</label>
+                                            <label class="Form-label is-required" for="comune" id="comLbl">Comune di nascita</label>
                                             <select class="Form-input u-text-r-s u-borderRadius-m" id="com" aria-required="true" required>
                                                 <option selected>Seleziona il comune di nascita</option>
 
@@ -571,6 +573,10 @@
                                         var s = document.getElementsByTagName('script')[0];
                                         s.parentNode.insertBefore(wf, s);
                                     })();
+
+
+                                    
+
                                 </script>
 
                                 <script type="text/javascript">
@@ -880,8 +886,7 @@
 
                                     <div class="Grid-cell u-md-size12of12 u-lg-size12of12">
                                         <div class="Form-field" id="proDiv">
-                                            <label class="Form-label is-required" for="pro">
-                                                <a id="proLbl">Provincia locazione dell'immobile:</a>
+                                            <label class="Form-label is-required" for="pro" id="proLbl">Provincia locazione dell'immobile
                                             </label>
                                             <select class="Form-input u-text-r-s u-borderRadius-m" id="pro" aria-required="true" required>
                                                 <option selected>Seleziona una provincia</option>
@@ -895,7 +900,7 @@
                                     <div class="Grid-cell u-md-size12of12 u-lg-size12of12">
                                         <div class="Form-field" id="com1Div">
                                             <label class="Form-label is-required" for="com1" id="com1Lbl">
-                                                Comune locazione dell'immobile:
+                                                Comune locazione dell'immobile
                                             </label>
                                             <select class="Form-input u-text-r-s u-borderRadius-m" id="com1" aria-required="true" required>
                                                 <option selected>Seleziona il comune</option>
@@ -907,8 +912,7 @@
                                     </div>
 
                                     <div class="Form-field" id="viaDiv">
-                                        <label class="Form-label is-required">
-                                            <a id="viaLbl">Via</a>
+                                        <label class="Form-label is-required" id="viaLbl">Via
                                         </label>
                                         <input class="Form-input u-text-r-s u-borderRadius-m" id="via" aria-required="true" required>
                                     </div>
@@ -930,10 +934,15 @@
 
 
                                     <div class="Form-field" id="telDiv">
-                                        <label class="Form-label is-required">
-                                            <a id="telLbl">Telefono</a>
+                                        <label class="Form-label is-required" id="telLbl">Telefono
                                         </label>
                                         <input class="Form-input u-text-r-s u-borderRadius-m" id="tel" aria-required="true" required>
+                                    </div>
+
+                                    <div class="Form-field" id="estrDocDiv">
+                                        <label class="Form-label is-required" id="estrDocLbl">Estremi del documento
+                                        </label>
+                                        <input class="Form-input u-text-r-s u-borderRadius-m" id="estrDoc" aria-required="true" required>
                                     </div>
                                 </fieldset>
 
@@ -1053,6 +1062,18 @@
                                             document.getElementById("telLbl").style.color = "black";
                                             document.getElementById("errorNuovRes2").style.display = 'none';
                                             document.getElementById("telDiv").className = "Form-field";
+                                        }
+
+                                        if (document.getElementById("estrDoc").value == ""){
+                                            document.getElementById("estrDocLbl").style.color = "red";
+                                            document.getElementById("estrDocDiv").className = "Form-field is-invalid";
+                                            document.getElementById("errorNuovRes2").style.display = 'block';
+                                            cont++;
+                                        }
+                                        else {
+                                            document.getElementById("estrDocLbl").style.color = "black";
+                                            document.getElementById("errorNuovRes2").style.display = 'none';
+                                            document.getElementById("estrDocDiv").className = "Form-field";
                                         }
 
 
@@ -1192,15 +1213,15 @@
                                             <input class="Form-input u-text-r-s u-borderRadius-m" id="sez" aria-required="true" required>
                                         </div>
                                         <div class="Form-field" id="foglioDiv">
-                                            <label class="Form-label is-required" id="foglioLbl" for="cognome">Foglio:</label>
+                                            <label class="Form-label is-required" id="foglioLbl" for="cognome">Foglio</label>
                                             <input class="Form-input u-text-r-s u-borderRadius-m" id="foglio" aria-required="true" required>
                                         </div>
                                         <div class="Form-field" id="partDiv">
-                                            <label class="Form-label is-required" id="partLbl" for="cognome">Part</label>
+                                            <label class="Form-label is-required" id="partLbl" for="cognome">Particella</label>
                                             <input class="Form-input u-text-r-s u-borderRadius-m" id="part" aria-required="true" required>
                                         </div>
                                         <div class="Form-field" id="subDiv">
-                                            <label class="Form-label is-required" id="subLbl" for="cognome">Sub</label>
+                                            <label class="Form-label is-required" id="subLbl" for="cognome">Subalterno</label>
                                             <input class="Form-input u-text-r-s u-borderRadius-m" id="sub" aria-required="true" required>
                                         </div>
                                         <div class="Grid-cell u-md-size12of12 u-lg-size12of12">
@@ -1208,22 +1229,68 @@
                                                 <label class="Form-label is-required" id="usoLbl" for="provincia">Uso</label>
                                                 <select class="Form-input u-text-r-s u-borderRadius-m" id="uso" aria-required="true" required>
                                                     <option selected>Seleziona l'uso</option>
-                                                    <option>MO</option>
-                                                    <option>MI</option>
-                                                    <option>ME</option>
-                                                    <option>MB</option>
+                                                    <option>Immobili a destinazione ordinaria</option>
+                                                    <option>Immobili a destinazione speciale o particolare</option>
+                                        
                                                 </select>
                                             </div>
                                         </div>
                                         <div class="Grid-cell u-md-size12of12 u-lg-size12of12">
                                             <div class="Form-field" id="catDiv">
-                                                <label class="Form-label is-required" id="catLbl" for="provincia">Cat</label>
+                                                <label class="Form-label is-required" id="catLbl" for="cat">Categoria</label>
                                                 <select class="Form-input u-text-r-s u-borderRadius-m" id="cat" aria-required="true" required>
-                                                    <option selected>Seleziona la cat</option>
-                                                    <option>MO</option>
-                                                    <option>MI</option>
-                                                    <option>ME</option>
-                                                    <option>MB</option>
+                                                    <option selected>Seleziona la categoria</option>
+                                                    <option>A1</option>
+                                                    <option>A2</option>
+                                                    <option>A3</option>
+                                                    <option>A4</option>
+                                                    <option>A5</option>
+                                                    <option>A6</option>
+                                                    <option>A7</option>
+                                                    <option>A8</option>
+                                                    <option>A9</option>
+                                                    <option>A10</option>
+                                                    <option>A11</option>
+                                                    <option>B1</option>
+                                                    <option>B2</option>
+                                                    <option>B3</option>
+                                                    <option>B4</option>
+                                                    <option>B5</option>
+                                                    <option>B6</option>
+                                                    <option>B7</option>
+                                                    <option>B8</option>
+                                                    <option>C1</option>
+                                                    <option>C2</option>
+                                                    <option>C3</option>
+                                                    <option>C4</option>
+                                                    <option>C5</option>
+                                                    <option>C6</option>
+                                                    <option>C7</option>
+                                                    <option>D1</option>
+                                                    <option>D2</option>
+                                                    <option>D3</option>
+                                                    <option>D4</option>
+                                                    <option>D5</option>
+                                                    <option>D6</option>
+                                                    <option>D7</option>
+                                                    <option>D8</option>
+                                                    <option>D9</option>
+                                                    <option>D10</option>
+                                                    <option>E1</option>
+                                                    <option>E2</option>
+                                                    <option>E3</option>
+                                                    <option>E4</option>
+                                                    <option>E5</option>
+                                                    <option>E6</option>
+                                                    <option>E7</option>
+                                                    <option>E8</option>
+                                                    <option>E9</option>
+                                                    <option>F1</option>
+                                                    <option>F2</option>
+                                                    <option>F3</option>
+                                                    <option>F4</option>
+                                                    <option>F5</option>
+
                                                 </select>
                                             </div>
                                         </div>
@@ -1329,7 +1396,7 @@
                                             document.getElementById("errorNuovRes3").style.display = 'none';
                                             document.getElementById("intDiv").className = "Form-field";
                                         }
-                                        if (document.getElementById("scala").value == "") {
+                                        if ((document.getElementById("scala").value == "") || (!/^[0-9]+$/i.test(document.getElementById("scala").value)))   {
                                             document.getElementById("scalaLbl").style.color = "red";
                                             document.getElementById("scalaDiv").className = "Form-field is-invalid";
                                             document.getElementById("errorNuovRes3").style.display = 'block';
@@ -1341,7 +1408,7 @@
                                             document.getElementById("scalaDiv").className = "Form-field";
                                         }
 
-                                        if (document.getElementById("suff").value == "") {
+                                        if ((document.getElementById("suff").value == "") || (!/^[0-9]+$/i.test(document.getElementById("suff").value))) {
                                             document.getElementById("suffLbl").style.color = "red";
                                             document.getElementById("suffDiv").className = "Form-field is-invalid";
                                             document.getElementById("errorNuovRes3").style.display = 'block';
@@ -1353,7 +1420,7 @@
                                             document.getElementById("suffDiv").className = "Form-field";
                                         }
 
-                                        if (document.getElementById("part").value == "") {
+                                        if ((document.getElementById("part").value == "") || (!/^[0-9]+$/i.test(document.getElementById("suff").value))) {
                                             document.getElementById("partLbl").style.color = "red";
                                             document.getElementById("partDiv").className = "Form-field is-invalid";
                                             document.getElementById("errorNuovRes3").style.display = 'block';
@@ -1365,7 +1432,7 @@
                                             document.getElementById("partDiv").className = "Form-field";
                                         }
 
-                                        if (document.getElementById("foglio").value == "") {
+                                        if ((document.getElementById("foglio").value == "") || (!/^[0-9]+$/i.test(document.getElementById("foglio").value)))  {
                                             document.getElementById("foglioLbl").style.color = "red";
                                             document.getElementById("foglioDiv").className = "Form-field is-invalid";
                                             document.getElementById("errorNuovRes3").style.display = 'block';
@@ -1377,7 +1444,7 @@
                                             document.getElementById("foglioDiv").className = "Form-field";
                                         }
 
-                                        if (document.getElementById("sez").value == "") {
+                                        if ((document.getElementById("sez").value == "") || (!/^[0-9]+$/i.test(document.getElementById("sez").value))) {
                                             document.getElementById("sezLbl").style.color = "red";
                                             document.getElementById("sezDiv").className = "Form-field is-invalid";
                                             document.getElementById("errorNuovRes3").style.display = 'block';
@@ -1389,7 +1456,7 @@
                                             document.getElementById("sezDiv").className = "Form-field";
                                         }
 
-                                        if (document.getElementById("sub").value == "") {
+                                        if ((document.getElementById("sub").value == "") || (!/^[0-9]+$/i.test(document.getElementById("sub").value))) {
                                             document.getElementById("subLbl").style.color = "red";
                                             document.getElementById("subDiv").className = "Form-field is-invalid";
                                             document.getElementById("errorNuovRes3").style.display = 'block';
@@ -1416,7 +1483,7 @@
                                         }
 
                                         //Controllo Cat
-                                        if (document.getElementById("cat").options[document.getElementById("cat").selectedIndex].value == "Seleziona la cat") {
+                                        if (document.getElementById("cat").options[document.getElementById("cat").selectedIndex].value == "Seleziona la categoria") {
                                             document.getElementById("catLbl").style.color = "red";
                                             document.getElementById("catDiv").className = "Form-field is-invalid";
                                             document.getElementById("errorNuovRes3").style.display = 'block';
