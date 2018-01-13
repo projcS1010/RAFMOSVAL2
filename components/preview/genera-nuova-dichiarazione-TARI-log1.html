@@ -472,11 +472,11 @@
                                         </legend>
                                         <div class="From-field" id="contrDiv" style="align-self: auto">
                                             <label class="Form-label Form-label--block">
-                                                <input type="radio" class="Form-input" name="contribuente" id="contribuente1" aria-required="true" required>
+                                                <input type="radio" class="Form-input" name="contribuente" id="contribuente1" aria-required="true" onclick="hide_show()" required>
                                                 <span class="Form-fieldIcon" role="presentation"></span> Persona fisica
                                             </label>
                                             <label class="Form-label Form-label--block">
-                                                <input type="radio" class="Form-input" name="contribuente" id="contribuente2" aria-required="true" required>
+                                                <input type="radio" class="Form-input" name="contribuente" id="contribuente2" aria-required="true" onclick="hide_show()" required>
                                                 <span class="Form-fieldIcon" role="presentation"></span> Persona giuridica
                                             </label>
                                         </div>
@@ -574,7 +574,27 @@
                                         s.parentNode.insertBefore(wf, s);
                                     })();
 
+                                    function hide_show(){
+                                        if(document.getElementById('contribuente2').checked){
+                                            document.getElementById("cognDiv").style.display = 'none';
+                                            document.getElementById("nomeLbl").innerHTML = 'Ragione sociale';
+                                            document.getElementById("sexField").style.display = 'none';
+                                            document.getElementById("ddnDiv").style.display = 'none';
+                                            document.getElementById("comDiv").style.display = 'none';
+                                            document.getElementById("provDiv").style.display = 'none';
+                                            document.getElementById("statoDiv").style.display = 'none';
 
+                                        }
+                                        else if(document.getElementById('contribuente1').checked){
+                                            document.getElementById("cognDiv").style.display = 'block';
+                                            document.getElementById("nomeLbl").innerHTML = 'Nome';
+                                            document.getElementById("sexField").style.display = 'block';
+                                            document.getElementById("ddnDiv").style.display = 'block';
+                                            document.getElementById("comDiv").style.display = 'block';
+                                            document.getElementById("provDiv").style.display = 'block';
+                                            document.getElementById("statoDiv").style.display = 'block';
+                                        }
+                                    }
                                     
 
                                 </script>
@@ -796,7 +816,7 @@
 
 
                                         //Controllo finale
-                                        if (cont == 0) {
+                                        if ((cont == 0) || ($('#cognDiv').is(':hidden'))){
                                             document.getElementById("errorNuovRes").style.display = 'none';
                                             showDivSalto1();
 
@@ -1239,57 +1259,57 @@
                                             <div class="Form-field" id="catDiv">
                                                 <label class="Form-label is-required" id="catLbl" for="cat">Categoria</label>
                                                 <select class="Form-input u-text-r-s u-borderRadius-m" id="cat" aria-required="true" required>
-                                                    <option selected>Seleziona la categoria</option>
-                                                    <option>A1</option>
-                                                    <option>A2</option>
-                                                    <option>A3</option>
-                                                    <option>A4</option>
-                                                    <option>A5</option>
-                                                    <option>A6</option>
-                                                    <option>A7</option>
-                                                    <option>A8</option>
-                                                    <option>A9</option>
-                                                    <option>A10</option>
-                                                    <option>A11</option>
-                                                    <option>B1</option>
-                                                    <option>B2</option>
-                                                    <option>B3</option>
-                                                    <option>B4</option>
-                                                    <option>B5</option>
-                                                    <option>B6</option>
-                                                    <option>B7</option>
-                                                    <option>B8</option>
-                                                    <option>C1</option>
-                                                    <option>C2</option>
-                                                    <option>C3</option>
-                                                    <option>C4</option>
-                                                    <option>C5</option>
-                                                    <option>C6</option>
-                                                    <option>C7</option>
-                                                    <option>D1</option>
-                                                    <option>D2</option>
-                                                    <option>D3</option>
-                                                    <option>D4</option>
-                                                    <option>D5</option>
-                                                    <option>D6</option>
-                                                    <option>D7</option>
-                                                    <option>D8</option>
-                                                    <option>D9</option>
-                                                    <option>D10</option>
-                                                    <option>E1</option>
-                                                    <option>E2</option>
-                                                    <option>E3</option>
-                                                    <option>E4</option>
-                                                    <option>E5</option>
-                                                    <option>E6</option>
-                                                    <option>E7</option>
-                                                    <option>E8</option>
-                                                    <option>E9</option>
-                                                    <option>F1</option>
-                                                    <option>F2</option>
-                                                    <option>F3</option>
-                                                    <option>F4</option>
-                                                    <option>F5</option>
+                                                   <option selected>Seleziona la categoria</option>
+                                                    <option>A1 - Abitazione di tipo signorile</option>
+                                                    <option>A2 - Abitazione di tipo civile</option>
+                                                    <option>A3 -    Abitazioni di tipo economico</option>
+                                                    <option>A4 -    Abitazioni di tipo popolari</option>
+                                                    <option>A5 - Abitazioni di tipo ultrapopolare</option>
+                                                    <option>A6 - Abitazione di tipo rurale</option>
+                                                    <option>A7 - Abitazione in villini</option>
+                                                    <option>A8 - Abitazione in villa</option>
+                                                    <option>A9 -    Castelli, palazzi di eminenti pregi artistici o storici</option>
+                                                    <option>A10 - Uffici e studi privati</option>
+                                                    <option>A11 -   Abitazioni o alloggi tipici dei luoghi</option>
+                                                    <option>B1 -    Collegi e convitti, educandati, ricoveri, orfanotrofi, ospizi, conventi, seminari, caserme</option>
+                                                    <option>B2 - Case di cura e ospedali senza fine di lucro</option>
+                                                    <option>B3 - Prigioni e riformatori</option>
+                                                    <option>B4 -    Uffici Pubblici</option>
+                                                    <option>B5 - Scuole e laboratori scientifici</option>
+                                                    <option>B6 - Biblioteche, pinacoteche, musei, gallerie, accademie </option>
+                                                    <option>B7 -    Cappelle ed oratori non destinati all’esercizio pubblico del culto</option>
+                                                    <option>B8 - Magazzini sotterranei per depositi di derrate</option>
+                                                    <option>C1 - Negozi e Botteghe</option>
+                                                    <option>C2 - Magazzini e locali di Deposito </option>
+                                                    <option>C3 - Laboratori per arti e mestieri</option>
+                                                    <option>C4 - Fabbricati e locali per esercizi sportivi (senza fine di lucro)   </option>
+                                                    <option>C5 - Stabilimenti balneari e di acque curative (senza fine di lucro)</option>
+                                                    <option>C6 - Stalle, scuderie, rimesse, autorimesse</option>
+                                                    <option>C7 - Tettoie chiuse od aperte</option>
+                                                    <option>D1 - Opifici</option>
+                                                    <option>D2 -    Alberghi e pensioni (con fine di lucro)</option>
+                                                    <option>D3 - Teatri, cinematografi, sale per concerti e spettacoli e simili (con fine di lucro)</option>
+                                                    <option>D4 - Case di cura ed ospedali (con fine di lucro</option>
+                                                    <option>D5 - Istituto di credito, cambio e assicurazione (con fine di lucro)</option>
+                                                    <option>D6 -    Fabbricati e locali per esercizi sportivi (con fine di lucro)</option>
+                                                    <option>D7 -    Fabbricati costruiti o adattati per le speciali esigenze di un’attività industriale</option>
+                                                    <option>D8 - Fabbricati costruiti o adattati per le speciali esigenze di un’attività commerciale</option>
+                                                    <option>D9 -    Edifici galleggianti o sospesi assicurati a punti fissi del suolo, ponti privati soggetti a pedaggio</option>
+                                                    <option>D10 -   Fabbricati per funzioni produttive connesse alle attività agricole</option>
+                                                    <option>E1 -    Stazioni per servizi di trasporto, terrestri, marittimi ed aerei</option>
+                                                    <option>E2 - Ponti comunali e provinciali soggetti a pedaggio</option>
+                                                    <option>E3 - Costruzioni e fabbricati per speciali esigenze pubbliche</option>
+                                                    <option>E4 - Recinti chiusi per speciali esigenze pubbliche</option>
+                                                    <option>E5 - Fabbricati costituenti fortificazioni e loro dipendenze</option>
+                                                    <option>E6 - Fari, semafori, torri per rendere d’uso pubblico l’orologio comunale</option>
+                                                    <option>E7 - Fabbricati destinati all’esercizio pubblico dei culti</option>
+                                                    <option>E8 -    Fabbricati e costruzioni nei cimiteri, esclusi i colombari, i sepolcri e le tombe di famiglia</option>
+                                                    <option>E9 - Edifici a destinazione particolare non compresi nelle categorie precedenti del gruppo E</option>
+                                                    <option>F1 -    Area urbana</option>
+                                                    <option>F2 - Unità collabenti</option>
+                                                    <option>F3 -    Unità in corso di costruzione</option>
+                                                    <option>F4 - Unità in corso di definizione</option>
+                                                    <option>F5 -    Lastrico solare</option>
 
                                                 </select>
                                             </div>
